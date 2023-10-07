@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand ml-3" href="../index.php">Zbierka Úloh - WD1</a>
         <ul class="navbar-nav mx-auto" style="margin-right: 0px!important;">

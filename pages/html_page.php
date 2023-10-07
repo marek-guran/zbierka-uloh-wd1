@@ -15,7 +15,7 @@
 
     <?php include '../includes/header.php'; ?>
 
-    <div class="priklad">
+    <div class="priklad container card-text">
         <h2>Príklad 1</h2>
         <p>Vašou úlohou je vytvoriť webovú stránku s názvom "Príklad 1" pomocou HTML kódu. Stránka by mala obsahovať
             nasledujúci obsah a štruktúru:<br>
@@ -57,12 +57,12 @@
         <p>
     </div>
 
-    <div class="code-wrapper">
-    <button id="show-code-btn" class="btn btn-primary" style="margin-left: 50px;">Ukázať Kód</button>
-    <a href="../priklady/iba html/pr1.html" target="_blank">
-        <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
-    </a>
-    <pre id="code" style="display: none;" class="code">
+    <div class="code-wrapper container">
+        <button id="show-code-btn" class="btn btn-primary">Ukázať Kód</button>
+        <a href="../priklady/iba html/pr1.html" target="_blank">
+            <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
+        </a>
+        <pre id="code" style="display: none;" class="code">
 
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;sk&quot;&gt;
@@ -115,22 +115,22 @@
 &lt;/body&gt;
 &lt;/html&gt;
     </pre>
-</div>
+    </div>
 
-<script>
-    const showCodeBtn = document.getElementById('show-code-btn');
-    const code = document.getElementById('code');
+    <script>
+        const showCodeBtn = document.getElementById('show-code-btn');
+        const code = document.getElementById('code');
 
-    showCodeBtn.addEventListener('click', () => {
-        if (code.style.display === 'none') {
-            code.style.display = 'block';
-            showCodeBtn.textContent = 'Skryť Kód';
-        } else {
-            code.style.display = 'none';
-            showCodeBtn.textContent = 'Ukázať Kód';
-        }
-    });
-</script>
+        showCodeBtn.addEventListener('click', () => {
+            if (code.style.display === 'none') {
+                code.style.display = 'block';
+                showCodeBtn.textContent = 'Skryť Kód';
+            } else {
+                code.style.display = 'none';
+                showCodeBtn.textContent = 'Ukázať Kód';
+            }
+        });
+    </script>
 
     <?php include '../includes/footer.php'; ?>
 

@@ -16,7 +16,7 @@
     <?php include 'includes/header.php'; ?>
 
     <div class="container mt-4">
-        <div class="row">
+        <div class="row card-text">
             <div class="col-md-12">
                 <div class="page-header">
                     <h1>O Zbierke Úloh</h1>
@@ -33,28 +33,28 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <a href="pages/html_page.php" class="card-link">
-                    <div class="card">
+                    <div class="card card-hover">
                         <img src="/img/html.jpg" class="card-img-top" alt="HTML Image">
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-4">
                 <a href="pages/css_page.php" class="card-link">
-                    <div class="card">
+                    <div class="card card-hover">
                         <img src="/img/css.webp" class="card-img-top" alt="CSS Image">
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-4">
                 <a href="pages/js_page.php" class="card-link">
-                    <div class="card">
+                    <div class="card card-hover">
                         <img src="/img/js.png" class="card-img-top" alt="JavaScript Image">
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-4">
                 <a href="pages/priklady.php" class="card-link">
-                    <div class="card">
+                    <div class="card card-hover">
                         <img src="/img/priklady.png" class="card-img-top" alt="JavaScript Image">
                     </div>
                 </a>
