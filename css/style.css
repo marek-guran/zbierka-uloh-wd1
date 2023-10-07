@@ -1,0 +1,27 @@
+img {
+    width: 100vw;
+    border-radius: 20px!important;
+}
+
+.card {
+    border-radius: 20px!important;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 15px black;
+    transform: scale(1.02);
+}
+
+.card:active {
+    transform: scale(0.98);
+    transition: transform 0.2s;
+}
+
+.navbar-nav .nav-item .nav-link {
+    border-radius: 50px;
+}
+
+.btn {
+    border-radius: 50px!important;
+}
