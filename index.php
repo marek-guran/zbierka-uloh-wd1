@@ -16,6 +16,21 @@
 
     <div class="container mt-4">
         <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>O Zbierke</h1>
+                    <p>Táto zbierka úloh obsahuje všetko potrebné aby si mohli študenti predmetu Webový Dizajn 1 osvojiť
+                        základy tvorby webových stránok pomocou HTML, CSS a JavaScriptu.
+                        Zbierku úloh spravuje učiteľ. To znamená, že ak študenti majú vyriešiť príklad alebo úlohu, tak
+                        vyučujúci je schopný v reálnom čase skryť a zobraziť jedno možné riešenie na webstránke pomocou
+                        administrátorskeho účtu,
+                        ktorý upravuje v databázi jednotlivé údaje a je schopný prídávať aj vlastné príklady so
+                        zadaniami a riešeniami.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-4 mb-4">
                 <a href="html_page.php" class="card-link">
                     <div class="card">
