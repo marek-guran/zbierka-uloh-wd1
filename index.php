@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
@@ -19,12 +20,15 @@
             <div class="col-md-12">
                 <div class="page-header">
                     <h1>O Zbierke Úloh</h1>
-                    <p>Táto zbierka úloh obsahuje všetko potrebné, aby si mohli <strong>študenti</strong> predmetu <strong>Webový Dizajn 1</strong> osvojiť
+                    <p>Táto zbierka úloh obsahuje všetko potrebné, aby si mohli <strong>študenti</strong> predmetu
+                        <strong>Webový Dizajn 1</strong> osvojiť
                         základy tvorby webových stránok pomocou <strong>HTML, CSS a JavaScriptu</strong>.
                         Zbierku úloh spravuje učiteľ. To znamená, že ak študenti majú vyriešiť príklad alebo úlohu, tak
-                        vyučujúci je schopný v <strong>reálnom čase</strong> skryť a zobraziť jedno možné riešenie na webstránke pomocou
+                        vyučujúci je schopný v <strong>reálnom čase</strong> skryť a zobraziť jedno možné riešenie na
+                        webstránke pomocou
                         administrátorskeho účtu,
-                        ktorý upravuje v databázi jednotlivé údaje a je schopný prídávať aj <strong>vlastné príklady</strong> so
+                        ktorý upravuje v databázi jednotlivé údaje a je schopný prídávať aj <strong>vlastné
+                            príklady</strong> so
                         zadaniami a riešeniami.
                     </p>
                 </div>
