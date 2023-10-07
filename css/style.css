@@ -25,3 +25,48 @@ img {
 .btn {
     border-radius: 50px !important;
 }
+
+footer {
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .socials {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .socials .social {
+    display: inline-block;
+    text-align: center;
+    margin: 0 2%;
+}
+
+footer .socials .social a {
+    color: #3d3d3d;
+    font-size: 2.5em;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+footer .socials .social .email:hover {
+    color: #c53636;
+}
+
+footer .socials .social .github:hover {
+    color: #9ba0a3;
+}
+
+footer .socials .social .linkedin:hover {
+    color: #0177B5;
+}
+
+footer .socials .social .mastodon:hover {
+    color: #0c59ff;
+}
+
+footer .clear {
+    clear: both;
+}
