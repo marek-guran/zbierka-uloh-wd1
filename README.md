@@ -1,4 +1,8 @@
+# K dispozícii na
+91.148.38.245 (ak mi ISP nezmení IP)
+
 # Pridať
+- Upraviť dizajn
 - Fonty
 - Príklady
 - Databázu
