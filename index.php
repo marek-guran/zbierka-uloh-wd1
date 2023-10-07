@@ -52,6 +52,13 @@
                     </div>
                 </a>
             </div>
+            <div class="col-md-4 mb-4">
+                <a href="pages/priklady.php" class="card-link">
+                    <div class="card">
+                        <img src="/img/priklady.png" class="card-img-top" alt="JavaScript Image">
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 
