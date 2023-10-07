@@ -18,13 +18,13 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="page-header">
-                    <h1>O Zbierke</h1>
-                    <p>Táto zbierka úloh obsahuje všetko potrebné aby si mohli študenti predmetu Webový Dizajn 1 osvojiť
-                        základy tvorby webových stránok pomocou HTML, CSS a JavaScriptu.
+                    <h1>O Zbierke Úloh</h1>
+                    <p>Táto zbierka úloh obsahuje všetko potrebné, aby si mohli <strong>študenti</strong> predmetu <strong>Webový Dizajn 1</strong> osvojiť
+                        základy tvorby webových stránok pomocou <strong>HTML, CSS a JavaScriptu</strong>.
                         Zbierku úloh spravuje učiteľ. To znamená, že ak študenti majú vyriešiť príklad alebo úlohu, tak
-                        vyučujúci je schopný v reálnom čase skryť a zobraziť jedno možné riešenie na webstránke pomocou
+                        vyučujúci je schopný v <strong>reálnom čase</strong> skryť a zobraziť jedno možné riešenie na webstránke pomocou
                         administrátorskeho účtu,
-                        ktorý upravuje v databázi jednotlivé údaje a je schopný prídávať aj vlastné príklady so
+                        ktorý upravuje v databázi jednotlivé údaje a je schopný prídávať aj <strong>vlastné príklady</strong> so
                         zadaniami a riešeniami.
                     </p>
                 </div>
