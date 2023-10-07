@@ -8,15 +8,29 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
 
 <body>
 
     <?php include '../includes/header.php'; ?>
 
+    <div>
+        <div class="navigation mt-3" role="group" aria-label="Button Group">
+            <a href="?pr=pr1" class="btn btn-primary btn-sm btn-group-toggle">1</a>
+            <a href="?pr=pr2" class="btn btn-primary btn-sm btn-group-toggle">2</a>
+            <a href="?pr=pr3" class="btn btn-primary btn-sm btn-group-toggle">3</a>
+            <a href="?pr=pr4" class="btn btn-primary btn-sm btn-group-toggle">4</a>
+        </div>
+        <?php
+            $pr = isset($_GET['pr']) ? $_GET['pr'] : 'pr1';
+            include "../includes/priklady/css/{$pr}.php";
+        ?>
+    </div>
+
     <?php include '../includes/footer.php'; ?>
 
+    <script src="../js/show-code.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

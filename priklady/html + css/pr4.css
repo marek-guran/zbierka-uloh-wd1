@@ -39,10 +39,9 @@ nav a:hover {
 }
 
 nav a:hover i {
-    opacity: 1; /* Show the icon on hover */
+    opacity: 1;
 }
 
-/* Additional animation for text */
 nav a::before {
     content: "";
     position: absolute;
