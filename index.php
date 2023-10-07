@@ -32,21 +32,21 @@
         </div>
         <div class="row">
             <div class="col-md-4 mb-4">
-                <a href="html_page.php" class="card-link">
+                <a href="pages/html_page.php" class="card-link">
                     <div class="card">
                         <img src="/img/html.jpg" class="card-img-top" alt="HTML Image">
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="css_page.php" class="card-link">
+                <a href="pages/css_page.php" class="card-link">
                     <div class="card">
                         <img src="/img/css.webp" class="card-img-top" alt="CSS Image">
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="javascript_page.php" class="card-link">
+                <a href="pages/js_page.php" class="card-link">
                     <div class="card">
                         <img src="/img/js.png" class="card-img-top" alt="JavaScript Image">
                     </div>

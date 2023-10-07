@@ -1,0 +1,71 @@
+<!--
+Vašou úlohou je vytvoriť novú webovú stránku, ktorá obsahuje formuláre. Postupujte podľa nasledujúcich krokov:
+
+Názov stránky: Zvoľte vhodný názov pre vašu webovú stránku. Napríklad: "Kontaktný formulár".
+
+Hlavička: Vložte nadpis úrovne 1 s názvom vašej stránky do hlavičky.
+
+Formulár 1: Kontaktujte nás:
+Vytvorte formulár, ktorý umožní používateľom kontaktovať vás. Formulár by mal obsahovať tieto polia:
+Meno a priezvisko (textové pole)
+Email (textové pole pre email)
+Správa (textové pole alebo textové pole s veľkým textovým obsahom)
+Pridajte tlačidlo s textom "Odoslať". Po stlačení tlačidla by mali údaje z formulára byť odoslané na server.
+
+Formulár 2: Prihlásenie:
+Vytvorte druhý formulár, ktorý slúži na prihlásenie používateľov. Formulár by mal obsahovať tieto polia:
+Používateľské meno (textové pole)
+Heslo (textové pole so skrytými znakmi)
+Pridajte tlačidlo s textom "Prihlásiť sa".
+Päta stránky: Pridajte pätu stránky, ktorá obsahuje váš kontakt (napríklad emailovú adresu alebo telefónne číslo) a autorské práva.
+-->
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktný formulár</title>
+</head>
+
+<body>
+    <header>
+        <h1>Kontaktný formulár</h1>
+    </header>
+
+    <section id="kontakt-formular">
+        <h2>Kontaktujte nás</h2>
+        <form id="kontakt-form" onsubmit="return validateKontaktForm()">
+            <label for="meno">Meno a priezvisko:</label>
+            <input type="text" id="meno" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="sprava">Správa:</label>
+            <textarea id="sprava" rows="4" required></textarea>
+
+            <button type="submit">Odoslať</button>
+        </form>
+    </section>
+
+    <section id="prihlasenie">
+        <h2>Prihlásenie</h2>
+        <form id="prihlasovaci-formular" onsubmit="return validatePrihlasovaciForm()">
+            <label for="pouzivatel">Používateľské meno:</label>
+            <input type="text" id="pouzivatel" required>
+
+            <label for="heslo">Heslo:</label>
+            <input type="password" id="heslo" required>
+
+            <button type="submit">Prihlásiť sa</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Vaša webová stránka</p>
+        <p>Kontakt: info@vasawebovastranka.sk</p>
+    </footer>
+</body>
+
+</html>

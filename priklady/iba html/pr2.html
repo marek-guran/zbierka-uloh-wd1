@@ -1,0 +1,62 @@
+<!--
+Vašou úlohou je vytvoriť webstránku s multimediálnymi prvkami. Dodržte nasledujúce inštrukcie na zahrnutie týchto prvkov do vášho HTML kódu:
+
+Obrázky:
+Pridajte aspoň dva obrázky na svoju webovú stránku.
+Použite značku <img>, aby ste obrázky vložili do vášho HTML.
+Pre každý obrázok uveďte atribút alt na poskytnutie alternatívneho textu.
+
+Videá:
+Vložte video na svoju webovú stránku. Môžete použiť online video hostingovú službu ako YouTube alebo Vimeo.
+Na vloženie videa na svoju stránku použite značky <iframe> alebo <video>.
+Uistite sa, že poskytnete krátky popis alebo titulok k videu.
+
+Ikona webovej stránky (Favicon):
+Vytvorte alebo nájdite malý obrázok, ktorý bude reprezentovať vašu webovú stránku. Tento obrázok bude použitý ako favicon, ktorý sa zobrazuje v kartách prehliadača.
+Obrázok favicon uložte vo vhodnom formáte (napríklad .ico, .png).
+Favicon pridajte na svoju webovú stránku pomocou značky <link> v časti <head>.
+
+Zvuk:
+Vložte na svoju webovú stránku zvukový element. Môžete použiť HTML5 značku <audio>.
+Pridajte audio súbor (napríklad .mp3 alebo .ogg) do vášho projektu a odkážte sa naň vo vašom HTML kóde.
+Poskytnite ovládanie pre prehrávanie a pozastavenie zvuku.
+-->
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Príklad 2</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Základy HTML</h1>
+    </header>
+
+    <main>
+        <section id="images">
+            <h2>Obrázky</h2>
+            <img src="image1.jpg" alt="Prvý obrázok">
+            <img src="image2.jpg" alt="Druhý obrázok">
+        </section>
+
+        <section id="video">
+            <h2>Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="audio">
+            <h2>Zvuk</h2>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Váš webový prehliadač nepodporuje prehrávanie zvuku.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 webstranka.sk</p>
+    </footer>
+</body>
+</html>

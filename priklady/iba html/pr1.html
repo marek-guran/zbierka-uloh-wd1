@@ -1,0 +1,88 @@
+<!--
+Vašou úlohou je vytvoriť webovú stránku s názvom "Príklad 1" pomocou HTML kódu. Stránka by mala obsahovať nasledujúci obsah a štruktúru:
+
+Názov stránky: "Príklad 1"
+
+Hlavička:
+Nadpis úrovne 1: "Základy HTML"
+
+Navigačný panel:
+Zoznam s odkazmi na sekcie:
+"Sekcia 1: Úvod do HTML"
+"Sekcia 2: HTML Elementy"
+"Sekcia 3: Vytváranie odkazov"
+
+Obsah stránky:
+Sekcia 1: Úvod do HTML
+Nadpis úrovne 2: "Sekcia 1: Úvod do HTML"
+Text: "HTML (Hypertext Markup Language) je štandardným jazykom na vytváranie webových stránok. Je dôležité porozumieť základom HTML pre vytváranie obsahu na webu."
+
+Sekcia 2: HTML Elementy
+Nadpis úrovne 2: "Sekcia 2: HTML Elementy"
+Text: "V HTML používate elementy na štruktúrovanie vášho obsahu. Tu sú niektoré často používané elementy:"
+Zoznam:
+"Nadpisy pre tituly a hlavičky: <h1> - <h6>"
+"Odseky pre text: <p>"
+"Zlomy riadkov pre nové riadky: <br>"
+"Odkazy na iné webové stránky: <a>"
+
+Sekcia 3: Vytváranie odkazov
+Nadpis úrovne 2: "Sekcia 3: Vytváranie odkazov"
+Text: "Odkazy sú dôležité pre navigáciu. Tu je, ako vytvoriť odkaz:"
+Príklad odkazu: <a href="https://www.example.com">Navštíviť example.com</a>
+
+Päta stránky:
+Copyright: "© 2023 webstranka.sk"
+Vaša webová stránka by mala vyzerať a fungovať podľa uvedeného popisu. Použite HTML kód na vytvorenie tejto stránky. Uistite sa, že ste správne implementovali všetky nadpisy, odseky, odkazy a ďalšie časti kódu.
+-->
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Príklad 1</title>
+</head>
+<body>
+    <header>
+        <h1>Základy HTML</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#section1">Sekcia 1: Úvod do HTML</a></li>
+            <li><a href="#section2">Sekcia 2: HTML Elementy</a></li>
+            <li><a href="#section3">Sekcia 3: Vytváranie odkazov</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section1">
+            <h2>Sekcia 1: Úvod do HTML</h2>
+            <p>HTML (Hypertext Markup Language) je štandardným jazykom na vytváranie webových stránok. Je dôležité porozumieť základom HTML pre vytváranie obsahu na webu.</p>
+        </section>
+
+        <section id="section2">
+            <h2>Sekcia 2: HTML Elementy</h2>
+            <p>V HTML používate elementy na štruktúrovanie vášho obsahu. Tu sú niektoré často používané elementy:</p>
+            <ul>
+                <li><strong>&lt;h1&gt; - &lt;h6&gt;</strong>: Nadpisy pre tituly a hlavičky</li>
+                <li><strong>&lt;p&gt;</strong>: Odseky pre text</li>
+                <li><strong>&lt;br&gt;</strong>: Zlomy riadkov pre nové riadky</li>
+                <li><strong>&lt;a&gt;</strong>: Odkazy na iné webové stránky</li>
+            </ul>
+        </section>
+
+        <section id="section3">
+            <h2>Sekcia 3: Vytváranie odkazov</h2>
+            <p>Odkazy sú dôležité pre navigáciu. Tu je príklad, ako vytvoriť odkaz:</p>
+            <p><code>&lt;a href="https://www.example.com"&gt;Navštíviť example.com&lt;/a&gt;</code></p>
+            <a href="https://www.example.com">Navštíviť example.com</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 webstranka.sk</p>
+    </footer>
+</body>
+</html>
