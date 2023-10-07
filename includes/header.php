@@ -14,5 +14,4 @@
             <a class="nav-link btn btn-outline-primary" href="/pages/js_page.php">JavaScript</a>
         </li>
     </ul>
-    <button class="btn btn-outline-primary" id="loginButton" style="margin-right: 50px;">Login</button>
 </nav>
