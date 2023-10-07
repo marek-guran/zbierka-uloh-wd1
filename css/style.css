@@ -1,10 +1,10 @@
 img {
     width: 100vw;
-    border-radius: 20px!important;
+    border-radius: 20px !important;
 }
 
 .card {
-    border-radius: 20px!important;
+    border-radius: 20px !important;
     transition: transform 0.4s, box-shadow 0.4s;
 }
 
@@ -23,5 +23,5 @@ img {
 }
 
 .btn {
-    border-radius: 50px!important;
+    border-radius: 50px !important;
 }
