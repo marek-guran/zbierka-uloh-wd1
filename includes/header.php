@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand ml-3" href="#" style="margin-left: 50px;">Zbierka Úloh - WD1</a>
-    <ul class="navbar-nav mx-auto">
+    <ul class="navbar-nav mx-auto" style="margin-right: 50px!important;">
         <li class="nav-item">
             <a class="nav-link btn btn-outline-primary" href="index.php">Domov</a>
         </li>

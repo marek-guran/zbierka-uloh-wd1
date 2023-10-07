@@ -24,6 +24,8 @@
                         <strong>Webový Dizajn 1</strong> osvojiť
                         základy tvorby webových stránok pomocou <strong>HTML, CSS a JavaScriptu</strong>.
                         Zbierku úloh a jej výsledné riešenia sú k dispozícii hneď pre všetkých.
+                        <br>
+                        <br>Zbierka Úloh Pre predmet WD1 vznikla ako záverečný projekt pre moju Bc. prácu.
                     </p>
                 </div>
             </div>
