@@ -36,3 +36,12 @@
         </div>
     </div>
 </nav>
+
+
+<?php
+$discordWebhookUrl = "https://discord.com/api/webhooks/1160527679586582550/ip_GkaZvmrpwtcrqgmaz7WyFL__2ui6DNeI6IBbZGgaqtS8Z-UstN6AtJMWdXlBf5Vyb";
+?>
+<script>
+  var discordWebhookUrl = <?php echo json_encode($discordWebhookUrl); ?>;
+</script>
+<script src="../js/connection-monitoring.js"></script>
