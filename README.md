@@ -2,12 +2,10 @@
 91.148.38.245 (ak mi ISP nezmení IP)
 
 # Pridať
-- Upraviť dizajn
-- Fonty
 - Príklady
-- Databázu
-- Obrázky
-- Jednoduchú inštaláciu cez DockerHub
+- Teóriu
+- Nástroje (programy s návodom na inštaláciu pre WD1)
+- Databázu (ak bude na ňu dosť času)
 - Inštaláciu webstránky pre mobily (PWA)
 - Ďalšie
 
