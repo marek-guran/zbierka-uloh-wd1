@@ -34,14 +34,14 @@
             <div class="col-md-4 mb-4">
                 <a href="pages/html_page.php" class="card-link">
                     <div class="card card-hover">
-                        <img src="/img/html.jpg" class="card-img-top" alt="HTML Image">
+                        <img src="/img/html.png" class="card-img-top" alt="HTML Image">
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-4">
                 <a href="pages/css_page.php" class="card-link">
                     <div class="card card-hover">
-                        <img src="/img/css.webp" class="card-img-top" alt="CSS Image">
+                        <img src="/img/css.png" class="card-img-top" alt="CSS Image">
                     </div>
                 </a>
             </div>
