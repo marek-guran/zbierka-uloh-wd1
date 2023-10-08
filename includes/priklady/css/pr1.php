@@ -61,7 +61,7 @@
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 <pre id="css-code" style="display: none;">
-    body, h1, h2, p, ul, li {
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
