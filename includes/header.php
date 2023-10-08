@@ -26,6 +26,12 @@
                 <li class="nav-item">
                     <a class="nav-link btn btn-outline-primary" href="../pages/priklady.php">Príklady</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" href="../pages/teoria.php">Teória</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-primary" href="../pages/nastroje.php">Nástroje</a>
+                </li>
             </ul>
         </div>
     </div>
