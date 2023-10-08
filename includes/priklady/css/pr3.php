@@ -13,57 +13,29 @@
         <button id="show-html-code" class="code-pill-button btn btn-primary">HTML</button>
         <button id="show-css-code" class="code-pill-button btn btn-primary">CSS</button>
     </div>
-    <pre id="code" style="display: none;" class="code">
     <pre id="html-code">
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;sk&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Animovaná Lopta&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;pr3.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class=&quot;ball&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
-<pre id="css-code" style="display: none;">
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #f0f0f0;
-}
+<?php
+$documentRoot = $_SERVER['DOCUMENT_ROOT'];
+$filePath = $documentRoot . '/priklady/html + css/pr3.html';
+$htmlCode = file_get_contents($filePath);
 
-.ball {
-    width: 50px;
-    height: 50px;
-    background-color: #000000;
-    border-radius: 50%;
-    position: absolute;
-    animation: moveBall 4s linear infinite;
+if ($htmlCode !== false) {
+    echo '<pre id="code" style="display: none;" class="code">' . htmlspecialchars($htmlCode) . '</pre>';
+} else {
+    echo 'File not found or unable to read.';
 }
+?></pre>
+    <pre id="css-code" style="display: none;">
+<?php
+$documentRoot = $_SERVER['DOCUMENT_ROOT'];
+$cssFilePath = $documentRoot . '/priklady/html + css/pr3.css';
+$cssCode = file_get_contents($cssFilePath);
 
-@keyframes moveBall {
-    0% {
-        top: 0;
-        left: 0;
-    }
-    25% {
-        top: 0;
-        left: calc(100% - 50px);
-    }
-    50% {
-        top: calc(100% - 50px);
-        left: calc(100% - 50px);
-    }
-    75% {
-        top: calc(100% - 50px);
-        left: 0;
-    }
-    100% {
-        top: 0;
-        left: 0;
-    }
-}</pre>
+if ($cssCode !== false) {
+    echo '<pre id="code" class="code">' . htmlspecialchars($cssCode) . '</pre>';
+} else {
+    echo 'CSS file not found or unable to read.';
+}
+?>
+</pre>
 </div>

@@ -45,55 +45,15 @@
     <a href="../priklady/iba html/pr1.html" target="_blank">
         <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
     </a>
-    <pre id="code" style="display: none;" class="code">
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;sk&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Príklad 1&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Základy HTML&lt;/h1&gt;
-    &lt;/header&gt;
-    
-    &lt;nav&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;a href=&quot;#section1&quot;&gt;Sekcia 1: Úvod do HTML&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#section2&quot;&gt;Sekcia 2: HTML Elementy&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href=&quot;#section3&quot;&gt;Sekcia 3: Vytváranie odkazov&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/nav&gt;
+    <?php
+    $documentRoot = $_SERVER['DOCUMENT_ROOT'];
+    $filePath = $documentRoot . '/priklady/iba html/pr1.html';
+    $htmlCode = file_get_contents($filePath);
 
-    &lt;main&gt;
-        &lt;section id=&quot;section1&quot;&gt;
-            &lt;h2&gt;Sekcia 1: Úvod do HTML&lt;/h2&gt;
-            &lt;p&gt;HTML (Hypertext Markup Language) je štandardným jazykom na vytváranie webových stránok. Je dôležité porozumieť základom HTML pre vytváranie obsahu na webu.&lt;/p&gt;
-        &lt;/section&gt;
-
-        &lt;section id=&quot;section2&quot;&gt;
-            &lt;h2&gt;Sekcia 2: HTML Elementy&lt;/h2&gt;
-            &lt;p&gt;V HTML používate elementy na štruktúrovanie vášho obsahu. Tu sú niektoré často používané elementy:&lt;/p&gt;
-            &lt;ul&gt;
-                &lt;li&gt;&lt;strong&gt;&amp;amp;lt;h1&amp;amp;gt; - &amp;amp;lt;h6&amp;amp;gt;&lt;/strong&gt;: Nadpisy pre tituly a hlavičky&lt;/li&gt;
-                &lt;li&gt;&lt;strong&gt;&amp;amp;lt;p&amp;amp;gt;&lt;/strong&gt;: Odseky pre text&lt;/li&gt;
-                &lt;li&gt;&lt;strong&gt;&amp;amp;lt;br&amp;amp;gt;&lt;/strong&gt;: Zlomy riadkov pre nové riadky&lt;/li&gt;
-                &lt;li&gt;&lt;strong&gt;&amp;amp;lt;a&amp;amp;gt;&lt;/strong&gt;: Odkazy na iné webové stránky&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/section&gt;
-
-        &lt;section id=&quot;section3&quot;&gt;
-            &lt;h2&gt;Sekcia 3: Vytváranie odkazov&lt;/h2&gt;
-            &lt;p&gt;Odkazy sú dôležité pre navigáciu. Tu je príklad, ako vytvoriť odkaz:&lt;/p&gt;
-            &lt;p&gt;&lt;code&gt;&amp;amp;lt;a href=&quot;https://www.example.com&quot;&amp;amp;gt;Navštíviť example.com&amp;amp;lt;/a&amp;amp;gt;&lt;/code&gt;&lt;/p&gt;
-            &lt;a href=&quot;https://www.example.com&quot;&gt;Navštíviť example.com&lt;/a&gt;
-        &lt;/section&gt;
-    &lt;/main&gt;
-
-    &lt;footer&gt;
-        &lt;p&gt;&amp;copy; 2023 webstranka.sk&lt;/p&gt;
-    &lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    if ($htmlCode !== false) {
+        echo '<pre id="code" style="display: none;" class="code">' . htmlspecialchars($htmlCode) . '</pre>';
+    } else {
+        echo 'File not found or unable to read.';
+    }
+    ?>
 </div>

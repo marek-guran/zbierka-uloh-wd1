@@ -26,55 +26,15 @@ Pridajte tlačidlo s textom "Prihlásiť sa".<br>
     <a href="../priklady/iba html/pr3.html" target="_blank">
         <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
     </a>
-    <pre id="code" style="display: none;" class="code">
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;sk&quot;&gt;
+    <?php
+    $documentRoot = $_SERVER['DOCUMENT_ROOT'];
+    $filePath = $documentRoot . '/priklady/iba html/pr3.html';
+    $htmlCode = file_get_contents($filePath);
 
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Kontaktný formulár&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Kontaktný formulár&lt;/h1&gt;
-    &lt;/header&gt;
-
-    &lt;section id=&quot;kontakt-formular&quot;&gt;
-        &lt;h2&gt;Kontaktujte nás&lt;/h2&gt;
-        &lt;form id=&quot;kontakt-form&quot; onsubmit=&quot;return validateKontaktForm()&quot;&gt;
-            &lt;label for=&quot;meno&quot;&gt;Meno a priezvisko:&lt;/label&gt;
-            &lt;input type=&quot;text&quot; id=&quot;meno&quot; required&gt;
-
-            &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
-            &lt;input type=&quot;email&quot; id=&quot;email&quot; required&gt;
-
-            &lt;label for=&quot;sprava&quot;&gt;Správa:&lt;/label&gt;
-            &lt;textarea id=&quot;sprava&quot; rows=&quot;4&quot; required&gt;&lt;/textarea&gt;
-
-            &lt;button type=&quot;submit&quot;&gt;Odoslať&lt;/button&gt;
-        &lt;/form&gt;
-    &lt;/section&gt;
-
-    &lt;section id=&quot;prihlasenie&quot;&gt;
-        &lt;h2&gt;Prihlásenie&lt;/h2&gt;
-        &lt;form id=&quot;prihlasovaci-formular&quot; onsubmit=&quot;return validatePrihlasovaciForm()&quot;&gt;
-            &lt;label for=&quot;pouzivatel&quot;&gt;Používateľské meno:&lt;/label&gt;
-            &lt;input type=&quot;text&quot; id=&quot;pouzivatel&quot; required&gt;
-
-            &lt;label for=&quot;heslo&quot;&gt;Heslo:&lt;/label&gt;
-            &lt;input type=&quot;password&quot; id=&quot;heslo&quot; required&gt;
-
-            &lt;button type=&quot;submit&quot;&gt;Prihlásiť sa&lt;/button&gt;
-        &lt;/form&gt;
-    &lt;/section&gt;
-
-    &lt;footer&gt;
-        &lt;p&gt;&copy; 2023 Vaša webová stránka&lt;/p&gt;
-        &lt;p&gt;Kontakt: info@vasawebovastranka.sk&lt;/p&gt;
-    &lt;/footer&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;</pre>
+    if ($htmlCode !== false) {
+        echo '<pre id="code" style="display: none;" class="code">' . htmlspecialchars($htmlCode) . '</pre>';
+    } else {
+        echo 'File not found or unable to read.';
+    }
+    ?>
 </div>
