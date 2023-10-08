@@ -107,3 +107,19 @@ div.navigation {
     font-size: 20px;
     font-weight: bold;
 }
+
+.code-pill-button-container {
+    text-align: center;
+}
+
+.code-pill-button {
+    display: inline-block;
+    margin: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* { outline: 1px solid red;}

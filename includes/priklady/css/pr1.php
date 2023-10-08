@@ -1,19 +1,23 @@
 <div class="priklad container card-text">
     <h2>Príklad 1</h2>
     <p>Vytvorte jednoduchú webovú stránku so samostatným css súborom s nasledujúcimi časťami:<br><br>
-    <strong>Hlavička (Header)</strong> s názvom webovej stránky a navigačným menu.<br>
-    <strong>Hlavný obsah (Main)</strong> obsahujúci článok, 3 obrázky a vložené video z YouTube.<br>
-    <strong>Päta (Footer)</strong> s copyright informáciami.
+        <strong>Hlavička (Header)</strong> s názvom webovej stránky a navigačným menu.<br>
+        <strong>Hlavný obsah (Main)</strong> obsahujúci článok, 3 obrázky a vložené video z YouTube.<br>
+        <strong>Päta (Footer)</strong> s copyright informáciami.
     <p>
 </div>
 
-<div class="code-wrapper container">
+<div class="code-wrapper container code-pill-container">
     <button id="show-code-btn" class="btn btn-primary">Ukázať Kód</button>
     <a href="../priklady/html + css/pr1.html" target="_blank">
         <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
     </a>
+    <div class="code-pill-button-container">
+        <button id="show-html-code" class="code-pill-button btn btn-primary">HTML</button>
+        <button id="show-css-code" class="code-pill-button btn btn-primary">CSS</button>
+    </div>
     <pre id="code" style="display: none;" class="code">
-<h2>HTML</h2>
+            <pre id="html-code">
 &lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;sk&quot;&gt;
 &lt;head&gt;
@@ -55,10 +59,9 @@
         &copy; 2023 Moja Firma
     &lt;/footer&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-
-<h2>CSS</h2>
-body, h1, h2, p, ul, li {
+&lt;/html&gt;</pre>
+<pre id="css-code" style="display: none;">
+    body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
