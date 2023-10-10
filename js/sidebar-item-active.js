@@ -4,6 +4,9 @@ menuItems[0].classList.add('active');
 
 menuItems.forEach(item => {
     if (item.href === window.location.href) {
+        menuItems.forEach(item => {
+            item.classList.remove('active');
+        });
         item.classList.add('active');
     }
     item.addEventListener('click', () => {

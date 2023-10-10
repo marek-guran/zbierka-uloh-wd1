@@ -23,12 +23,12 @@ Pridajte tlačidlo s textom "Prihlásiť sa".<br>
 
 <div class="code-wrapper container">
     <button id="show-code-btn" class="btn btn-primary">Ukázať Kód</button>
-    <a href="../priklady/iba html/pr3.html" target="_blank">
+    <a href="../priklady/html/pr3.html" target="_blank">
         <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
     </a>
     <?php
     $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-    $filePath = $documentRoot . '/priklady/iba html/pr3.html';
+    $filePath = $documentRoot . '/priklady/html/pr3.html';
     $htmlCode = file_get_contents($filePath);
 
     if ($htmlCode !== false) {

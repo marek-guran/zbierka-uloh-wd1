@@ -9,7 +9,7 @@
 
 <div class="code-wrapper container code-pill-container">
     <button id="show-code-btn" class="btn btn-primary">Ukázať Kód</button>
-    <a href="../priklady/html + css/pr1.html" target="_blank">
+    <a href="../priklady/css/pr1.html" target="_blank">
         <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
     </a>
     <div class="code-pill-button-container">
@@ -19,7 +19,7 @@
     <pre id="html-code">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$filePath = $documentRoot . '/priklady/html + css/pr1.html';
+$filePath = $documentRoot . '/priklady/css/pr1.html';
 $htmlCode = file_get_contents($filePath);
 
 if ($htmlCode !== false) {
@@ -31,7 +31,7 @@ if ($htmlCode !== false) {
     <pre id="css-code" style="display: none;">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$cssFilePath = $documentRoot . '/priklady/html + css/pr1.css';
+$cssFilePath = $documentRoot . '/priklady/css/pr1.css';
 $cssCode = file_get_contents($cssFilePath);
 
 if ($cssCode !== false) {
