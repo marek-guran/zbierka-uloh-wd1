@@ -14,6 +14,7 @@
 <body>
 
     <?php include '../includes/header.php'; ?>
+    <?php include '../includes/html-menu.php'; ?>
 
     <div>
         <div class="navigation mt-3" role="group" aria-label="Button Group">
@@ -22,8 +23,8 @@
             <a href="?pr=pr3" class="btn btn-primary btn-sm btn-group-toggle">3</a>
         </div>
         <?php
-            $pr = isset($_GET['pr']) ? $_GET['pr'] : 'pr1';
-            include "../includes/priklady/html/{$pr}.php";
+        $pr = isset($_GET['pr']) ? $_GET['pr'] : 'pr1';
+        include "../includes/priklady/html/{$pr}.php";
         ?>
     </div>
 
@@ -35,6 +36,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#sidebarToggle").click(function () {
+                $("#mySidebar").toggleClass("open");
+            });
+        });
+    </script>
 </body>
 
 </html>
