@@ -34,7 +34,7 @@
     }
 
     .sidebar a {
-        padding: 10px 15px;
+        padding: 5px 15px;
         margin-bottom: 5px;
         text-decoration: none;
         font-size: 18px;
