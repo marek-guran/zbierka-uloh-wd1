@@ -19,13 +19,10 @@
         <div class="row card-text">
             <div class="col-md-12">
                 <div class="page-header">
-                    <h1>O Zbierke Úloh</h1>
+                    <h1>Zbierka Úloh pre Webový Dizajn 1 (Učiteľská Verzia)</h1>
                     <p>Táto zbierka úloh obsahuje všetko potrebné, aby si mohli <strong>študenti</strong> predmetu
                         <strong>Webový Dizajn 1</strong> osvojiť
-                        základy tvorby webových stránok pomocou <strong>HTML, CSS a JavaScriptu</strong>.
-                        Zbierku úloh a jej výsledné riešenia sú k dispozícii hneď pre všetkých.
-                        <br>
-                        <br>Zbierka Úloh Pre predmet WD1 vznikla ako záverečný projekt pre moju Bc. prácu.
+                        základy tvorby webových stránok pomocou <strong>HTML5, CSS3 a JavaScriptu</strong>.
                     </p>
                 </div>
             </div>

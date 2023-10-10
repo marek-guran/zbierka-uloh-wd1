@@ -179,6 +179,7 @@ Side Bar
     transition: left 0.3s;
     border-top-right-radius: 20px !important;
     border-bottom-right-radius: 20px !important;
+    z-index: 10;
 }
 
 .sidebar-container {
@@ -230,7 +231,7 @@ Side Bar
     top: 50%;
     right: -30px;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 100;
     border-top-right-radius: 20px !important;
     border-bottom-right-radius: 20px !important;
     border-top-left-radius: 0 !important;
@@ -253,6 +254,40 @@ Side Bar
 .sidebar h2 {
     color: white;
     text-align: center;
+}
+
+.img-zadania {
+    width: 350px;
+}
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    z-index: 0;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.img-container:hover .img-overlay {
+    opacity: 1;
+}
+
+.img-overlay i {
+    color: #fff;
+    font-size: 3rem;
 }
 
 /* { outline: 1px solid red;}

@@ -17,13 +17,8 @@
     <?php include '../includes/html-menu.php'; ?>
 
     <div>
-        <div class="navigation mt-3" role="group" aria-label="Button Group">
-            <a href="?pr=pr1" class="btn btn-primary btn-sm btn-group-toggle">1</a>
-            <a href="?pr=pr2" class="btn btn-primary btn-sm btn-group-toggle">2</a>
-            <a href="?pr=pr3" class="btn btn-primary btn-sm btn-group-toggle">3</a>
-        </div>
         <?php
-        $pr = isset($_GET['pr']) ? $_GET['pr'] : 'pr1';
+        $pr = isset($_GET['pr']) ? $_GET['pr'] : 'text-pr1';
         include "../includes/priklady/html/{$pr}.php";
         ?>
     </div>

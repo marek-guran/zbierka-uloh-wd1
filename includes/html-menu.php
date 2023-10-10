@@ -3,28 +3,22 @@
     <div class="sidebar-container">
         <ul class="nav flex-column side-menu">
             <li class="nav-item">
-                <a class="nav-link" href="?pr=pr1">Texty</a>
+                <a class="nav-link" href="?pr=text-pr1">Texty</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Rozdeľovanie Stránky</a>
+                <a class="nav-link" href="?pr=media-pr1">Médiá</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?pr=pr2">Médiá</a>
+                <a class="nav-link" href="?pr=form-pr1">Formuláre</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?pr=pr3">Formuláre</a>
+                <a class="nav-link" href="?pr=tabulky-pr1">Tabuľky</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tabuľky</a>
+                <a class="nav-link" href="?pr=meta-pr1">Meta údaje</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Meta údaje</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Navigácia po stránke</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Tlačidlá</a>
+                <a class="nav-link" href="?pr=navigacia-pr1">Navigácia po stránke</a>
             </li>
         </ul>
     </div>
