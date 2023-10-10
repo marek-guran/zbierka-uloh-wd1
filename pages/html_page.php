@@ -18,9 +18,9 @@
 
     <div>
         <div class="navigation mt-3" role="group" aria-label="Button Group">
-            <a href="?pr=pr1" class="btn btn-primary btn-sm btn-group-toggle">1</a>
-            <a href="?pr=pr2" class="btn btn-primary btn-sm btn-group-toggle">2</a>
-            <a href="?pr=pr3" class="btn btn-primary btn-sm btn-group-toggle">3</a>
+            <a href="?pr=pr1" class="btn btn-primary btn-sm btn-group-toggle">Headers</a>
+            <a href="?pr=pr2" class="btn btn-primary btn-sm btn-group-toggle">Paragrafy</a>
+            <a href="?pr=pr3" class="btn btn-primary btn-sm btn-group-toggle">Články</a>
         </div>
         <?php
         $pr = isset($_GET['pr']) ? $_GET['pr'] : 'pr1';

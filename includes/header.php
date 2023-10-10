@@ -15,10 +15,10 @@
                     <a class="nav-link btn btn-outline-primary" href="../index.php">Domov</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-primary" href="../pages/html_page.php">HTML</a>
+                    <a class="nav-link btn btn-outline-primary" href="../pages/html_page.php">HTML5</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-primary" href="../pages/css_page.php">CSS</a>
+                    <a class="nav-link btn btn-outline-primary" href="../pages/css_page.php">CSS3</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-outline-primary" href="../pages/js_page.php">JavaScript</a>
