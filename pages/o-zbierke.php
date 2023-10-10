@@ -19,7 +19,7 @@
             <div class="col-md-12">
                 <div class="page-header">
                     <h1>O Zbierke Úloh</h1>
-                    <p>Vznikla ako učebná pomôcka pre študentov predmetu Webvý Dizajn 1 ako výsledok mojej Bc. práce na
+                    <p>Vznikla ako učebná pomôcka pre študentov predmetu Webový Dizajn 1 ako výsledok mojej Bc. práce na
                         katedre Informatiky.
                         Zbierka úloh môže byť taktiež využitá pre predmet Webový Dizajn 2, kde sa vyučuje PHP a práca s
                         Bootstrapom.<br><br>

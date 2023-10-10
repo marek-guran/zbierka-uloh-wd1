@@ -77,7 +77,7 @@ footer .socials .social .linkedin:hover {
 }
 
 footer .socials .social .mastodon:hover {
-    color: #0c59ff;
+    color: #6364ff;
 }
 
 footer .clear {
@@ -140,25 +140,29 @@ div.navigation {
 
 .btn-outline-primary {
     --bs-btn-color: #55a4cc !important;
-    --bs-btn-border-color: #1b1b1b !important;
+    --bs-btn-border-color: none !important;
     --bs-btn-hover-bg: #55a4cc !important;
-    --bs-btn-hover-border-color: #55a4cc !important;
+    --bs-btn-hover-border-color: none !important;
     --bs-btn-focus-shadow-rgb: 13, 110, 253 !important;
     --bs-btn-active-bg: #55a4cc !important;
-    --bs-btn-active-border-color: #55a4cc !important;
+    --bs-btn-active-border-color: none !important;
     --bs-btn-disabled-color: #55a4cc !important;
-    --bs-btn-disabled-border-color: #55a4cc !important;
+    --bs-btn-disabled-border-color: none !important;
+}
+
+.btn-outline-primary:hover {
+    color: white !important;
 }
 
 .btn-primary {
     --bs-btn-bg: #5199bd !important;
-    --bs-btn-border-color: #55a4cc !important;
-    --bs-btn-hover-bg: #55a4cc !important;
-    --bs-btn-hover-border-color: #55a4cc !important;
+    --bs-btn-border-color: none !important;
+    --bs-btn-hover-bg: #72b0cf !important;
+    --bs-btn-hover-border-color: none !important;
     --bs-btn-active-bg: #55a4cc !important;
-    --bs-btn-active-border-color: #55a4cc !important;
+    --bs-btn-active-border-color: none !important;
     --bs-btn-disabled-bg: #55a4cc !important;
-    --bs-btn-disabled-border-color: #55a4cc !important;
+    --bs-btn-disabled-border-color: none !important;
 }
 
 /*
