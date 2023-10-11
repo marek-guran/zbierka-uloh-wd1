@@ -13,16 +13,11 @@
 <body>
 
     <?php include '../includes/header.php'; ?>
+    <?php include '../includes/css-menu.php'; ?>
 
     <div>
-        <div class="navigation mt-3" role="group" aria-label="Button Group">
-            <a href="?pr=pr1" class="btn btn-primary btn-sm btn-group-toggle">1</a>
-            <a href="?pr=pr2" class="btn btn-primary btn-sm btn-group-toggle">2</a>
-            <a href="?pr=pr3" class="btn btn-primary btn-sm btn-group-toggle">3</a>
-            <a href="?pr=pr4" class="btn btn-primary btn-sm btn-group-toggle">4</a>
-        </div>
         <?php
-            $pr = isset($_GET['pr']) ? $_GET['pr'] : 'pr1';
+            $pr = isset($_GET['pr']) ? $_GET['pr'] : 'css-pr1';
             include "../includes/priklady/css/{$pr}.php";
         ?>
     </div>
@@ -33,6 +28,10 @@
     <script src="../js/jquery-3.5.1.js"></script>
     <script src="../js/popperjs_core-2.5.3.js"></script>
     <script src="../js/bootstrap-5.3.2.js"></script>
+    <script src="../js/code-active.js"></script>
+    <script src="../js/sidebar-item-active.js"></script>
+    <!-- Sidebar tlačidlo musí byť vždy ako posledné!!! -->
+    <script src="../js/sidebar-toggle.js"></script>
 </body>
 
 </html>
