@@ -32,6 +32,34 @@
         </div>
     </div>
 
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h2>Použité Knižnice</h2>
+                    <p>Bootstrap 5.3.2<br>
+                        jQuery 3.5.1<br>
+                        Popper 2.5.3
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Zbierka beží na PHP verzii</p>
+                <?php
+                $php_version = phpversion();
+                ?>
+                <a href="../phpinfo.php" target="_blank" class="btn btn-primary">
+                    <?php echo $php_version; ?>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <?php include '../includes/footer.php'; ?>
 
     <script src="../js/jquery-3.5.1.js"></script>

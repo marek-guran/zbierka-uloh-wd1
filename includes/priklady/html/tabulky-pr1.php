@@ -1,14 +1,21 @@
-<div class="priklad container card-text">
-    <h2>Tabuľky</h2>
-    <p>Vytvorte tabuľku podľa obrázka nižšie.
-    <p>
-    <div class="img-container">
-        <a href="../img/priklady/html/tabulky-pr1.png" target="_blank">
-            <img src="../img/priklady/html/tabulky-pr1.png" alt="Zadanie príkladu" class="img-zadania">
-            <div class="img-overlay">
-                <i class="fas fa-image"></i>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="priklad card-text">
+                <h2>Tabuľky</h2>
+                <p>Vytvorte tabuľku podľa obrázka nižšie.
             </div>
-        </a>
+        </div>
+        <div class="col-md-6">
+            <div class="img-container">
+                <a href="../img/priklady/html/tabulky-pr1.png" target="_blank">
+                    <img src="../img/priklady/html/tabulky-pr1.png" alt="Zadanie príkladu" class="img-zadania">
+                    <div class="img-overlay">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 

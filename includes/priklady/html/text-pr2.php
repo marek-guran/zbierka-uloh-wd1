@@ -2,17 +2,24 @@
     <a href="?pr=text-pr1" class="btn btn-primary btn-sm btn-group-toggle">1</a>
     <a href="?pr=text-pr2" class="btn btn-primary btn-sm btn-group-toggle">2</a>
 </div>
-<div class="priklad container card-text">
-    <h2>Príklad 2</h2>
-    <p>Vytvorte podobnú webstránku podľa obrázkovej predlohy.
-    <p>
-    <div class="img-container">
-        <a href="../img/priklady/html/text-pr2.png" target="_blank">
-            <img src="../img/priklady/html/text-pr2.png" alt="Zadanie príkladu" class="img-zadania">
-            <div class="img-overlay">
-                <i class="fas fa-image"></i>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="priklad card-text">
+                <h2>Príklad 2</h2>
+                <p>Vytvorte podobnú webstránku podľa obrázkovej predlohy.</p>
             </div>
-        </a>
+        </div>
+        <div class="col-md-6">
+            <div class="img-container">
+                <a href="../img/priklady/html/text-pr2.png" target="_blank">
+                    <img src="../img/priklady/html/text-pr2.png" alt="Zadanie príkladu" class="img-zadania">
+                    <div class="img-overlay">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 
