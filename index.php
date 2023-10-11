@@ -15,9 +15,9 @@
     <?php include 'includes/header.php'; ?>
 
     <div class="container mt-4">
-        <div class="row card-text">
+        <div class="row">
             <div class="col-md-12">
-                <div class="page-header">
+                <div class="page-header card-text">
                     <h1>Zbierka Úloh pre Webový Dizajn 1 (Učiteľská Verzia)</h1>
                     <p>Táto zbierka úloh obsahuje všetko potrebné, aby si mohli <strong>študenti</strong> predmetu
                         <strong>Webový Dizajn 1</strong> osvojiť

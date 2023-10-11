@@ -45,21 +45,7 @@
             </div>
         </div>
     </div>
-
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-12">
-                <p>Zbierka beží na PHP verzii</p>
-                <?php
-                $php_version = phpversion();
-                ?>
-                <a href="../phpinfo.php" target="_blank" class="btn btn-primary">
-                    <?php echo $php_version; ?>
-                </a>
-            </div>
-        </div>
-    </div>
-
+    
     <?php include '../includes/footer.php'; ?>
 
     <script src="../js/jquery-3.5.1.js"></script>
