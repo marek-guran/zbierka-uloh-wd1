@@ -1,6 +1,5 @@
 const HtmlCodeButton = document.getElementById('show-html-code');
 const CssCodeButton = document.getElementById('show-css-code');
-const JsCodeButton = document.getElementById('show-js-code');
 
 HtmlCodeButton.classList.add('btn-active');
 

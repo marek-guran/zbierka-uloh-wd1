@@ -28,7 +28,7 @@
     <script src="../js/jquery-3.5.1.js"></script>
     <script src="../js/popperjs_core-2.5.3.js"></script>
     <script src="../js/bootstrap-5.3.2.js"></script>
-    <script src="../js/code-active.js"></script>
+    <script src="../js/code-active-css.js"></script>
     <script src="../js/sidebar-item-active.js"></script>
     <!-- Sidebar tlačidlo musí byť vždy ako posledné!!! -->
     <script src="../js/sidebar-toggle.js"></script>

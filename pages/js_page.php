@@ -13,12 +13,25 @@
 <body>
 
     <?php include '../includes/header.php'; ?>
+    <?php include '../includes/js-menu.php'; ?>
+
+    <div>
+        <?php
+            $pr = isset($_GET['pr']) ? $_GET['pr'] : 'js-pr1';
+            include "../includes/priklady/js/{$pr}.php";
+        ?>
+    </div>
 
     <?php include '../includes/footer.php'; ?>
 
+    <script src="../js/show-code-js.js"></script>
     <script src="../js/jquery-3.5.1.js"></script>
     <script src="../js/popperjs_core-2.5.3.js"></script>
     <script src="../js/bootstrap-5.3.2.js"></script>
+    <script src="../js/code-active-js.js"></script>
+    <script src="../js/sidebar-item-active.js"></script>
+    <!-- Sidebar tlačidlo musí byť vždy ako posledné!!! -->
+    <script src="../js/sidebar-toggle.js"></script>
 </body>
 
 </html>
