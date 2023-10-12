@@ -36,11 +36,26 @@ showCodeBtn.addEventListener('click', () => {
         showHtmlCodeButton.style.display = 'inline-block';
         showCssCodeButton.style.display = 'inline-block';
         showJsCodeButton.style.display = 'inline-block';
+        if (showHtmlCodeButton.classList.contains('btn-active')) {
+            htmlCode.style.display = 'block';
+            cssCode.style.display = 'none';
+            jsCode.style.display = 'none';
+        } else if (showCssCodeButton.classList.contains('btn-active')) {
+            cssCode.style.display = 'block';
+            htmlCode.style.display = 'none';
+            jsCode.style.display = 'none';
+        } else if (showJsCodeButton.classList.contains('btn-active')) {
+            jsCode.style.display = 'block';
+            htmlCode.style.display = 'none';
+        }
     } else {
         code.style.display = 'none';
         showCodeBtn.textContent = 'Ukázať Kód';
         showHtmlCodeButton.style.display = 'none';
         showCssCodeButton.style.display = 'none';
         showJsCodeButton.style.display = 'none';
+        htmlCode.style.display = 'none';
+        cssCode.style.display = 'none';
+        jsCode.style.display = 'none';
     }
 });
