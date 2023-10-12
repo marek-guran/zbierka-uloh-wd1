@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap-5.3.2.css">
     <style>
-        body {
-            background-color: #f7f7f7;
-        }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 50px;
             text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .not-found {
@@ -40,7 +40,7 @@
 </head>
 
 <body>
-    <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="container">
         <div class="text-center">
             <p class="not-found"><strong>404</strong></p>
             <h1><strong>Stránka sa nenašla</strong></h1>
