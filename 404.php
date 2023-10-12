@@ -3,38 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Stránka nenájdená (404)</title>
+    <title>404</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap-5.3.2.css">
     <style>
         .container {
-            max-width: 800px;
             margin: 0 auto;
             padding: 50px;
             text-align: center;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
         .not-found {
-            font-size: 68px;
-            margin-bottom: 25px;
+            font-size: 6rem;
+            margin-bottom: 1.5rem;
         }
 
         h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
+            font-size: 4rem;
+            margin-bottom: 1.25rem;
         }
 
         p {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            margin-bottom: 1.25rem;
         }
 
         button {
-            font-size: 24px!important;
+            font-size: 2.5rem !important;
         }
     </style>
 </head>
@@ -51,7 +49,7 @@
             <p>Dnes sa stránka 404 používa na informovanie návštevníkov o tom, že stránka, ktorú hľadajú, neexistuje
                 alebo sa presunula na inú adresu.
             </p>
-                <button class="btn btn-primary" onclick="window.location.href='/';"><strong>DOMOV</strong></button>
+            <button class="btn btn-primary" onclick="window.location.href='/';"><strong>DOMOV</strong></button>
         </div>
     </div>
     <script src="../js/bootstrap-5.3.2.js"></script>

@@ -243,7 +243,7 @@ Side Bar
     display: none;
     position: absolute;
     top: 50%;
-    right: -30px;
+    right: -40px;
     transform: translateY(-50%);
     z-index: 100;
     border-top-right-radius: 20px !important;
@@ -253,6 +253,7 @@ Side Bar
     color: white;
     background-color: #55a4cc;
     border: none;
+    font-size: 24px!important;
 }
 
 @media (max-width: 1764px) {
