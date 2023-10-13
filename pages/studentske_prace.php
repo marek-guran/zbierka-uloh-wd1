@@ -4,10 +4,18 @@
 $isTeacher = false; // Set to false by default
 if (isset($_POST['password'])) {
     $password = $_POST['password'];
-    session_start();
     if ($password === getenv('TEACHER_PASSWORD')) {
+        setcookie('isTeacher', 'true', time() + (86400 * 30), "/"); // Set cookie for 30 days
         $isTeacher = true;
     }
+} elseif (isset($_COOKIE['isTeacher'])) {
+    $isTeacher = true;
+}
+
+// Handle logout
+if (isset($_POST['logout'])) {
+    setcookie('isTeacher', 'false', time() - 360000, "/"); // Set cookie to expire in the past
+    header("Refresh:0"); // Refresh the page
 }
 
 // Handle zip file upload
@@ -117,6 +125,9 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
                             <input type="file" class="form-control" id="zipFile" name="zipFile" required>
                         </div>
                         <button type="submit" class="btn btn-primary" name="upload">Nahrať</button>
+                    </form>
+                    <form method="post">
+                        <button type="submit" class="btn btn-danger" name="logout">Odhlásiť sa</button>
                     </form>
                 </div>
             </div>
