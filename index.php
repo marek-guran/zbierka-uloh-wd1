@@ -49,16 +49,16 @@
                 </a>
             </div>
             <div class="col-md-4 mb-4">
-                <a href="pages/teoria.php" class="card-link">
+                <a href="pages/studentske_prace.php" class="card-link">
                     <div class="card card-hover">
-                        <img src="/img/teoria.png" class="card-img-top" alt="JavaScript Image">
+                        <img src="/img/prace.png" class="card-img-top" alt="Prace Image">
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-4">
                 <a href="pages/nastroje.php" class="card-link">
                     <div class="card card-hover">
-                        <img src="/img/nastroje.png" class="card-img-top" alt="JavaScript Image">
+                        <img src="/img/nastroje.png" class="card-img-top" alt="Nastroje Image">
                     </div>
                 </a>
             </div>

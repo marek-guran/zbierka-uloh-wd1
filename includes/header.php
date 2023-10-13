@@ -24,7 +24,7 @@
                     <a class="nav-link btn btn-outline-primary" href="../pages/js_page.php">JavaScript</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-primary" href="../pages/teoria.php">Teória</a>
+                    <a class="nav-link btn btn-outline-primary" href="../pages/studentske_prace.php">Študentské Práce</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-outline-primary" href="../pages/nastroje.php">Nástroje</a>
