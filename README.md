@@ -15,7 +15,10 @@ docker run --name zbierka-web -d -p 10000:80 -e DISCORD_WEBHOOK_URL="https://you
 ```bash
 docker cp zbierka-web:/etc/apache2/sites-available/000-default.conf /home/pi/
 ```
-ErrorDocument 404 /404.php (Pridať do súboru)
+Pridať do súboru:
+```conf
+ErrorDocument 404 /404.php
+```
 ```bash
 docker cp /home/pi/ zbierka-web:/etc/apache2/sites-available/000-default.conf
 ```
