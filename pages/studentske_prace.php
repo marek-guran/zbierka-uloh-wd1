@@ -110,7 +110,7 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
                 </div>
                 <?php if ($isTeacher) { ?>
                     <div class="d-flex justify-content-between">
-                        <form method="post">
+                        <form method="post" onsubmit="return confirm('Odhlásiť?')">
                             <button type="submit" class="btn btn-primary danger" name="logout">Odhlásiť sa</button>
                         </form>
                     </div>
@@ -174,10 +174,9 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
                                 <form method="post" class="mt-3">
                                     <input type="hidden" name="folderName" value="<?php echo basename($folder); ?>">
                                     <?php if ($isTeacher) { ?>
-                                        <button type="submit" class="btn btn-primary danger" name="delete">Odstrániť</button>
+                                        <button type="submit" class="btn btn-primary danger" name="delete" onclick="return confirm('Vymazať?')">Odstrániť</button>
                                     <?php } else { ?>
-                                        <button type="submit" class="btn btn-primary danger" name="delete"
-                                            style="display: none;">Odstrániť</button>
+                                        <button type="submit" class="btn btn-primary danger" name="delete" style="display: none;">Odstrániť</button>
                                     <?php } ?>
                                 </form>
                             <?php } ?>

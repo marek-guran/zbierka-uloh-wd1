@@ -20,7 +20,7 @@ Pridať do súboru:
 ErrorDocument 404 /404.php
 ```
 ```bash
-docker cp /home/pi/ zbierka-web:/etc/apache2/sites-available/000-default.conf
+docker cp /home/pi/000-default.conf zbierka-web:/etc/apache2/sites-available/000-default.conf
 ```
 
 # Nastavenie php.ini
