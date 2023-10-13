@@ -99,43 +99,72 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
 
     <?php include '../includes/header.php'; ?>
 
-    <div class="container mt-3">
-        <?php if (!$isTeacher) { ?>
-            <div class="row">
-                <div class="col-md-6">
-                    <form method="post">
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Heslo pre učiteľa</label>
-                            <input type="password" class="form-control" id="password" name="password" required>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="page-header card-text">
+                    <h1>Študentské Práce</h1>
+                    <p><strong>Vyučujúci</strong> je schopný <strong>nahrávať</strong> na webový server práce svojich
+                        študentov. Tieto práce sú <strong>viditeľné pre každeho</strong> a iba vyučujúci môže nahrávať
+                        alebo mazať.</p>
+                </div>
+                <?php if ($isTeacher) { ?>
+                    <div class="d-flex justify-content-between">
+                        <form method="post">
+                            <button type="submit" class="btn btn-primary danger" name="logout">Odhlásiť sa</button>
+                        </form>
+                    </div>
+                <?php } ?>
+            </div>
+            <div class="col-md-6">
+                <?php if (!$isTeacher) { ?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form method="post">
+                                <div class="mb-3">
+                                    <label for="password" class="form-label"><h2><strong>Učiteľské Heslo</strong></h2></label>
+                                    <input type="password" class="form-control formular" id="password" name="password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Prihlásiť sa</button>
+                            </form>
                         </div>
-                        <button type="submit" class="btn btn-primary">Prihlásiť sa</button>
-                    </form>
+                    </div>
+                <?php } else { ?>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="folderName" class="form-label">Názov Práce</label>
+                                    <input type="text" class="form-control formular" id="folderName" name="folderName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="zipFile" class="form-label">Vybrať ZIP súbor (maximálna veľkosť súboru:
+                                        <?php echo ini_get('upload_max_filesize'); ?>B)
+                                    </label>
+                                    <input type="file" class="form-control formular" id="zipFile" name="zipFile" required>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button type="submit" class="btn btn-primary" name="upload">Nahrať</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4 offset-md-4">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="search-addon"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control search-text" placeholder="Hľadať" aria-label="Hľadať" aria-describedby="search-addon" id="search-input">
+                    <button class="btn btn-primary trash" type="button" id="clear-search-btn"><i class="fas fa-trash"></i></button>
                 </div>
             </div>
-        <?php } else { ?>
-            <div class="row">
-                <div class="col-md-6">
-                    <form method="post" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="folderName" class="form-label">Názov Práce</label>
-                            <input type="text" class="form-control" id="folderName" name="folderName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="zipFile" class="form-label">Vybrať ZIP súbor</label>
-                            <input type="file" class="form-control" id="zipFile" name="zipFile" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary" name="upload">Nahrať</button>
-                    </form>
-                    <form method="post">
-                        <button type="submit" class="btn btn-danger" name="logout">Odhlásiť sa</button>
-                    </form>
-                </div>
-            </div>
-        <?php } ?>
+        </div>
         <div class="row mt-3">
             <?php foreach ($folders as $folder) { ?>
-                <div class="col-md-4">
-                    <div class="card">
+                <div class="col-md-4 cardcontainer">
+                    <div class="card card-hover card-text">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <?php echo basename($folder); ?>
@@ -145,9 +174,9 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
                                 <form method="post" class="mt-3">
                                     <input type="hidden" name="folderName" value="<?php echo basename($folder); ?>">
                                     <?php if ($isTeacher) { ?>
-                                        <button type="submit" class="btn btn-danger" name="delete">Odstrániť</button>
+                                        <button type="submit" class="btn btn-primary danger" name="delete">Odstrániť</button>
                                     <?php } else { ?>
-                                        <button type="submit" class="btn btn-danger" name="delete"
+                                        <button type="submit" class="btn btn-primary danger" name="delete"
                                             style="display: none;">Odstrániť</button>
                                     <?php } ?>
                                 </form>
@@ -167,3 +196,5 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
 </body>
 
 </html>
+
+<script src="../js/search.js"></script>

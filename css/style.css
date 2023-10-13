@@ -309,4 +309,43 @@ Side Bar
     font-size: 3rem;
 }
 
+/*
+################################## 
+Search Bar
+##################################
+*/
+
+.input-group-text {
+    border-bottom-left-radius: 20px!important;
+    border-top-left-radius: 20px!important;
+    background-color: #55a4cc!important;
+    color: white!important;
+}
+
+.search-text {
+    border-bottom-right-radius: 20px!important;
+    border-top-right-radius: 20px!important;
+    margin-right: 10px!important;
+    background-color: #a4dbf7!important;
+}
+
+.formular {
+    border-radius: 20px!important;
+    background-color: #a4dbf7!important;
+}
+
+.trash {
+    background-color: #fd6e7a!important;
+}
+
+.danger {
+    --bs-btn-bg: #fd737f !important;
+    --bs-btn-border-color: none !important;
+    --bs-btn-hover-bg: rgb(255, 67, 67) !important;
+    --bs-btn-hover-border-color: none !important;
+    --bs-btn-active-bg: #fd737f !important;
+    --bs-btn-active-border-color: none !important;
+    --bs-btn-disabled-bg: #fd737f#fd737f !important;
+    --bs-btn-disabled-border-color: none !important;
+}
 /* { outline: 1px solid red;}
