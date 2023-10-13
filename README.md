@@ -6,7 +6,7 @@ http://91.148.38.245/ (ak mi ISP nezmení IP)
 - Nástroje (programy s návodom na inštaláciu pre WD1)
 - Ďalšie
 
-# Inštalácia
+# Inštalácia (discord webhook je alerting pre prípad DDOS útoku)
 ```bash
 docker run --name zbierka-web -d -p 10000:80 -e DISCORD_WEBHOOK_URL="https://your.discord.webhook.url" -e TEACHER_PASSWORD="your_teacher_password" -v /home/pi/zbierka/:/var/www/html php:apache
 ```
