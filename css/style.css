@@ -376,6 +376,11 @@ Navigačné Menu
     border-radius: 50px;
 }
 
+.desk-active .icon-text {
+    display: inline-block!important;
+    transform: translateY(0%)!important;
+}
+
 /* Ukáž iba ikony pre PC a na hover ukáž text */
 @media (min-width: 992px) {
     .navbar-nav .nav-link .icon-text {
