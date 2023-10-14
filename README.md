@@ -3,7 +3,6 @@ http://91.148.38.245/ (ak mi ISP nezmení IP)
 
 # Pridať
 - Príklady
-- Nástroje (programy s návodom na inštaláciu pre WD1)
 - Ďalšie
 
 # Inštalácia - automatická (Potrebné mať nainštalovaný docker, discord webhook je alerting pre prípad DDOS útoku)
