@@ -15,9 +15,9 @@
     <?php include '../includes/header.php'; ?>
 
     <div class="container mt-4">
-        <div class="row card-text">
+        <div class="row">
             <div class="col-md-12">
-                <div class="page-header">
+                <div class="page-header card-text">
                     <h1>O Zbierke Úloh</h1>
                     <p>Vznikla ako učebná pomôcka pre študentov predmetu Webový Dizajn 1 ako výsledok mojej Bc. práce na
                         katedre Informatiky.
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-    
+
     <?php include '../includes/footer.php'; ?>
 
     <script src="../js/jquery-3.5.1.js"></script>

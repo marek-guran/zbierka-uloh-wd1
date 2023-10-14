@@ -5,7 +5,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto" style="margin-right: 0px!important;">
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-primary" href="../index.php"><i
+                    <a class="nav-link btn btn-outline-primary " href="../index.php"><i
                             class="fa-solid fa-house"></i><span class="icon-text"> Domov</span></a>
                 </li>
                 <li class="nav-item">
@@ -22,7 +22,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-outline-primary" href="../pages/studentske_prace.php"><i
-                            class="fa-solid fa-graduation-cap"></i><span class="icon-text"> Študentské Práce</span></a>
+                            class="fa-solid fa-graduation-cap"></i><span class="icon-text"> Práce</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-outline-primary" href="../pages/nastroje.php"><i
@@ -66,7 +66,7 @@
         echo 'active';
     } ?>" href="../pages/studentske_prace.php">
         <i class="fa-solid fa-graduation-cap"></i>
-        <span>Študentské Práce</span>
+        <span>Práce</span>
     </a>
     <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'nastroje.php') !== false) {
         echo 'active';

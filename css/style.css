@@ -448,4 +448,13 @@ Navigačné Menu
 }
 
 
+.carousel-controls span {
+    color: white!important;
+    font-size: 40px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
 /* { outline: 1px solid red;}
