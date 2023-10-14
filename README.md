@@ -5,7 +5,11 @@ http://91.148.38.245/ (ak mi ISP nezmení IP)
 - Príklady
 - Ďalšie
 
-# Inštalácia - automatická (Potrebné mať nainštalovaný docker, discord webhook je alerting pre prípad DDOS útoku)
+# Inštalácia - automatická
+### Potrebné veci:
+- Docker
+- Stiahnuté súbory stránky
+### Discord webhook je alerting pre prípad DDOS útoku (môže sa tam dať napríklad písmeno 'a' na preskočenie)
 ```bash
 #!/bin/bash
 
