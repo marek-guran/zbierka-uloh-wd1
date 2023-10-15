@@ -2,16 +2,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="priklad card-text">
-                <h2>Tabuľky</h2>
-                <p>Vytvorte responzívnu tabuľku aspoň s tromi stĺpcami a štyrmi riadkami. Bonusová úloha: Keď bude
-                    tabuľka zobrazená na malej obrazovke, skryte posledný stĺpec. Môžete sa inšpirovať obrázkom.
+                <h2>Grid</h2>
+                <p>Vytvorte stránku podľa obrázkovej šablóny, použite grid.
                 <p>
             </div>
         </div>
         <div class="col-md-6">
             <div class="img-container">
-                <a href="../img/priklady/css/tabulky/css-tabulky-pr1.png" target="_blank">
-                    <img src="../img/priklady/css/tabulky/css-tabulky-pr1.png" alt="Zadanie príkladu"
+                <a href="../img/priklady/css/grid/css-grid-pr1.png" target="_blank">
+                    <img src="../img/priklady/css/grid/css-grid-pr1.png" alt="Zadanie príkladu"
                         class="img-zadania">
                     <div class="img-overlay">
                         <i class="fas fa-image"></i>
@@ -24,7 +23,7 @@
 
 <div class="code-wrapper container code-pill-container">
     <button id="show-code-btn" class="btn btn-primary">Ukázať Kód</button>
-    <a href="../priklady/css/tabulky/pr1.html" target="_blank">
+    <a href="../priklady/css/grid/pr1.html" target="_blank">
         <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
     </a>
     <div class="code-pill-button-container">
@@ -34,7 +33,7 @@
     <pre id="html-code">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$filePath = $documentRoot . '/priklady/css/tabulky/pr1.html';
+$filePath = $documentRoot . '/priklady/css/grid/pr1.html';
 $htmlCode = file_get_contents($filePath);
 
 if ($htmlCode !== false) {
@@ -46,7 +45,7 @@ if ($htmlCode !== false) {
     <pre id="css-code" style="display: none;">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$cssFilePath = $documentRoot . '/priklady/css/tabulky/pr1.css';
+$cssFilePath = $documentRoot . '/priklady/css/grid/pr1.css';
 $cssCode = file_get_contents($cssFilePath);
 
 if ($cssCode !== false) {

@@ -32,9 +32,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="?pr=css-transformacie1">Transformácie</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-tlacidla1">Tlačidlá</a>
-            </li>
         </ul>
     </div>
 
