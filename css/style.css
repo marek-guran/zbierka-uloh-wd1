@@ -416,7 +416,7 @@ Navigačné Menu
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 60px;
+        height: 80px;
         background-color: #6cb3d6;
         box-shadow: 0px 0px 2px #55a4cc;
     }
@@ -452,6 +452,11 @@ Navigačné Menu
     }
 }
 
+/*
+################################## 
+Stránka Nástroje
+##################################
+*/
 
 .carousel-controls span {
     color: white!important;

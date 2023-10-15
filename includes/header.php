@@ -4,11 +4,12 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto" style="margin-right: 0px!important;">
-                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'index.php') !== false) {
+                <li class="nav-item <?php if ($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/index.php') {
                     echo 'desk-active';
                 } ?>">
-                    <a class="nav-link btn btn-outline-primary " href="../index.php"><i
-                            class="fa-solid fa-house"></i><span class="icon-text"> Domov</span></a>
+                    <a class="nav-link btn btn-outline-primary" href="../index.php">
+                        <i class="fa-solid fa-house"></i><span class="icon-text"> Domov</span>
+                    </a>
                 </li>
                 <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'html_page.php') !== false) {
                     echo 'desk-active';
@@ -52,7 +53,7 @@
 </nav>
 
 <div class="bottom-navbar">
-    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'index.php') !== false) {
+    <a class="nav-link <?php if ($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/index.php') {
         echo 'active';
     } ?>" href="../index.php">
         <i class="fa-solid fa-house"></i>
