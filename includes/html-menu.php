@@ -1,12 +1,12 @@
 <div class="sidebar" id="mySidebar">
-    <h2>HTML5</h2>
+    <h2><strong>HTML5</strong></h2>
     <div class="sidebar-container">
         <ul class="nav flex-column side-menu">
             <li class="nav-item">
                 <a class="nav-link" href="?pr=text-pr1">Texty</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?pr=media-pr1">Médiá</a>
+                <a class="nav-link" href="?pr=media-pr1">Média</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="?pr=form-pr1">Formuláre</a>

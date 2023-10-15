@@ -1,5 +1,5 @@
 <div class="sidebar" id="mySidebar">
-    <h2>JavaScript</h2>
+    <h2><strong>JavaScript</strong></h2>
     <div class="sidebar-container">
         <ul class="nav flex-column side-menu">
             <li class="nav-item">

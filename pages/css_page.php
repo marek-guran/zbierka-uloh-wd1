@@ -17,7 +17,7 @@
 
     <div>
         <?php
-            $pr = isset($_GET['pr']) ? $_GET['pr'] : 'css-pr1';
+            $pr = isset($_GET['pr']) ? $_GET['pr'] : 'css-texty1';
             include "../includes/priklady/css/{$pr}.php";
         ?>
     </div>
