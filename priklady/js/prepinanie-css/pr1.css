@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header {
+    background-color: #007acc;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 32px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 40px;
+    border-radius: 50px;
+    font-size: 24px;
+  }
+  
+  body.dark {
+    background-color: #333;
+    color: white;
+  }
+  
+  body.light {
+    background-color: white;
+    color: #333;
+  }
+  
+  button.dark {
+    background-color: #8f8f8f;
+    color: white;
+  }
+  
+  button.light {
+    background-color: #007acc;
+    color: white;
+  }
+  
