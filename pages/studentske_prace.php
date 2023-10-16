@@ -29,17 +29,29 @@ if (isset($_POST['upload'])) {
 
     $zipFile = $_FILES['zipFile'];
 
-    if ($zipFile['error'] === UPLOAD_ERR_OK) { // Check if file was uploaded successfully
-        $zip = new ZipArchive;
-        if ($zip->open($zipFile['tmp_name']) === TRUE) {
-            $zip->extractTo($targetDir);
-            $zip->close();
-        } else {
-            echo "Nepodarilo sa extrahovať zip súbor.";
+    // Check if file is a ZIP file
+    $fileType = strtolower(pathinfo($zipFile['name'], PATHINFO_EXTENSION));
+    if ($fileType !== 'zip') {
+        echo "Only ZIP files are allowed.";
+        exit;
+    }
+
+    // Check if file contains executable code
+    $zip = new ZipArchive;
+    if ($zip->open($zipFile['tmp_name']) === TRUE) {
+        for ($i = 0; $i < $zip->numFiles; $i++) {
+            $filename = $zip->getNameIndex($i);
+            $fileType = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+            if (in_array($fileType, ['php', 'exe', 'sh', 'py'])) {
+                echo "Súbory typu: php, exe, sh, py sú zakázané.";
+                rmdir($targetDir);
+                exit;
+            }
         }
+        $zip->extractTo($targetDir);
+        $zip->close();
     } else {
-        echo "Nahrávanie zlyhalo: " . $zipFile['name'] . "<br>";
-        echo "Chyba: " . $zipFile['error'] . "<br>";
+        echo "Failed to extract ZIP file.";
     }
 }
 
@@ -149,6 +161,8 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
                                         <?php echo ini_get('upload_max_filesize'); ?>B)
                                     </label>
                                     <input type="file" class="form-control formular" id="zipFile" name="zipFile" required>
+                                    <p><i class="fas fa-warning"></i> Súbory typu: php, exe, sh, py sú <strong>zakázané</strong> a preto sa
+                                        práca neuloží.</p>
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <button type="submit" class="btn btn-primary" name="upload"><i
