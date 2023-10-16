@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>&copy;
-                    <?php echo date("Y"); ?> Marek Guráň
+                <p><i class="fa-regular fa-copyright"></i><strong>
+                    <?php echo date("Y"); ?> Marek Guráň</strong>
                 </p>
             </div>
         </div>

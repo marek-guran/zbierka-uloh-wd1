@@ -1,12 +1,30 @@
-<div class="priklad container card-text">
-    <h2>Príklad 1</h2>
-    <p>Zadanie - mobilná navigácia
-    <p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="priklad card-text">
+                <h2>API</h2>
+                <p>Pomocou priloženého súboru JSON vytvorte stránku, ktorá zobrazí jeho obsah. Viď. fotka.
+                <p>
+                <a href="../includes/priklady/js/download/api/pr1.json" download class="btn btn-primary"><i class="fa-solid fa-download"></i> JSON</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="img-container">
+                <a href="../img/priklady/js/api/js-api-pr1.png" target="_blank">
+                    <img src="../img/priklady/js/api/js-api-pr1.png" alt="Zadanie príkladu" class="img-zadania">
+                    <div class="img-overlay">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
+
 
 <div class="code-wrapper container code-pill-container">
     <button id="show-code-btn" class="btn btn-primary">Ukázať Kód</button>
-    <a href="../priklady/js/pr1.html" target="_blank">
+    <a href="../priklady/js/api/pr1.html" target="_blank">
         <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
     </a>
     <div class="code-pill-button-container">
@@ -17,7 +35,7 @@
     <pre id="html-code">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$filePath = $documentRoot . '/priklady/js/pr1.html';
+$filePath = $documentRoot . '/priklady/js/api/pr1.html';
 $htmlCode = file_get_contents($filePath);
 
 if ($htmlCode !== false) {
@@ -29,7 +47,7 @@ if ($htmlCode !== false) {
     <pre id="css-code" style="display: none;">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$cssFilePath = $documentRoot . '/priklady/js/pr1.css';
+$cssFilePath = $documentRoot . '/priklady/js/api/pr1.css';
 $cssCode = file_get_contents($cssFilePath);
 
 if ($cssCode !== false) {
@@ -39,10 +57,10 @@ if ($cssCode !== false) {
 }
 ?>
 </pre>
-<pre id="js-code" style="display: none;">
+    <pre id="js-code" style="display: none;">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$jsFilePath = $documentRoot . '/priklady/js/pr1.js';
+$jsFilePath = $documentRoot . '/priklady/js/api/pr1.js';
 $jsCode = file_get_contents($jsFilePath);
 
 if ($jsCode !== false) {
