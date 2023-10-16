@@ -2,14 +2,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="priklad card-text">
-                <h2>Kalkulačka</h2>
-                <p>Pokúste sa vytvoriť jednoduchú kalkulačku. Viď. video.
+                <h2>Hodiny</h2>
+                <p>Pokúste sa vytvoriť hodiny so sekundami. Viď. video.
                 <p>
             </div>
         </div>
         <div class="col-md-6">
             <div class="video-container">
-                <video src="../video/priklady/js/kalkulacka/pr1.mp4" alt="Video príkladu" controls></video>
+                <video src="../video/priklady/js/hodiny/pr1.mp4" alt="Video príkladu" controls></video>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
 
 <div class="code-wrapper container code-pill-container">
     <button id="show-code-btn" class="btn btn-primary">Ukázať Kód</button>
-    <a href="../priklady/js/kalkulacka/pr1.html" target="_blank">
+    <a href="../priklady/js/hodiny/pr1.html" target="_blank">
         <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
     </a>
     <div class="code-pill-button-container">
@@ -29,7 +29,7 @@
     <pre id="html-code">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$filePath = $documentRoot . '/priklady/js/kalkulacka/pr1.html';
+$filePath = $documentRoot . '/priklady/js/hodiny/pr1.html';
 $htmlCode = file_get_contents($filePath);
 
 if ($htmlCode !== false) {
@@ -41,7 +41,7 @@ if ($htmlCode !== false) {
     <pre id="css-code" style="display: none;">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$cssFilePath = $documentRoot . '/priklady/js/kalkulacka/pr1.css';
+$cssFilePath = $documentRoot . '/priklady/js/hodiny/pr1.css';
 $cssCode = file_get_contents($cssFilePath);
 
 if ($cssCode !== false) {
@@ -54,7 +54,7 @@ if ($cssCode !== false) {
     <pre id="js-code" style="display: none;">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$jsFilePath = $documentRoot . '/priklady/js/kalkulacka/pr1.js';
+$jsFilePath = $documentRoot . '/priklady/js/hodiny/pr1.js';
 $jsCode = file_get_contents($jsFilePath);
 
 if ($jsCode !== false) {
