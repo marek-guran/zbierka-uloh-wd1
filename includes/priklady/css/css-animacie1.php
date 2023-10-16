@@ -1,7 +1,5 @@
-<div class="navigation mt-3" role="group" aria-label="Button Group">
-    <a href="?pr=css-animacie1" class="btn btn-primary btn-sm btn-group-toggle">Text</a>
-    <a href="?pr=css-animacie2" class="btn btn-primary btn-sm btn-group-toggle">Lopta</a>
-</div>
+<?php include 'menu-animacie.php'; ?>
+
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -13,7 +11,7 @@
         </div>
         <div class="col-md-6">
             <div class="video-container">
-                <video src="../video/priklady/css/responzivita/pr1.mp4" alt="Video príkladu" controls></video>
+                <video src="../video/priklady/css/animacie/text1.mp4" alt="Video príkladu" controls></video>
             </div>
         </div>
     </div>
