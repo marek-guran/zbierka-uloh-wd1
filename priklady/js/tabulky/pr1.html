@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pr1.css">
+    <title>Známky</title>
+</head>
+
+<body>
+    <h1>Priemery známok výkonu všetkých predmetov počas celý rok</h1>
+    <div class="center">
+        <table>
+            <thead>
+                <tr>
+                    <th>Predmet</th>
+                    <th>Známka</th>
+                    <th>Akcia</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+        <form id="add-form">
+            <h2>Pridať záznam</h2>
+            <label for="predmet">Predmet:</label>
+            <input type="text" id="predmet" name="predmet" required>
+            <label for="znamka">Známka:</label>
+            <input type="number" id="znamka" name="znamka" min="1" max="5" required>
+            <button type="submit">Pridať</button>
+        </form>
+    </div>
+
+    <script src="pr1.js"></script>
+</body>
+
+</html>
