@@ -12,9 +12,6 @@
                 <a class="nav-link" href="?pr=js-menu1">Navigačné menu</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?pr=js-alerting1">Alerting</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="?pr=js-prepinaniecss1">Prepínanie CSS štýlu</a>
             </li>
             <li class="nav-item">
