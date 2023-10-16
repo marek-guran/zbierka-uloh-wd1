@@ -1,5 +1,5 @@
 # K dispozícii na
-http://91.148.38.245/ (ak mi ISP nezmení IP)
+http://wd1.site/ (ak mi ISP nezmení IP)
 
 # Pridať
 - Príklady
