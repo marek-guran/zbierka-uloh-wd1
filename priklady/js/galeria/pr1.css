@@ -1,0 +1,38 @@
+.carousel-container {
+    width: 600px;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.tlacidla {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    border-radius: 50px;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 60px;
+}
