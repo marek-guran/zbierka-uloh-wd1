@@ -5,7 +5,9 @@
                 <h2>API</h2>
                 <p>Pomocou priloženého súboru JSON vytvorte stránku, ktorá zobrazí jeho obsah. Viď. fotka.
                 <p>
-                <a href="../includes/priklady/js/download/api/pr1.json" download class="btn btn-primary"><i class="fa-solid fa-download"></i> JSON</a>
+                <p><i class="fa-solid fa-download"></i> <strong>Na Stiahnutie</strong></p>
+                <a href="../includes/priklady/js/download/api/pr1.json" download class="btn btn-primary"><i
+                        class="fa-regular fa-file-lines"></i> JSON</a>
             </div>
         </div>
         <div class="col-md-6">

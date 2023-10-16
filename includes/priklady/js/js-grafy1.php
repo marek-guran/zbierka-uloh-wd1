@@ -6,12 +6,12 @@
                 <p>Pomocou priloženého súboru JSON a knižnice vytvorte stránku, ktorá zobrazí jeho obsah na grafe. Máte
                     priloženú aj dokumentáciu ku knižnici. Viď. fotka.
                 <p>
-                    <a href="../includes/priklady/js/download/grafy/pr1.json" download class="btn btn-primary"><i
-                            class="fa-solid fa-download"></i> JSON</a>
-                    <a href="../includes/priklady/js/download/grafy/library-graphs.js" download
-                        class="btn btn-primary"><i class="fa-solid fa-book"></i> Knižnica</a>
-                    <a href="https://www.chartjs.org/docs/4.4.0/" class="btn btn-primary" target="_blank"><i
-                            class="fa-regular fa-newspaper"></i> Dokumentácia</a>
+                <p><i class="fa-solid fa-download"></i> <strong>Na Stiahnutie</strong></p>
+                <a href="../includes/priklady/js/download/grafy/pr1.json" download class="btn btn-primary"><i
+                        class="fa-regular fa-file-lines"></i> JSON</a>
+                <a href="../includes/priklady/js/download/grafy/library-graphs.js" download class="btn btn-primary"><i
+                        class="fa-solid fa-book"></i> Knižnica</a>
+                <a href="https://www.chartjs.org/docs/4.4.0/" class="btn btn-primary" target="_blank"><i class="fa-solid fa-book-open"></i> Dokumentácia</a>
             </div>
         </div>
         <div class="col-md-6">
