@@ -1,18 +1,23 @@
-<div class="navigation mt-3" role="group" aria-label="Button Group">
-    <a href="?pr=css-pr1" class="btn btn-primary btn-sm btn-group-toggle">1</a>
-    <a href="?pr=css-pr2" class="btn btn-primary btn-sm btn-group-toggle">2</a>
-    <a href="?pr=css-pr3" class="btn btn-primary btn-sm btn-group-toggle">3</a>
-    <a href="?pr=css-pr4" class="btn btn-primary btn-sm btn-group-toggle">4</a>
-</div>
-<div class="priklad container card-text">
-    <h2>Príklad 4</h2>
-    <p>Vytvorte webstránku na ktorej bude menu s animovaným prechodom farebného pozadia, keď prejdeme myšou ponad každé menu
-    <p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="priklad card-text">
+                <h2>Transformácie</h2>
+                <p>Podľa videa sa pokúste vytvoriť transformáciu.
+                <p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="video-container">
+                <video src="../video/priklady/css/transformacie/pr1.mp4" alt="Video príkladu" controls></video>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="code-wrapper container code-pill-container">
     <button id="show-code-btn" class="btn btn-primary">Ukázať Kód</button>
-    <a href="../priklady/css/pr4.html" target="_blank">
+    <a href="../priklady/css/transformacie/pr1.html" target="_blank">
         <button class="btn btn-primary" style="margin-left: 5px;">Výsledná Stránka</button>
     </a>
     <div class="code-pill-button-container">
@@ -22,7 +27,7 @@
     <pre id="html-code">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$filePath = $documentRoot . '/priklady/css/pr4.html';
+$filePath = $documentRoot . '/priklady/css/transformacie/pr1.html';
 $htmlCode = file_get_contents($filePath);
 
 if ($htmlCode !== false) {
@@ -34,7 +39,7 @@ if ($htmlCode !== false) {
     <pre id="css-code" style="display: none;">
 <?php
 $documentRoot = $_SERVER['DOCUMENT_ROOT'];
-$cssFilePath = $documentRoot . '/priklady/css/pr4.css';
+$cssFilePath = $documentRoot . '/priklady/css/transformacie/pr1.css';
 $cssCode = file_get_contents($cssFilePath);
 
 if ($cssCode !== false) {
