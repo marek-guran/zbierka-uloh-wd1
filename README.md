@@ -1,6 +1,8 @@
 # K dispozícii na
 https://wd1.site/
 
+Stránka sa dá navštíviť iba so **slovenskou / českou IP adresou**.
+
 # Pridať
 - Príklady
 - Ďalšie
