@@ -9,7 +9,7 @@ http://91.148.38.245/ (ak mi ISP nezmení IP)
 ### Potrebné veci:
 - Docker
 - Stiahnuté súbory stránky
-### Discord webhook je alerting pre prípad DDOS útoku (môže sa tam dať napríklad písmeno 'a' na preskočenie)
+### Discord webhook je alerting, keď niekto bude chcieť nahrávať súbory (môže sa tam dať napríklad písmeno 'a' na preskočenie)
 ```bash
 #!/bin/bash
 
@@ -23,7 +23,7 @@ read -p "Enter teacher password: " TEACHER_PASSWORD
 read -p "Enter the location of web files (e.g., /var/www/html): " WEB_FILES_LOCATION
 
 # Nainstalujte a spustite Docker kontajner s pouzitim specifikovaneho umiestnenia web suborov
-docker run --name zbierka-web -d -p 10000:80 -e DISCORD_WEBHOOK_URL="$DISCORD_WEBHOOK_URL" -e TEACHER_PASSWORD="$TEACHER_PASSWORD" -v "$WEB_FILES_LOCATION":/var/www/html php:apache
+docker run --name zbierka-web -d -p 10000:80 -p 10001:443 -e DISCORD_WEBHOOK_URL="$DISCORD_WEBHOOK_URL" -e TEACHER_PASSWORD="$TEACHER_PASSWORD" -v "$WEB_FILES_LOCATION":/var/www/html php:apache
 
 # Nastavenie 404.php
 docker cp zbierka-web:/etc/apache2/sites-available/000-default.conf /tmp/000-default.conf
@@ -48,10 +48,22 @@ sudo chmod -R 777 "$WEB_FILES_LOCATION"
 
 echo "Installation and configuration completed."
 ```
-
-# Inštalácia - manuálna (discord webhook je alerting pre prípad DDOS útoku)
+#### HTTPS nastavenie
+##### Používa sa Cloudflare
+Treba nastaviť NS (Nameserver)
+##### Nastavenie kontajnera:
 ```bash
-docker run --name zbierka-web -d -p 10000:80 -e DISCORD_WEBHOOK_URL="https://your.discord.webhook.url" -e TEACHER_PASSWORD="your_teacher_password" -v /home/pi/zbierka/:/var/www/html php:apache
+docker exec -it zbierka-web /bin/bash
+
+apt-get update
+apt-get install certbot python3-certbot-apache
+certbot --apache
+```
+Po tomto by už malo fungovať HTTPS
+
+# Inštalácia - manuálna (discord webhook je alerting, keď niekto bude chcieť nahrávať súbory)
+```bash
+docker run --name zbierka-web -d -p 10000:80 -p 10001:443 -e DISCORD_WEBHOOK_URL="https://your.discord.webhook.url" -e TEACHER_PASSWORD="your_teacher_password" -v /home/pi/zbierka/:/var/www/html php:apache
 ```
 
 # Nastavenie 404.php

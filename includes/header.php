@@ -96,8 +96,3 @@
         <span>O Zbierke</span>
     </a>
 </div>
-
-<script>
-    var discordWebhookUrl = "<?php echo getenv('DISCORD_WEBHOOK_URL'); ?>";
-</script>
-<script src="../js/connection-monitoring.js"></script>
