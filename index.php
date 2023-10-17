@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap-5.3.2.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="robots" content="noindex, nofollow">
 </head>
 
 <body>
