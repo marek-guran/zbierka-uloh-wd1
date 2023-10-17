@@ -48,10 +48,10 @@ sudo chmod -R 777 "$WEB_FILES_LOCATION"
 
 echo "Installation and configuration completed."
 ```
-#### HTTPS nastavenie
-##### Používa sa Cloudflare
+# HTTPS nastavenie
+### Používa sa Cloudflare
 Treba nastaviť NS (Nameserver)
-##### Nastavenie kontajnera:
+### Nastavenie kontajnera:
 ```bash
 docker exec -it zbierka-web /bin/bash
 
