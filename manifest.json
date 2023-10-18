@@ -1,0 +1,38 @@
+{
+    "name": "WD1 Zbierka",
+    "short_name": "WD1",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "/img/logo-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/logo-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#5199bd",
+    "background_color": "#D6FFFF",
+    "display": "standalone",
+    "orientation": "any",
+    "screenshots": [
+        {
+            "src": "/img/pc_ukazka.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "platform": "wide",
+            "form_factor": "wide",
+            "label": "Domovská stránka na veľkých obrazovkách"
+        },
+        {
+            "src": "/img/mobilna_ukazka.png",
+            "sizes": "1080x2400",
+            "type": "image/png",
+            "platform": "narrow",
+            "label": "Domovská stránka na malých obrazovkách"
+        }
+    ]
+}

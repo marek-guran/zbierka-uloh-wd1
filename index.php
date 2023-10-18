@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="/css/bootstrap-5.3.2.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#5199bd" />
+	<link rel="manifest" href="manifest.json">
+
+    <script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/js/service-worker.js');
+		} else {
+			console.log("Service worker nie je podporovaný");
+		}
+	</script>
 </head>
 
 <body>
