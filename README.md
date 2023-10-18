@@ -1,7 +1,8 @@
-# K dispozícii na
-https://wd1.site/
+# <img src="https://github.com/marek-guran/zbierka-uloh-wd1/assets/26904790/1e5fdb7e-0fe8-4be7-a7b2-50fe8dfc552f" alt="Logo" height="32"> K dispozícii na
 
-Stránka sa dá navštíviť iba so **slovenskou / českou IP adresou**.
+[wd1.site](https://wd1.site/)
+
+Stránka sa dá navštíviť iba so **slovenskou / českou** IP adresou.
 
 # Pridať
 - Príklady
