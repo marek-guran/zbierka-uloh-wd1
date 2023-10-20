@@ -6,6 +6,9 @@
                 <a class="nav-link" href="?pr=js-api1">API</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="?pr=js-ajax1">AJAX</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="?pr=js-grafy1">Grafy</a>
             </li>
             <li class="nav-item">
