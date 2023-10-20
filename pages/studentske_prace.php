@@ -224,8 +224,3 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
 </html>
 
 <script src="../js/search.js"></script>
-
-<script>
-    var discordWebhookUrl = "<?php echo getenv('DISCORD_WEBHOOK_URL'); ?>";
-</script>
-<script src="../js/connection-monitoring.js"></script>
