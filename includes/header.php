@@ -33,7 +33,7 @@
                     echo 'desk-active';
                 } ?>">
                     <a class="nav-link btn btn-outline-primary" href="../pages/ucitelske_zadania.php"><i
-                            class="fa-solid fa-graduation-cap"></i><span class="icon-text"> Zadania</span></a>
+                            class="fa-solid fa-table-columns"></i><span class="icon-text"> Zadania</span></a>
                 </li>
                 <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'nastroje.php') !== false) {
                     echo 'desk-active';
@@ -45,7 +45,7 @@
                     echo 'desk-active';
                 } ?>">
                     <a class="nav-link btn btn-outline-primary" href="../pages/o-zbierke.php"><i
-                            class="fa-solid fa-file-lines"></i><span class="icon-text"> O Zbierke</span></a>
+                            class="fa-solid fa-book-open"></i><span class="icon-text"> O Zbierke</span></a>
                 </li>
             </ul>
         </div>
@@ -80,7 +80,7 @@
     <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'studentske_prace.php') !== false) {
         echo 'active';
     } ?>" href="../pages/ucitelske_zadania.php">
-        <i class="fa-solid fa-graduation-cap"></i>
+        <i class="fa-solid fa-table-columns"></i>
         <span>Zadania</span>
     </a>
     <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'nastroje.php') !== false) {
@@ -92,7 +92,7 @@
     <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'o-zbierke.php') !== false) {
         echo 'active';
     } ?>" href="../pages/o-zbierke.php">
-        <i class="fa-solid fa-file-lines"></i>
+        <i class="fa-solid fa-book-open"></i>
         <span>O Zbierke</span>
     </a>
 </div>

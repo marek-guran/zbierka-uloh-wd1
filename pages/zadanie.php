@@ -130,10 +130,7 @@ if ($isTeacher) {
                                 foreach ($images as $index => $image) {
                                     $active = $index === 0 ? 'active' : '';
                                     echo '<div class="carousel-item ' . $active . '">';
-                                    echo '<div class="img-overlay">';
-                                    echo '<a href="' . $image . '" target="_blank"><i class="fas fa-image"></i></a>';
-                                    echo '</div>';
-                                    echo '<img src="' . $image . '" class="d-block w-100" alt="Image ' . $index . '">';
+                                    echo '<img src="' . $image . '" class="d-block w-100" alt="Image ' . $index . '" oncontextmenu="return false;" ondragstart="return false;">';
                                     echo '</div>';
                                 }
                                 ?>

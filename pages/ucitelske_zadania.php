@@ -82,6 +82,11 @@ if (isset($_POST['upload'])) {
         }
         move_uploaded_file($tmp_name, $imagesDir . $imageFile);
     }
+    // Copy teacherCheck.php file to target directory
+    $teacherCheckFile = "../teacherCheck.php";
+    if (file_exists($teacherCheckFile)) {
+        copy($teacherCheckFile, $targetDir . "index.php");
+    }
 }
 
 // Handle file deletion
