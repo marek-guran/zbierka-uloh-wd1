@@ -5,7 +5,7 @@ $isTeacher = false; // Set to false by default
 if (isset($_POST['password'])) {
     $password = $_POST['password'];
     if ($password === getenv('TEACHER_PASSWORD')) {
-        setcookie('isTeacher', 'true', time() + (86400 * 30), "/"); // Set cookie for 30 days
+        setcookie('isTeacher', 'true', time() + (86400 * 30), "/"); // Set cookie for 30 days with path set to root directory
         $isTeacher = true;
     }
 } elseif (isset($_COOKIE['isTeacher'])) {
@@ -14,7 +14,7 @@ if (isset($_POST['password'])) {
 
 // Handle logout
 if (isset($_POST['logout'])) {
-    setcookie('isTeacher', 'false', time() - 360000, "/"); // Set cookie to expire in the past
+    setcookie('isTeacher', 'false', time() - 360000, "/"); // Set cookie to expire in the past with path set to root directory
     header("Refresh:0"); // Refresh the page
 }
 
@@ -28,6 +28,8 @@ if (isset($_POST['upload'])) {
     }
 
     $zipFile = $_FILES['zipFile'];
+    $description = $_POST['description'];
+    $imageFiles = $_FILES['imageFiles'];
 
     // Check if file is a ZIP file
     $fileType = strtolower(pathinfo($zipFile['name'], PATHINFO_EXTENSION));
@@ -52,6 +54,33 @@ if (isset($_POST['upload'])) {
         $zip->close();
     } else {
         echo "Failed to extract ZIP file.";
+    }
+
+    // Save description and images
+    $zadanieDir = $targetDir . "zadanie/";
+    if (!file_exists($zadanieDir)) {
+        mkdir($zadanieDir, 0777, true);
+    }
+    $zadanieJson = array(
+        "name" => $folderName,
+        "description" => $description,
+        "visible" => isset($_POST['visible']) ? true : false
+    );
+    file_put_contents($zadanieDir . "zadanie.json", json_encode($zadanieJson));
+    $imagesDir = $zadanieDir . "images/";
+    if (!file_exists($imagesDir)) {
+        mkdir($imagesDir, 0777, true);
+    }
+    foreach ($imageFiles['tmp_name'] as $key => $tmp_name) {
+        $imageFile = $imageFiles['name'][$key];
+        $fileType = strtolower(pathinfo($imageFile, PATHINFO_EXTENSION));
+        if (in_array($fileType, ['php', 'exe', 'sh', 'py'])) {
+            echo "Súbory typu: php, exe, sh, py sú zakázané.";
+            rmdir($zadanieDir);
+            rmdir($targetDir);
+            exit;
+        }
+        move_uploaded_file($tmp_name, $imagesDir . $imageFile);
     }
 }
 
@@ -101,7 +130,7 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Študentské Práce</title>
+    <title>Učiteľské Zadania</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap-5.3.2.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -113,13 +142,13 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
     <?php include '../includes/header.php'; ?>
 
     <div class="container mt-4">
+        <h1><i class="fa-solid fa-screwdriver-wrench"></i> Stránka sa momentálne upravuje</h1>
         <div class="row">
             <div class="col-md-6">
                 <div class="page-header card-text">
-                    <h1>Študentské Práce</h1>
-                    <p><strong>Vyučujúci</strong> je schopný <strong>nahrávať</strong> na webový server práce svojich
-                        študentov. Tieto práce sú <strong>viditeľné pre každeho</strong> a iba vyučujúci môže nahrávať
-                        alebo mazať.</p>
+                    <h1>Učiteľské Zadania</h1>
+                    <p><strong>Vyučujúci</strong> je schopný <strong>nahrávať</strong> na webový server vlastné zadania,
+                        pridať do nich obrázky, nastaviť viditeľnosť výsledku a napísať vlastné zadanie.</p>
                 </div>
                 <?php if ($isTeacher) { ?>
                     <div class="d-flex justify-content-between">
@@ -152,9 +181,22 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
                         <div class="col-md-12">
                             <form method="post" enctype="multipart/form-data">
                                 <div class="mb-3">
-                                    <label for="folderName" class="form-label">Názov Práce</label>
+                                    <label for="folderName" class="form-label">Názov Zadania</label>
                                     <input type="text" class="form-control formular" id="folderName" name="folderName"
                                         required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Popis Zadania</label>
+                                    <textarea class="form-control formular" id="description" name="description" rows="3"
+                                        required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="imageFiles" class="form-label">Vybrať obrázky (maximálna veľkosť všetkých
+                                        obrázkov spolu:
+                                        <?php echo ini_get('upload_max_filesize'); ?>B)
+                                    </label>
+                                    <input type="file" class="form-control formular" id="imageFiles" name="imageFiles[]"
+                                        multiple required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="zipFile" class="form-label">Vybrať <strong>ZIP</strong> súbor (maximálna
@@ -162,8 +204,13 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
                                         <?php echo ini_get('upload_max_filesize'); ?>B)
                                     </label>
                                     <input type="file" class="form-control formular" id="zipFile" name="zipFile" required>
-                                    <p><i class="fas fa-warning"></i> Súbory typu: php, exe, sh, py sú <strong>zakázané</strong> a preto sa
-                                        práca neuloží.</p>
+                                    <p><i class="fas fa-warning"></i> Súbory typu: php, exe, sh, py sú z bezpečnostných
+                                        dóvodov <strong>zakázané</strong> a preto sa zadanie neuloží.
+                                    </p>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <label class="form-check-label" for="visible">Výsledok viditeľný študentom?</label>
+                                    <input type="checkbox" class="form-check-input" id="visible" name="visible">
                                 </div>
                                 <div class="d-flex justify-content-between">
                                     <button type="submit" class="btn btn-primary" name="upload"><i
@@ -189,7 +236,8 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
         <div class="row mt-3">
             <?php foreach ($folders as $folder) { ?>
                 <div class="col-md-4 cardcontainer">
-                    <div class="card card-hover card-text" onclick="window.open('<?php echo $folder; ?>', '_blank')">
+                    <div class="card card-hover card-text"
+                        onclick="window.location.href='../pages/zadanie.php?folder=<?php echo basename($folder); ?>'">
                         <div class="card-body">
                             <h5 class="card-title">
                                 <?php echo basename($folder); ?>
