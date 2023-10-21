@@ -20,7 +20,7 @@ if (isset($_POST['logout'])) {
 
 // Handle zip file upload
 if (isset($_POST['upload'])) {
-    $targetDir = "../studentske-prace/";
+    $targetDir = "../ucitelske-zadania/";
     $folderName = $_POST['folderName'];
     $targetDir .= $folderName . "/";
     if (!file_exists($targetDir)) {
@@ -86,7 +86,7 @@ if (isset($_POST['upload'])) {
 
 // Handle file deletion
 if (isset($_POST['delete'])) {
-    $targetDir = "../studentske-prace/";
+    $targetDir = "../ucitelske-zadania/";
     $folderName = $_POST['folderName'];
     $targetDir .= $folderName . "/";
 
@@ -119,8 +119,8 @@ if (isset($_POST['delete'])) {
     }
 }
 
-// Get list of folders in studentske-prace directory
-$folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
+// Get list of folders in ucitelske-zadania directory
+$folders = array_filter(glob('../ucitelske-zadania/*'), 'is_dir');
 
 ?>
 
@@ -142,13 +142,12 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
     <?php include '../includes/header.php'; ?>
 
     <div class="container mt-4">
-        <h1><i class="fa-solid fa-screwdriver-wrench"></i> Stránka sa momentálne upravuje</h1>
         <div class="row">
             <div class="col-md-6">
                 <div class="page-header card-text">
                     <h1>Učiteľské Zadania</h1>
-                    <p><strong>Vyučujúci</strong> je schopný <strong>nahrávať</strong> na webový server vlastné zadania,
-                        pridať do nich obrázky, nastaviť viditeľnosť výsledku a napísať vlastné zadanie.</p>
+                    <p><strong>Vyučujúci</strong> je schopný <strong>nahrávať</strong> na webový server <strong>vlastné zadania</strong>,
+                        pridať do nich obrázky, nastaviť viditeľnosť výsledku a napísať vlastný popis zadania.</p>
                 </div>
                 <?php if ($isTeacher) { ?>
                     <div class="d-flex justify-content-between">
@@ -191,20 +190,20 @@ $folders = array_filter(glob('../studentske-prace/*'), 'is_dir');
                                         required></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="imageFiles" class="form-label">Vybrať obrázky (maximálna veľkosť všetkých
-                                        obrázkov spolu:
-                                        <?php echo ini_get('upload_max_filesize'); ?>B)
+                                    <label for="imageFiles" class="form-label">Vybrať obrázky (maximálna veľkosť súboru:<strong>
+                                        <?php echo ini_get('upload_max_filesize'); ?>B</strong>, maximálny počet súborov:<strong>
+                                        <?php echo ini_get('max_file_uploads'); ?></strong>)
                                     </label>
                                     <input type="file" class="form-control formular" id="imageFiles" name="imageFiles[]"
                                         multiple required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="zipFile" class="form-label">Vybrať <strong>ZIP</strong> súbor (maximálna
-                                        veľkosť súboru:
-                                        <?php echo ini_get('upload_max_filesize'); ?>B)
+                                        veľkosť súboru:<strong>
+                                        <?php echo ini_get('upload_max_filesize'); ?>B</strong>)
                                     </label>
                                     <input type="file" class="form-control formular" id="zipFile" name="zipFile" required>
-                                    <p><i class="fas fa-warning"></i> Súbory typu: php, exe, sh, py sú z bezpečnostných
+                                    <p><i class="fas fa-warning"></i> Súbory typu: <strong>php, exe, sh, py</strong> sú z bezpečnostných
                                         dóvodov <strong>zakázané</strong> a preto sa zadanie neuloží.
                                     </p>
                                 </div>

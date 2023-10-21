@@ -32,8 +32,8 @@
                 <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'studentske_prace.php') !== false) {
                     echo 'desk-active';
                 } ?>">
-                    <a class="nav-link btn btn-outline-primary" href="../pages/studentske_prace.php"><i
-                            class="fa-solid fa-graduation-cap"></i><span class="icon-text"> Práce</span></a>
+                    <a class="nav-link btn btn-outline-primary" href="../pages/ucitelske_zadania.php"><i
+                            class="fa-solid fa-graduation-cap"></i><span class="icon-text"> Zadania</span></a>
                 </li>
                 <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'nastroje.php') !== false) {
                     echo 'desk-active';
@@ -79,9 +79,9 @@
     </a>
     <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'studentske_prace.php') !== false) {
         echo 'active';
-    } ?>" href="../pages/studentske_prace.php">
+    } ?>" href="../pages/ucitelske_zadania.php">
         <i class="fa-solid fa-graduation-cap"></i>
-        <span>Práce</span>
+        <span>Zadania</span>
     </a>
     <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'nastroje.php') !== false) {
         echo 'active';

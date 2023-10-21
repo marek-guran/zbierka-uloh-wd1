@@ -18,13 +18,13 @@ if (isset($_POST['logout'])) {
 }
 
 $folderName = $_GET['folder'];
-$json_file = '../studentske-prace/' . $folderName . '/zadanie/zadanie.json';
+$json_file = '../ucitelske-zadania/' . $folderName . '/zadanie/zadanie.json';
 $json_data = file_get_contents($json_file);
 $data = json_decode($json_data, true);
 
 $name = $data['name'];
 $description = $data['description'];
-$image_folder = '../studentske-prace/' . $folderName . '/zadanie/images';
+$image_folder = '../ucitelske-zadania/' . $folderName . '/zadanie/images';
 $visible = isset($data['visible']) ? $data['visible'] : false;
 
 // Handle form submission
@@ -41,13 +41,13 @@ if ($isTeacher) {
         $newJsonName = $_POST['jsonName'];
         if ($newJsonName !== $folderName) {
             // Rename folder
-            $oldFolder = '../studentske-prace/' . $folderName;
-            $newFolder = '../studentske-prace/' . $newJsonName;
+            $oldFolder = '../ucitelske-zadania/' . $folderName;
+            $newFolder = '../ucitelske-zadania/' . $newJsonName;
             if (!file_exists($newFolder)) {
                 rename($oldFolder, $newFolder);
                 $folderName = $newJsonName;
-                $image_folder = '../studentske-prace/' . $folderName . '/zadanie/images';
-                $json_file = '../studentske-prace/' . $folderName . '/zadanie/zadanie.json';
+                $image_folder = '../ucitelske-zadania/' . $folderName . '/zadanie/images';
+                $json_file = '../ucitelske-zadania/' . $folderName . '/zadanie/zadanie.json';
                 $data['name'] = $newJsonName;
         
                 // Update the JSON file with the new name
@@ -96,14 +96,14 @@ if ($isTeacher) {
                                 <input type="text" class="form-control" id="jsonName" name="jsonName" value="<?php echo $folderName; ?>" required>
                             </div>
                             <div class="mb-3">
-                                <label for="description" class="form-label">Popis</label>
+                                <label for="description" class="form-label">Popis Zadania</label>
                                 <textarea class="form-control" id="description" name="description" rows="3"><?php echo $description; ?></textarea>
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="hidden" name="visible" value="false">
                                 <input type="checkbox" class="form-check-input" id="visible" name="visible" value="true"
                                     <?php echo $visible ? 'checked' : ''; ?>>
-                                <label class="form-check-label" for="visible">Viditeľné</label>
+                                <label class="form-check-label" for="visible">Výsledok viditeľný študentom?</label>
                             </div>
                             <button type="submit" class="btn btn-primary mb-3"><i class="fa-solid fa-save"></i> Uložiť</button>
                         </form>
@@ -114,7 +114,7 @@ if ($isTeacher) {
                     <?php } ?>
                     <?php if ($visible || $isTeacher): ?>
                         <button class="btn btn-primary"
-                            onclick="window.open('../studentske-prace/<?php echo $folderName; ?>/', '_blank')">Výsledná
+                            onclick="window.open('../ucitelske-zadania/<?php echo $folderName; ?>/', '_blank')">Výsledná
                             Stránka</button>
                     <?php endif; ?>
                 </div>
