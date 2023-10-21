@@ -29,7 +29,7 @@
                     <a class="nav-link btn btn-outline-primary" href="../pages/js_page.php"><i
                             class="fa-brands fa-js"></i><span class="icon-text"> JavaScript</span></a>
                 </li>
-                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'studentske_prace.php') !== false) {
+                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'ucitelske_zadania.php') !== false || strpos($_SERVER['REQUEST_URI'], 'pages/zadanie.php') !== false) {
                     echo 'desk-active';
                 } ?>">
                     <a class="nav-link btn btn-outline-primary" href="../pages/ucitelske_zadania.php"><i
@@ -77,7 +77,7 @@
         <i class="fa-brands fa-js"></i>
         <span>JavaScript</span>
     </a>
-    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'studentske_prace.php') !== false) {
+    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'ucitelske_zadania.php') !== false || strpos($_SERVER['REQUEST_URI'], 'pages/zadanie.php') !== false) {
         echo 'active';
     } ?>" href="../pages/ucitelske_zadania.php">
         <i class="fa-solid fa-table-columns"></i>
