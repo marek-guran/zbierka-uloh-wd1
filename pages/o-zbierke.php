@@ -22,7 +22,7 @@
                     <h1>O Zbierke Úloh</h1>
                     <p>Vznikla ako <strong>učebná pomôcka</strong> pre študentov predmetu <strong>Webový Dizajn 1</strong> ako výsledok mojej Bc. práce na
                         katedre Informatiky.
-                        Zbierka úloh môže byť taktiež využitá pre predmet <strong>Webový Dizajn 2</strong>, kde sa vyučuje <stong>PHP</stong> a práca s
+                        Zbierka úloh môže byť taktiež využitá pre predmet <strong>Webový Dizajn 2</strong>, kde sa vyučuje <strong>PHP</strong> a práca s
                         <strong>Bootstrapom.</strong><br><br>
                         <strong>Názov Práce:</strong> Zbierka riešených príkladov pre predmet Webový dizajn 1<br>
                         <strong>Vytvoril:</strong> Marek Guráň<br>
