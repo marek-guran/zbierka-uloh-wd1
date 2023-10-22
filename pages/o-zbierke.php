@@ -20,10 +20,11 @@
             <div class="col-md-12">
                 <div class="page-header card-text">
                     <h1>O Zbierke Úloh</h1>
-                    <p>Vznikla ako učebná pomôcka pre študentov predmetu Webový Dizajn 1 ako výsledok mojej Bc. práce na
+                    <p>Vznikla ako <strong>učebná pomôcka</strong> pre študentov predmetu <strong>Webový Dizajn 1</strong> ako výsledok mojej Bc. práce na
                         katedre Informatiky.
-                        Zbierka úloh môže byť taktiež využitá pre predmet Webový Dizajn 2, kde sa vyučuje PHP a práca s
-                        Bootstrapom.<br><br>
+                        Zbierka úloh môže byť taktiež využitá pre predmet <strong>Webový Dizajn 2</strong>, kde sa vyučuje <stong>PHP</stong> a práca s
+                        <strong>Bootstrapom.</strong><br><br>
+                        <strong>Názov Práce:</strong> Zbierka riešených príkladov pre predmet Webový dizajn 1<br>
                         <strong>Vytvoril:</strong> Marek Guráň<br>
                         <strong>Školiteľ:</strong> doc. Ing. Ján Pillár, PhD.<br>
                         <strong>Škola:</strong> Katolícka Univerzita v Ružomberku<br>
@@ -35,13 +36,46 @@
 
     <div class="container mt-4">
         <div class="row">
-            <div class="col-md-12">
-                <div class="page-header">
-                    <h2>Použité Knižnice</h2>
-                    <p>Bootstrap 5.3.2<br>
-                        jQuery 3.5.1<br>
-                        Popper 2.5.3
-                    </p>
+            <div class="col-md-6">
+                <div class="page-header text-center">
+                    <h2><strong>Použité Knižnice</strong></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <a href="https://getbootstrap.com/" class="card-link" target="_blank">
+                            <div class="card card-hover">
+                                <img src="/img/bootstrap.png" class="card-img-top" alt="Bootstrap Image">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <a href="https://jquery.com/" class="card-link" target="_blank">
+                            <div class="card card-hover">
+                                <img src="/img/jquery.png" class="card-img-top" alt="jQuery Image">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="page-header text-center">
+                    <h2><strong>Webový Server</strong></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <a href="https://httpd.apache.org/" class="card-link" target="_blank">
+                            <div class="card card-hover">
+                                <img src="/img/apache.png" class="card-img-top" alt="Apache Image">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <a href="https://www.php.net/" class="card-link" target="_blank">
+                            <div class="card card-hover">
+                                <img src="/img/php.png" class="card-img-top" alt="PHP Image">
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,8 +83,7 @@
 
     <?php include '../includes/footer.php'; ?>
 
-    <script src="../js/jquery-3.5.1.js"></script>
-    <script src="../js/popperjs_core-2.5.3.js"></script>
+    <script src="../js/jquery-3.7.1.js"></script>
     <script src="../js/bootstrap-5.3.2.js"></script>
 </body>
 

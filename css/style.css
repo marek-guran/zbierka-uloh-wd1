@@ -327,16 +327,16 @@ Side Bar
     padding-bottom: 56.25%;
     height: 0;
     margin-bottom: 10px;
-  }
-  
-  .video-container video {
+}
+
+.video-container video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border-radius: 20px;
-  }
+}
 
 /*
 ################################## 
@@ -393,8 +393,8 @@ Navigačné Menu
 }
 
 .desk-active .icon-text {
-    display: inline-block!important;
-    transform: translateY(0%)!important;
+    display: inline-block !important;
+    transform: translateY(0%) !important;
 }
 
 /* Ukáž iba ikony pre PC a na hover ukáž text */
@@ -475,12 +475,41 @@ Stránka Nástroje
 */
 
 .carousel-controls span {
-    color: white!important;
+    color: white !important;
     font-size: 40px;
 }
 
 .card-title {
     font-weight: bold;
+}
+
+/*
+################################## 
+Scrollbar
+##################################
+*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px grey;
+    border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5199bd;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #72b0cf;
 }
 
 /* { outline: 1px solid red;}

@@ -9,10 +9,10 @@ let resourcesToCache = [
     '/fonts/fontawesome-free-6.4.2-web/webfonts/fa-regular-400.ttf',
     '/fonts/fontawesome-free-6.4.2-web/webfonts/fa-solid-900.ttf',
     '/fonts/fontawesome-free-6.4.2-web/webfonts/fa-v4compatibility.ttf',
+    '/fonts/Nunito/static/Nunito-Light.ttf',
     '/css/bootstrap-5.3.2.css',
     '/js/bootstrap-5.3.2.js',
-    '/js/jquery-3.5.1.js',
-    '/js/popperjs_core-2.5.3.js',
+    '/js/jquery-3.7.1.js',
     '/favicon.ico'];
 
 self.addEventListener("install", e => {
