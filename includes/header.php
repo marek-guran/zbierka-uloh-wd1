@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand ml-3" href="../index.php">Zbierka Úloh - WD1</a>
+        <a class="navbar-brand ml-3" href="../index.php">
+            <img src="../img/logo-512x512.png" alt="Zbierka Úloh - WD1" style="width: 40px; height: 40px;" />
+        </a>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto" style="margin-right: 0px!important;">
@@ -49,6 +51,14 @@
                 </li>
             </ul>
         </div>
+        
+        <li class="navbar-brand admin <?php if ($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/admin.php') {
+            echo 'desk-active';
+        } ?>">
+            <a class="navbar-brand btn btn-outline-primary" href="../admin.php">
+                <i class="fa-solid fa-user" href="../admin.php"></i>
+            </a>
+        </li>
     </div>
 </nav>
 

@@ -392,22 +392,18 @@ Navigačné Menu
     border-radius: 50px;
 }
 
-.desk-active .icon-text {
-    display: inline-block !important;
-    transform: translateY(0%) !important;
+li.navbar-brand.admin {
+    list-style: none;
+    margin-right: 0px;
+}
+
+.desk-active .nav-link {
+    background-color: #55a4cc;
+    color: #fff;
 }
 
 /* Ukáž iba ikony pre PC a na hover ukáž text */
 @media (min-width: 992px) {
-    .navbar-nav .nav-link .icon-text {
-        display: none;
-    }
-
-    .navbar-nav .nav-link:hover .icon-text {
-        display: inline-block;
-        transform: translateY(0%);
-    }
-
     .navbar-nav .nav-link {
         margin-right: 10px;
     }

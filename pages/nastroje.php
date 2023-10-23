@@ -36,7 +36,8 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="card card-text">
-                                <img src="../img/nastroje/vs-code-logo.svg" class="card-img-top" alt="Visual Studio Code">
+                                <img src="../img/nastroje/vs-code-logo.svg" class="card-img-top"
+                                    alt="Visual Studio Code">
                                 <div class="card-body">
                                     <h3 class="card-title text-center">Visual Studio Code</h3>
                                     <p><strong>Visual Studio Code</strong> je editor zdrojového kódu vyvinutý
@@ -52,7 +53,8 @@
                         </div>
                         <div class="carousel-item">
                             <div class="card card-text">
-                                <img src="../img/nastroje/sublime-text-logo.svg" class="card-img-top" alt="Sublime Text">
+                                <img src="../img/nastroje/sublime-text-logo.svg" class="card-img-top"
+                                    alt="Sublime Text">
                                 <div class="card-body">
                                     <h3 class="card-title text-center">Sublime Text</h3>
                                     <p><strong>Sublime Text</strong> je proprietárny multiplatformový editor zdrojového
@@ -80,6 +82,23 @@
                                     <div class="text-center">
                                         <button class="btn btn-primary"
                                             onclick="window.open('http://brackets.io/', '_blank')">Otvoriť</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card card-text">
+                                <img src="../img/nastroje/pspad.png" class="card-img-top" alt="PSPad">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center">PSPad</h3>
+                                    <p><strong>PSPad</strong> je bezplatný textový editor pre Windows, ktorý podporuje
+                                        mnoho programovacích jazykov a umožňuje prácu s viacerými súbormi naraz. Editor
+                                        obsahuje mnoho užitočných funkcií, ako napríklad zvýrazňovanie syntaxu,
+                                        automatické dopĺňanie kódu, funkcie pre hromadnú úpravu súborov a mnoho
+                                        ďalšieho.</p>
+                                    <div class="text-center">
+                                        <button class="btn btn-primary"
+                                            onclick="window.open('https://www.pspad.com/sk', '_blank')">Otvoriť</button>
                                     </div>
                                 </div>
                             </div>
