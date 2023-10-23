@@ -12,7 +12,7 @@ Stránka sa dá navštíviť iba so **slovenskou / českou** IP adresou.
 ### Potrebné veci:
 - Docker
 - Stiahnuté súbory stránky
-### Discord webhook je alerting, keď niekto bude chcieť nahrávať súbory (môže sa tam dať napríklad písmeno 'a' na preskočenie)
+### Discord webhook je alerting, keď sa niekto pripojí na web server (môže sa tam dať napríklad písmeno 'a' na preskočenie)
 ```bash
 #!/bin/bash
 
@@ -64,7 +64,7 @@ certbot --apache
 ```
 Po tomto by už malo fungovať HTTPS
 
-# Inštalácia - manuálna (discord webhook je alerting, keď niekto bude chcieť nahrávať súbory)
+# Inštalácia - manuálna (discord webhook je alerting, keď sa niekto pripojí na web servver)
 ```bash
 docker run --name zbierka-web -d -p 10000:80 -p 10001:443 -e DISCORD_WEBHOOK_URL="https://your.discord.webhook.url" -e TEACHER_PASSWORD="your_teacher_password" -v /home/pi/zbierka/:/var/www/html php:apache
 ```
