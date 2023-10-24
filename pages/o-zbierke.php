@@ -85,6 +85,7 @@
 
     <script src="../js/jquery-3.7.1.js"></script>
     <script src="../js/bootstrap-5.3.2.js"></script>
+    <script src="../js/destroy-cookie-sidebar.js"></script>
 </body>
 
 </html>

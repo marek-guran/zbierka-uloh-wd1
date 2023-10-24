@@ -18,7 +18,7 @@
 
     <div>
         <?php
-        $pr = isset($_GET['pr']) ? $_GET['pr'] : 'text-pr1';
+        $pr = isset($_GET['pr']) ? $_GET['pr'] : 'domov';
         include "../includes/priklady/html/{$pr}.php";
         ?>
     </div>

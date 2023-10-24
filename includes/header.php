@@ -52,11 +52,11 @@
             </ul>
         </div>
         
-        <li class="navbar-brand admin <?php if ($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/admin.php') {
+        <li class="navbar-brand admin <?php if ($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/pages/admin.php') {
             echo 'desk-active';
         } ?>">
-            <a class="navbar-brand btn btn-outline-primary" href="../admin.php">
-                <i class="fa-solid fa-user" href="../admin.php"></i>
+            <a class="navbar-brand btn btn-outline-primary" href="../pages/admin.php">
+                <i class="fa-solid fa-user" href="../pages/admin.php"></i>
             </a>
         </li>
     </div>
