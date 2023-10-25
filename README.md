@@ -41,7 +41,7 @@ sed -i 's/;extension=zip/extension=zip/' /tmp/php.ini-production
 docker cp /tmp/php.ini-production zbierka-web:/usr/local/etc/php/php.ini
 
 # Inštalácia libzip-dev a povolenie zip pluginu
-docker exec -it zbierka-web bash -c 'apt-get update && apt-get install -y libzip-dev && docker-php-ext-install zip'
+docker exec -it zbierka-web bash -c 'apt-get update && apt-get install -y libzip-dev && docker-php-ext-install zip && docker-php-ext-install mysqli'
 
 # Reštartovať kontajner
 docker restart zbierka-web

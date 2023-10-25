@@ -3,40 +3,34 @@
     <div class="sidebar-container">
         <ul class="nav flex-column side-menu">
             <li class="nav-item">
-                <a class="nav-link" href="?pr=domov">Domov</a>
+                <a class="nav-link<?php if (!isset($_GET['pr'])) { echo ' active'; } ?>" href="../pages/html_page.php">Domov</a>
             </li>
             <?php
-            // Define the directory path
-            $directoryPath = '../includes/priklady/html/';
+            $host_menu = 'zbierka-db';
+            $port_menu = 3306;
+            $username_menu = 'admin';
+            $password_menu = getenv('TEACHER_PASSWORD');
+            $database_menu = 'zbierka';
 
-            // Get the list of directories in the specified path
-            $folders = array_filter(glob($directoryPath . '*'), 'is_dir');
+            $connection_menu = new mysqli($host_menu, $username_menu, $password_menu, $database_menu, $port_menu);
 
-            // Sort the folders based on the number in their names as a float
-            usort($folders, function($a, $b) {
-                $aNumber = floatval(preg_replace('/[^0-9\.]/', '', basename($a)));
-                $bNumber = floatval(preg_replace('/[^0-9\.]/', '', basename($b)));
-                return $aNumber - $bNumber;
-            });
+            if ($connection_menu->connect_error) {
+                die('Connection failed: ' . $connection_menu->connect_error);
+            }
 
-            // Loop through the folders and generate menu items
-            foreach ($folders as $folder) {
-                $folderName = basename($folder);
-                $firstPhpFile = findFirstPhpFile($folder);
-                
-                if ($firstPhpFile) {
-                    $fileName = basename($firstPhpFile, ".php"); // Remove the .php extension
-                    echo '<li class="nav-item">';
-                    echo '<a class="nav-link" href="?pr=' . $folderName . '/' . $fileName . '">' . $folderName . '</a>';
-                    echo '</li>';
+            $stmt_menu = $connection_menu->prepare("SELECT kategoria, MIN(nazov) FROM HTML GROUP BY kategoria");
+            $stmt_menu->execute();
+            $stmt_menu->bind_result($category_menu, $name_menu);
+            while ($stmt_menu->fetch()) {
+                $active_menu = '';
+                if (isset($_GET['pr']) && $_GET['pr'] == $category_menu . '/' . $name_menu) {
+                    $active_menu = ' active';
                 }
+                echo '<li class="nav-item">';
+                echo '<a class="nav-link' . $active_menu . '" href="../pages/html_page_priklad.php?pr=' . $name_menu . '">' . $category_menu . '</a>';
+                echo '</li>';
             }
-
-            // Function to find the first PHP file in a folder
-            function findFirstPhpFile($folder) {
-                $files = glob($folder . '/*.php');
-                return (count($files) > 0) ? $files[0] : null;
-            }
+            $stmt_menu->close();
             ?>
         </ul>
     </div>

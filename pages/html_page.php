@@ -18,8 +18,8 @@
 
     <div>
         <?php
-        $pr = isset($_GET['pr']) ? $_GET['pr'] : 'domov';
-        include "../includes/priklady/html/{$pr}.php";
+        $pr = isset($_GET['pr']) ? $_GET['pr'] : 'html-domov';
+        include "../includes/{$pr}.php";
         ?>
     </div>
 

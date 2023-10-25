@@ -13,7 +13,7 @@
                         <i class="fa-solid fa-house"></i><span class="icon-text"> Domov</span>
                     </a>
                 </li>
-                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'html_page.php') !== false) {
+                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'html_page.php') !== false || strpos($_SERVER['REQUEST_URI'], 'html_page_priklad.php') !== false) {
                     echo 'desk-active';
                 } ?>">
                     <a class="nav-link btn btn-outline-primary" href="../pages/html_page.php"><i
@@ -51,7 +51,7 @@
                 </li>
             </ul>
         </div>
-        
+
         <li class="navbar-brand admin <?php if ($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/pages/admin.php') {
             echo 'desk-active';
         } ?>">
@@ -69,7 +69,7 @@
         <i class="fa-solid fa-house"></i>
         <span>Domov</span>
     </a>
-    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'html_page.php') !== false) {
+    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'html_page.php') !== false || strpos($_SERVER['REQUEST_URI'], 'html_page_priklad.php') !== false) {
         echo 'active';
     } ?>" href="../pages/html_page.php">
         <i class="fa-brands fa-html5"></i>

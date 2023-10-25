@@ -1,20 +1,51 @@
-<div class="navigation mt-3" role="group" aria-label="Button Group">
-    <?php
-    $callingFilePath = debug_backtrace()[0]['file'];
-    $directoryPath = dirname($callingFilePath) . '/';
+<?php
+$host = 'zbierka-db';
+$port = 3306;
+$username = 'admin';
+$password = getenv('TEACHER_PASSWORD');
+$database = 'zbierka';
 
-    $phpFiles = array_filter(glob($directoryPath . '*.php'), 'is_file');
+$connection = new mysqli($host, $username, $password, $database, $port);
 
-    sort($phpFiles);
+if ($connection->connect_error) {
+    die('Connection failed: ' . $connection->connect_error);
+}
 
-    foreach ($phpFiles as $phpFile) {
-        $fileName = basename($phpFile, '.php');
-        $folderName = basename(dirname($phpFile));
-        $active = '';
-        if (isset($_GET['pr']) && $_GET['pr'] == $folderName . '/' . $fileName) {
-            $active = ' active';
+if (isset($_GET['pr'])) {
+    $selected = $_GET['pr'];
+    $category = '';
+
+    $stmt = $connection->prepare("SELECT kategoria FROM HTML WHERE nazov = ?");
+    $stmt->bind_param("s", $selected);
+    $stmt->execute();
+    $stmt->bind_result($category);
+    $stmt->fetch();
+    $stmt->close();
+
+    if (!empty($category)) {
+        $stmt = $connection->prepare("SELECT COUNT(*) FROM HTML WHERE kategoria = ?");
+        $stmt->bind_param("s", $category);
+        $stmt->execute();
+        $stmt->bind_result($count);
+        $stmt->fetch();
+        $stmt->close();
+
+        if ($count > 1) {
+            $stmt = $connection->prepare("SELECT nazov FROM HTML WHERE kategoria = ?");
+            $stmt->bind_param("s", $category);
+            $stmt->execute();
+            $stmt->bind_result($name);
+            $buttons = '';
+            while ($stmt->fetch()) {
+                $active = '';
+                if ($_GET['pr'] == $name) {
+                    $active = ' active';
+                }
+                $buttons .= '<a href="?pr=' . $name . '" class="btn btn-primary btn-sm btn-group-toggle' . $active . '" style="margin-right: 2px; margin-left: 2px">' . $name . '</a>';
+            }
+            $stmt->close();
+            echo '<div class="navigation mt-3" role="group" aria-label="Button Group">' . $buttons . '</div>';
         }
-        echo '<a href="?pr=' . $folderName . '/' . $fileName . '" class="btn btn-primary btn-sm btn-group-toggle' . $active . '" style="margin-right: 2px; margin-left: 2px">' . $fileName . '</a>';
     }
-    ?>
-</div>
+}
+?>
