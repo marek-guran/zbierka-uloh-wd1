@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
             echo '<div class="col-md-4"><div class="mb-3 text-center"><div class="card-body"><h3 class="card-title">' . $kategoria . '</h3></div></div><div class="row">';
             $currentKategoria = $kategoria;
         }
-        echo '<div class="col-md-6"><div class="card-hover card-text mb-3 text-center" onclick="event.preventDefault(); window.location.href = \'css_page_priklad.php?pr=' . $nazov . '\';"><div class="card-body"><p class="card-title">' . $nazov . '</p></div></div></div>';
+        echo '<div class="col-md-6"><div class="card-hover card-text mb-3 text-center" onclick="event.preventDefault(); window.location.href = \'html_page_priklad.php?pr=' . $nazov . '\';"><div class="card-body"><p class="card-title">' . $nazov . '</p></div></div></div>';
     }
     echo '</div></div></div>';
 } else {
