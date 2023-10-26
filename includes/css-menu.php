@@ -3,38 +3,37 @@
     <div class="sidebar-container">
         <ul class="nav flex-column side-menu">
             <li class="nav-item">
-                <a class="nav-link" href="?pr=css-texty1">Texty</a>
+                <a class="nav-link<?php if (!isset($_GET['pr'])) { echo ' active'; } ?>" href="../pages/css_page.php">Domov</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-responzivita1">Responzivita</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-media1">Média</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-formulare1">Formuláre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-tabulky1">Tabuľky</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-flexbox1">Flexbox</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-grid1">Grid</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-menu1">Navigačné menu</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-animacie1">Animácie</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="?pr=css-transformacie1">Transformácie</a>
-            </li>
+            <?php
+            $host_menu = 'zbierka-db';
+            $port_menu = 3306;
+            $username_menu = 'admin';
+            $password_menu = getenv('TEACHER_PASSWORD');
+            $database_menu = 'zbierka';
+
+            $connection_menu = new mysqli($host_menu, $username_menu, $password_menu, $database_menu, $port_menu);
+
+            if ($connection_menu->connect_error) {
+                die('Connection failed: ' . $connection_menu->connect_error);
+            }
+
+            $stmt_menu = $connection_menu->prepare("SELECT kategoria, MIN(nazov) FROM CSS GROUP BY kategoria ORDER BY CAST(kategoria AS UNSIGNED), kategoria");
+            $stmt_menu->execute();
+            $stmt_menu->bind_result($category_menu, $name_menu);
+            while ($stmt_menu->fetch()) {
+                $active_menu = '';
+                if (isset($_GET['pr']) && $_GET['pr'] == $category_menu . '/' . $name_menu) {
+                    $active_menu = ' active';
+                }
+                echo '<li class="nav-item">';
+                echo '<a class="nav-link' . $active_menu . '" href="../pages/css_page_priklad.php?pr=' . $name_menu . '">' . $category_menu . '</a>';
+                echo '</li>';
+            }
+            $stmt_menu->close();
+            ?>
         </ul>
     </div>
-
     <button id="sidebarToggle" class="btn btn-dark">
         <i class="fas fa-arrow-right"></i>
     </button>

@@ -197,7 +197,7 @@ Side Bar
 
 .sidebar {
     height: 98%;
-    width: 200px;
+    width: 210px;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -237,7 +237,7 @@ Side Bar
     font-size: 18px;
     color: white;
     display: block;
-    width: 180px !important;
+    width: 190px !important;
     border-top-right-radius: 50px !important;
     border-bottom-right-radius: 50px !important;
 }
@@ -271,7 +271,7 @@ Side Bar
 
 @media (max-width: 1764px) {
     .sidebar {
-        left: -200px;
+        left: -210px;
     }
 
     #sidebarToggle {
