@@ -76,6 +76,20 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-md-6 mb-4">
+                        <a href="https://mariadb.com/" class="card-link" target="_blank">
+                            <div class="card card-hover">
+                                <img src="/img/MariaDB.png" class="card-img-top" alt="MariaDB Image">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <a href="https://www.phpmyadmin.net/" class="card-link" target="_blank">
+                            <div class="card card-hover">
+                                <img src="/img/phpMyAdmin.png" class="card-img-top" alt="phpMyAdmin Image">
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
