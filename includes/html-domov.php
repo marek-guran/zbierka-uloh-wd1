@@ -11,7 +11,7 @@ if ($connection->connect_error) {
     die('Connection failed: ' . $connection->connect_error);
 }
 
-$sql = "SELECT kategoria, nazov FROM HTML ORDER BY kategoria, nazov";
+$sql = "SELECT kategoria, nazov FROM HTML ORDER BY CAST(kategoria AS UNSIGNED), kategoria, nazov";
 $result = $connection->query($sql);
 
 if ($result->num_rows > 0) {

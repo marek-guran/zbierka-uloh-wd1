@@ -18,7 +18,7 @@
                 die('Connection failed: ' . $connection_menu->connect_error);
             }
 
-            $stmt_menu = $connection_menu->prepare("SELECT kategoria, MIN(nazov) FROM HTML GROUP BY kategoria");
+            $stmt_menu = $connection_menu->prepare("SELECT kategoria, MIN(nazov) FROM HTML GROUP BY kategoria ORDER BY CAST(kategoria AS UNSIGNED), kategoria");
             $stmt_menu->execute();
             $stmt_menu->bind_result($category_menu, $name_menu);
             while ($stmt_menu->fetch()) {
