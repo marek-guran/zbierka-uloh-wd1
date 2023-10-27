@@ -85,8 +85,8 @@
 
     <?php include 'includes/footer.php'; ?>
 
-    <script src="../js/jquery-3.7.1.js"></script>
-    <script src="../js/bootstrap-5.3.2.js"></script>
+    <script src="js/bootstrap-5.3.2.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
 </body>
 
 </html>

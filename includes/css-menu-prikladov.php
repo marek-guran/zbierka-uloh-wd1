@@ -41,7 +41,7 @@ if (isset($_GET['pr'])) {
                 if ($_GET['pr'] == $name) {
                     $active = ' active';
                 }
-                $buttons .= '<a href="?pr=' . $name . '" class="btn btn-primary btn-sm btn-group-toggle' . $active . '" style="margin-right: 2px; margin-left: 2px">' . $name . '</a>';
+                $buttons .= '<a href="?pr=' . $name . '" class="btn btn-primary btn-sm btn-group-toggle' . $active . '" style="margin-right: 2px; margin-left: 2px; margin-bottom: 4px;">' . $name . '</a>';
             }
             $stmt->close();
             echo '<div class="navigation mt-3" role="group" aria-label="Button Group">' . $buttons . '</div>';

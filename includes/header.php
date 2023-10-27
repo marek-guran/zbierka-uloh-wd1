@@ -52,11 +52,9 @@
             </ul>
         </div>
 
-        <li class="navbar-brand admin <?php if ($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '/pages/admin.php') {
-            echo 'desk-active';
-        } ?>">
-            <a class="navbar-brand btn btn-outline-primary" href="../pages/admin.php">
-                <i class="fa-solid fa-user" href="../pages/admin.php"></i>
+        <li class="navbar-brand admin">
+            <a class="navbar-brand btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#adminModal">
+                <i class="fa-solid fa-user"></i>
             </a>
         </li>
     </div>
@@ -107,6 +105,7 @@
     </a>
 </div>
 
+<?php include '../includes/admin-login.php'; ?>
 
 <script>
     var discordWebhookUrl = "<?php echo getenv('DISCORD_WEBHOOK_URL'); ?>";

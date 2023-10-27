@@ -183,7 +183,7 @@ div.navigation {
     --bs-btn-border-color: none !important;
     --bs-btn-hover-bg: #72b0cf !important;
     --bs-btn-hover-border-color: none !important;
-    --bs-btn-active-bg: #55a4cc !important;
+    --bs-btn-active-bg: #307394 !important;
     --bs-btn-active-border-color: none !important;
     --bs-btn-disabled-bg: #55a4cc !important;
     --bs-btn-disabled-border-color: none !important;
@@ -394,7 +394,7 @@ Navigačné Menu
 
 li.navbar-brand.admin {
     list-style: none;
-    margin-right: 0px;
+    margin-right: 0px!important;
 }
 
 .desk-active .nav-link {
@@ -506,6 +506,29 @@ Scrollbar
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #72b0cf;
+}
+
+/*
+################################## 
+Modal
+##################################
+*/
+
+.modal-content {
+    color: black;
+    background-color: hsl(200, 91%, 91%) !important;
+    border-radius: 20px!important;
+}
+
+.form-control {
+    color: var(--bs-body-color);
+    background-color: #a4dbf7!important;
+    border-radius: 20px!important;
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 50px!important;
+    background-color: #307394!important;
 }
 
 /* { outline: 1px solid red;}
