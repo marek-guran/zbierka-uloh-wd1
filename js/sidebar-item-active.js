@@ -8,8 +8,6 @@ if (cookieValue) {
     const [index, page] = cookieValue.split(':');
     if (window.location.pathname.endsWith(page)) {
         activeIndex = parseInt(index);
-    } else {
-        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
     }
 }
 
@@ -53,20 +51,4 @@ menuItems.forEach((item, index) => {
         // Set the active item index and page in the cookie
         document.cookie = `${cookieName}=${activeIndex}:${window.location.pathname}; path=/`;
     });
-});
-
-// Delete the cookie when the user navigates to a different page
-window.addEventListener('unload', () => {
-    const currentPage = window.location.pathname;
-    if (!currentPage.endsWith('html_page.php') || currentPage.endsWith('js_page.php')) {
-        document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-    } else {
-        const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)activeMenuItem\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        if (cookieValue) {
-            const [index, page] = cookieValue.split(':');
-            if (!currentPage.endsWith(page)) {
-                document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-            }
-        }
-    }
 });

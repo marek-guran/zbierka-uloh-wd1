@@ -19,13 +19,13 @@
                     <a class="nav-link btn btn-outline-primary" href="../pages/html_page.php"><i
                             class="fa-brands fa-html5"></i><span class="icon-text"> HTML5</span></a>
                 </li>
-                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'css_page.php') !== false) {
+                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'css_page.php') !== false || strpos($_SERVER['REQUEST_URI'], 'css_page_priklad.php') !== false) {
                     echo 'desk-active';
                 } ?>">
                     <a class="nav-link btn btn-outline-primary" href="../pages/css_page.php"><i
                             class="fa-brands fa-css3-alt"></i><span class="icon-text"> CSS3</span></a>
                 </li>
-                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'js_page.php') !== false) {
+                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'js_page.php') !== false || strpos($_SERVER['REQUEST_URI'], 'js_page_priklad.php') !== false) {
                     echo 'desk-active';
                 } ?>">
                     <a class="nav-link btn btn-outline-primary" href="../pages/js_page.php"><i
@@ -75,13 +75,13 @@
         <i class="fa-brands fa-html5"></i>
         <span>HTML5</span>
     </a>
-    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'css_page.php') !== false) {
+    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'css_page.php') !== false || strpos($_SERVER['REQUEST_URI'], 'css_page_priklad.php') !== false) {
         echo 'active';
     } ?>" href="../pages/css_page.php">
         <i class="fa-brands fa-css3-alt"></i>
         <span>CSS3</span>
     </a>
-    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'js_page.php') !== false) {
+    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'js_page.php') !== false || strpos($_SERVER['REQUEST_URI'], 'js_page_priklad.php') !== false) {
         echo 'active';
     } ?>" href="../pages/js_page.php">
         <i class="fa-brands fa-js"></i>
