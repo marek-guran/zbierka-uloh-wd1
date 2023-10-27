@@ -108,6 +108,17 @@
 <?php include '../includes/admin-login.php'; ?>
 
 <script>
+    var path = window.location.pathname;
+
+    if (path === '/' || path === '/index.php') {
+        var adminLink = document.querySelector('.navbar-brand.admin');
+        if (adminLink) {
+            adminLink.style.display = 'none';
+        }
+    }
+</script>
+
+<script>
     var discordWebhookUrl = "<?php echo getenv('DISCORD_WEBHOOK_URL'); ?>";
 </script>
 <script src="../js/connection-monitoring.js"></script>
