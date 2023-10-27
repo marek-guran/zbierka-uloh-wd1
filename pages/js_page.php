@@ -18,8 +18,8 @@
 
     <div>
         <?php
-            $pr = isset($_GET['pr']) ? $_GET['pr'] : 'js-api1';
-            include "../includes/priklady/js/{$pr}.php";
+        $pr = isset($_GET['pr']) ? $_GET['pr'] : 'js-domov';
+        include "../includes/{$pr}.php";
         ?>
     </div>
 

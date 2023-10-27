@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: Št 26.Okt 2023, 14:52
+-- Čas generovania: Pi 27.Okt 2023, 08:54
 -- Verzia serveru: 11.1.2-MariaDB-1:11.1.2+maria~ubu2204
 -- Verzia PHP: 8.2.11
 
@@ -86,6 +86,47 @@ INSERT INTO `HTML` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `obrazok`, `v
 (15, '5 Meta Údaje', '5.1 Meta', 'Peter si založil internetový obchod na ktorom predáva tlačiarne a nepáči sa mu ako vyzerajú výsledky na internetových prehliadačoch. Ukazuje mu tam náhodný text z jeho webstránky. Vytvorte webovú stránku, ktorá obsahuje aspoň 3 produkty s cenami, niečo o Petrovom obchode a opravte mu meta údaje aby si ho mohli zákazníci lepšie všimnúť. <p><strong>Výsledná stránka by mala vyzerať približne takto:</strong></p>', '../priklady/html/5.1 Meta/meta-pr1.html', '../priklady/html/5.1 Meta/meta-pr1.png', '', ''),
 (16, '6 Navigácia', '6.1 Navigácia', 'Vytvorte dlhšiu webstránku, po ktorej budete môcť skákať kliknutím na navigačný link.<p><strong>Výsledná stránka by mala vyzerať približne takto:</strong>', '../priklady/html/6.1 Navigácia/navigacia-pr1.html', '../priklady/html/6.1 Navigácia/navigacia-pr1.png', '', '');
 
+-- --------------------------------------------------------
+
+--
+-- Štruktúra tabuľky pre tabuľku `JS`
+--
+
+CREATE TABLE `JS` (
+  `id` int(11) NOT NULL,
+  `kategoria` text NOT NULL,
+  `nazov` text NOT NULL,
+  `zadanie` longtext NOT NULL,
+  `html` text NOT NULL,
+  `css` text NOT NULL,
+  `js` text NOT NULL,
+  `jsonf` text NOT NULL,
+  `kniznica` text NOT NULL,
+  `dokumentacia` text NOT NULL,
+  `obrazok` text NOT NULL,
+  `video` text NOT NULL,
+  `visibleVysledok` text NOT NULL DEFAULT '0',
+  `downloadJs` text NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Sťahujem dáta pre tabuľku `JS`
+--
+
+INSERT INTO `JS` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `css`, `js`, `jsonf`, `kniznica`, `dokumentacia`, `obrazok`, `video`, `visibleVysledok`, `downloadJs`) VALUES
+(3, '1 API', '1.1 Zobrazenie Textu z JSON súboru', 'Pomocou priloženého súboru JSON vytvorte stránku, ktorá zobrazí jeho obsah. Viď. fotka.', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/pr1.html', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/pr1.css', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/pr1.js', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/pr1.json', '', '', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/js-api-pr1.png', '', '', '1'),
+(4, '2 AJAX', '2.1 Dáta na požiadanie', 'Pomocou priloženého súboru JSON vytvorte stránku, ktorá zobrazí jeho obsah na kliknutie tlačidla. Viď. video.', '../priklady/js/2.1 Dáta na požiadanie/pr1.html', '../priklady/js/2.1 Dáta na požiadanie/pr1.css', '../priklady/js/2.1 Dáta na požiadanie/pr1.js', '../priklady/js/2.1 Dáta na požiadanie/pr1.json', '', '', '', '../priklady/js/2.1 Dáta na požiadanie/pr1.mp4', '', '1'),
+(5, '3 Grafy', '3.1 Chart.js', 'Pomocou priloženého súboru JSON a knižnice vytvorte stránku, ktorá zobrazí jeho obsah na grafe. Máte priloženú aj dokumentáciu ku knižnici. Viď. fotka.', '../priklady/js/3.1 Chart.js/pr1.html', '../priklady/js/3.1 Chart.js/pr1.css', '../priklady/js/3.1 Chart.js/pr1.js', '../priklady/js/3.1 Chart.js/pr1.json', '../priklady/js/3.1 Chart.js/library-graphs.js', 'https://www.chartjs.org/docs/4.4.0/', '../priklady/js/3.1 Chart.js/js-grafy-pr1.png', '', '', '1'),
+(6, '4 Navigácia', '4.1 Mobilné Menu', 'Vytvorte navigačné menu pre menšie obrazovky, ktoré funguje ako hamburger menu na mobilných aplikáciach. Viď. video.', '../priklady/js/4.1 Mobilné Menu/pr1.html', '../priklady/js/4.1 Mobilné Menu/pr1.css', '../priklady/js/4.1 Mobilné Menu/pr1.js', '', '', '', '', '../priklady/js/4.1 Mobilné Menu/pr1.mp4', '', '1'),
+(7, '5 Prepínanie CSS', '5.1 Svetlý / Tmavý režim', 'Pomocou tlačidla na stránke zmeňte tému stránky na tmavú. Viď. video.', '../priklady/js/5.1 Svetlý / Tmavý režim/pr1.html', '../priklady/js/5.1 Svetlý / Tmavý režim/pr1.css', '../priklady/js/5.1 Svetlý / Tmavý režim/pr1.js', '', '', '', '', '../priklady/js/5.1 Svetlý / Tmavý režim/pr1.mp4', '', '1'),
+(8, '6 Vyskakovacie okná', '6.1 Povoliť Cookies', 'Vytvorte vyskakovacie okno, ktoré si bude pýtať od používateľa aby prijal Cookies. Toto následne uložte do lokálneho úložiska, aby sa ho stránka nabudúce nepýtala znovu jeho prijatie. Viď. video.', '../priklady/js/6.1 Povoliť Cookies/pr1.html', '../priklady/js/6.1 Povoliť Cookies/pr1.css', '../priklady/js/6.1 Povoliť Cookies/pr1.js', '', '', '', '', '../priklady/js/6.1 Povoliť Cookies/pr1.mp4', '', '1'),
+(11, '7 Drag and Drop', '7.1 Presun elementov na stránke do koša', 'Vytvorte stránku, na ktorej budete mať obrázok koša a budete môcť do neho pomocou funkcie drag and drop pretiahnuť elementy, ktoré potom zmiznú. Vždy, keď sa vloží niečo do koša, tak nech napíše nejaké slovo, ktoré zmizne po pár sekundách. Viď. video.', '../priklady/js/7.1 Presun elementov na stránke do koša/pr1.html', '../priklady/js/7.1 Presun elementov na stránke do koša/pr1.css', '../priklady/js/7.1 Presun elementov na stránke do koša/pr1.js', '', '', '', '', '../priklady/js/7.1 Presun elementov na stránke do koša/pr1.mp4', '', '1'),
+(12, '8 Tabuľky', '8.1 Správa dát v tabuľke', 'Vytvorte tabuľku, do ktorej budete môcť pridávať, upravovať a mazať údaje. Viď. video.', '../priklady/js/8.1 Správa dát v tabuľke/pr1.html', '../priklady/js/8.1 Správa dát v tabuľke/pr1.css', '../priklady/js/8.1 Správa dát v tabuľke/pr1.js', '', '', '', '', '../priklady/js/8.1 Správa dát v tabuľke/pr1.mp4', '', '1'),
+(13, '9 Vyhľadávanie', '9.1 Vyhľadávanie na aktuálnej stránke', 'Vytvorte stránku, kde budete môcť hľadať pomocou vyhľadávacieho okna produkty e-shopu. Viď. video.', '../priklady/js/9.1 Vyhľadávanie na aktuálnej stránke/pr1.html', '../priklady/js/9.1 Vyhľadávanie na aktuálnej stránke/pr1.css', '../priklady/js/9.1 Vyhľadávanie na aktuálnej stránke/pr1.js', '', '', '', '', '../priklady/js/9.1 Vyhľadávanie na aktuálnej stránke/pr1.mp4', '', '1'),
+(14, '10 Iné', '10.1 Kalkulačka', 'Pokúste sa vytvoriť jednoduchú kalkulačku. Viď. video.', '../priklady/js/10.1 Kalkulačka/pr1.html', '../priklady/js/10.1 Kalkulačka/pr1.css', '../priklady/js/10.1 Kalkulačka/pr1.js', '', '', '', '', '../priklady/js/10.1 Kalkulačka/pr1.mp4', '', '1'),
+(15, '10 Iné', '10.2 Hodiny', 'Pokúste sa vytvoriť hodiny so sekundami. Viď. video.', '../priklady/js/10.2 Hodiny/pr1.html', '../priklady/js/10.2 Hodiny/pr1.css', '../priklady/js/10.2 Hodiny/pr1.js', '', '', '', '', '../priklady/js/10.2 Hodiny/pr1.mp4', '', '1'),
+(16, '10 Iné', '10.3 Galéria', 'Vytvorte galériu obrázkov, kde sa budú prepínať obrázky na stlačenie tlačidla vpravo alebo vľavo. Viď. video.', '../priklady/js/10.3 Galéria/pr1.html', '../priklady/js/10.3 Galéria/pr1.css', '../priklady/js/10.3 Galéria/pr1.js', '', '', '', '', '../priklady/js/10.3 Galéria/pr1.mp4', '', '1');
+
 --
 -- Kľúče pre exportované tabuľky
 --
@@ -103,6 +144,12 @@ ALTER TABLE `HTML`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexy pre tabuľku `JS`
+--
+ALTER TABLE `JS`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pre exportované tabuľky
 --
 
@@ -117,6 +164,12 @@ ALTER TABLE `CSS`
 --
 ALTER TABLE `HTML`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT pre tabuľku `JS`
+--
+ALTER TABLE `JS`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

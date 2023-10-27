@@ -79,6 +79,14 @@ if (isset($_POST['logout'])) {
                             </button>
                         </div>
                     </div>
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#addJSModal">
+                                Momentálne sa pracuje na tomto, nepoužívať - Pridať JS
+                            </button>
+                        </div>
+                    </div>
                 <?php } ?>
             </div>
         </div>
@@ -86,6 +94,7 @@ if (isset($_POST['logout'])) {
 
     <?php include '../includes/admin-html-add.php'; ?>
     <?php include '../includes/admin-css-add.php'; ?>
+    <?php include '../includes/admin-js-add.php'; ?>
 
     <?php include '../includes/footer.php'; ?>
 
