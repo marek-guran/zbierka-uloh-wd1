@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Príklady</title>
+    <title>O Zbierke</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap-5.3.2.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -52,6 +52,13 @@
                         <a href="https://jquery.com/" class="card-link" target="_blank">
                             <div class="card card-hover">
                                 <img src="/img/jquery.png" class="card-img-top" alt="jQuery Image">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <a href="https://fontawesome.com/" class="card-link" target="_blank">
+                            <div class="card card-hover">
+                                <img src="/img/font-awesome.png" class="card-img-top" alt="Font Awesome Image">
                             </div>
                         </a>
                     </div>
