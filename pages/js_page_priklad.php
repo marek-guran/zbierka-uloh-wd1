@@ -1,3 +1,15 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nazovEdit = $_POST['nazovEdit'];
+    $url = $_SERVER['REQUEST_URI'];
+    $urlParts = parse_url($url);
+    parse_str($urlParts['query'], $query);
+    $query['pr'] = $nazovEdit;
+    $urlParts['query'] = http_build_query($query);
+    $newUrl = $urlParts['path'] . '?' . $urlParts['query'];
+    header("Refresh:0; url=$newUrl");
+}
+?>
 <!DOCTYPE html>
 <html lang="sk">
 
@@ -71,8 +83,20 @@
     }
 
     $connection->close();
+
+    if ($isTeacher) {
+        echo '<div class="container">';
+        echo '<div class="row">';
+        echo '<div class="col-md-12">';
+        echo '<h1 class="d-inline-block">Prihlásený ako <strong>učiteľ</strong></h1>';
+        echo '<button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#editJsModal"><i class="fa-regular fa-pen-to-square"></i> Upraviť príklad</button>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+    }
     ?>
 
+    <?php include '../includes/admin-js-edit.php'; ?>
     <?php include '../includes/js-menu-prikladov.php'; ?>
 
     <div class="container">
@@ -103,6 +127,20 @@
                             echo "<a href='$jsPath' download class=\"btn btn-primary me-2\"><i class=\"fa-brands fa-js\"></i> JavaScript</a>";
                         }
                     } else if (!empty($_COOKIE['isTeacher']) && $_COOKIE['isTeacher'] === "true") {
+                    }
+                    if (isset($_COOKIE['isTeacher']) && $_COOKIE['isTeacher'] == "true") {
+                        if ($downloadJS == "1") {
+                            echo "<hr>";
+                            echo "<p><i class='fa-solid fa-check'></i> JavaScript sa <strong>dá stiahnuť.</strong></p>";
+                        } else {
+                            echo "<hr>";
+                            echo "<p><i class='fa-solid fa-xmark'></i> JavaScript sa <strong> nedá stiahnuť.</strong></p>";
+                        }
+                        if ($visibleVysledok == "1") {
+                            echo "<p><i class='fa-regular fa-eye'></i> Výsledok je <strong>viditeľný.</strong></p>";
+                        } else {
+                            echo "<p><i class='fa-regular fa-eye-slash'></i> Výsledok je <strong>schovaný.</strong></p>";
+                        }
                     }
                     ?>
                 </div>
