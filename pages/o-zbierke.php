@@ -20,10 +20,12 @@
             <div class="col-md-12">
                 <div class="page-header card-text">
                     <h1>O Zbierke Úloh</h1>
-                    <p>Vznikla ako <strong>učebná pomôcka</strong> pre študentov predmetu <strong>Webový Dizajn 1</strong> ako výsledok mojej Bc. práce na
+                    <p>Vznikla ako <strong>učebná pomôcka</strong> pre študentov predmetu <strong>Webový Dizajn
+                            1</strong> ako výsledok mojej Bc. práce na
                         katedre Informatiky.
-                        Zbierka úloh môže byť taktiež využitá pre predmet <strong>Webový Dizajn 2</strong>, kde sa vyučuje <strong>PHP</strong> a práca s
-                        <strong>Bootstrapom.</strong><br><br>
+                        Zbierka úloh môže byť taktiež využitá pre predmet <strong>Webový Dizajn 2,</strong> kde sa
+                        vyučuje <strong>PHP,</strong>
+                        <strong>Bootstrap</strong> a práca s <strong>Databázami.</strong><br><br>
                         <strong>Názov Práce:</strong> Zbierka riešených príkladov pre predmet Webový dizajn 1<br>
                         <strong>Vytvoril:</strong> Marek Guráň<br>
                         <strong>Školiteľ:</strong> doc. Ing. Ján Pillár, PhD.<br>
@@ -104,8 +106,8 @@
 
     <?php include '../includes/footer.php'; ?>
 
-    <script src="../js/jquery-3.7.1.js"></script>
     <script src="../js/bootstrap-5.3.2.js"></script>
+    <script src="../js/jquery-3.7.1.js"></script>
 </body>
 
 </html>

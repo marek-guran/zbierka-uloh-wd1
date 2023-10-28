@@ -59,13 +59,8 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 mb-4">
-                <a href="pages/ucitelske_zadania.php" class="card-link">
-                    <div class="card card-hover">
-                        <img src="/img/zadania.png" class="card-img-top" alt="Zadania Image">
-                    </div>
-                </a>
-            </div>
+        </div>
+        <div class="row justify-content-center">
             <div class="col-md-4 mb-4">
                 <a href="pages/nastroje.php" class="card-link">
                     <div class="card card-hover">

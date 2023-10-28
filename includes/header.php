@@ -31,12 +31,6 @@
                     <a class="nav-link btn btn-outline-primary" href="../pages/js_page.php"><i
                             class="fa-brands fa-js"></i><span class="icon-text"> JavaScript</span></a>
                 </li>
-                <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'ucitelske_zadania.php') !== false || strpos($_SERVER['REQUEST_URI'], 'pages/zadanie.php') !== false) {
-                    echo 'desk-active';
-                } ?>">
-                    <a class="nav-link btn btn-outline-primary" href="../pages/ucitelske_zadania.php"><i
-                            class="fa-solid fa-table-columns"></i><span class="icon-text"> Zadania</span></a>
-                </li>
                 <li class="nav-item <?php if (strpos($_SERVER['REQUEST_URI'], 'nastroje.php') !== false) {
                     echo 'desk-active';
                 } ?>">
@@ -85,12 +79,6 @@
         <i class="fa-brands fa-js"></i>
         <span>JavaScript</span>
     </a>
-    <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'ucitelske_zadania.php') !== false || strpos($_SERVER['REQUEST_URI'], 'pages/zadanie.php') !== false) {
-        echo 'active';
-    } ?>" href="../pages/ucitelske_zadania.php">
-        <i class="fa-solid fa-table-columns"></i>
-        <span>Zadania</span>
-    </a>
     <a class="nav-link <?php if (strpos($_SERVER['REQUEST_URI'], 'nastroje.php') !== false) {
         echo 'active';
     } ?>" href="../pages/nastroje.php">
@@ -110,7 +98,7 @@
 <script>
     var path = window.location.pathname;
 
-    if (path === '/' || path === '/index.php') {
+    if (path === '/' || path === '/index.php' || path === '/pages/nastroje.php' || path === '/pages/o-zbierke.php') {
         var adminLink = document.querySelector('.navbar-brand.admin');
         if (adminLink) {
             adminLink.style.display = 'none';
