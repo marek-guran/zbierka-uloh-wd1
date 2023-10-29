@@ -531,4 +531,9 @@ Modal
     background-color: #307394!important;
 }
 
+.form-select {
+    background-color: #a4dbf7!important;
+    border-radius: 20px!important;
+}
+
 /* { outline: 1px solid red;}

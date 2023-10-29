@@ -7,7 +7,41 @@
             </div>
             <form method="post" enctype="multipart/form-data">
                 <div class="modal-body">
+                    <?php
+                    $hostCss = 'zbierka-db';
+                    $portCss = 3306;
+                    $usernameCss = 'admin';
+                    $passwordCss = getenv('TEACHER_PASSWORD');
+                    $databaseCss = 'zbierka';
+
+                    $connectionCss = new mysqli($hostCss, $usernameCss, $passwordCss, $databaseCss, $portCss);
+
+                    if ($connectionCss->connect_error) {
+                        die('Connection failed: ' . $connectionCss->connect_error);
+                    }
+
+                    $stmtCss = $connectionCss->prepare("SELECT DISTINCT kategoria FROM CSS");
+                    $stmtCss->execute();
+                    $resultCss = $stmtCss->get_result();
+                    $categoriesCss = array();
+                    while ($rowCss = $resultCss->fetch_assoc()) {
+                        array_push($categoriesCss, $rowCss['kategoria']);
+                    }
+                    $stmtCss->close();
+                    $connectionCss->close();
+                    ?>
                     <div class="mb-3">
+                        <label for="kategoria" class="form-label">Vyberte alebo pridajte kategóriu</label>
+                        <select class="form-select" id="kategoria-select" name="kategoria-select">
+                            <option value="new">Pridať novú kategóriu</option>
+                            <?php
+                            foreach ($categoriesCss as $categoryCss) {
+                                echo "<option value=\"$categoryCss\">$categoryCss</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="kategoria-form" style="display: none;">
                         <label for="kategoria" class="form-label">Kategória</label>
                         <input type="text" class="form-control" id="kategoria-css" name="kategoria-css" required>
                     </div>
@@ -39,7 +73,8 @@
                             accept=".mp4,.avi,.mov,.wmv,.flv,.mkv" optional>
                     </div>
                     <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="visible-vysledok-css" name="visible-vysledok-css">
+                        <input type="checkbox" class="form-check-input" id="visible-vysledok-css"
+                            name="visible-vysledok-css">
                         <label class="form-check-label" for="visible-vysledok-css">Viditeľný výsledok</label>
                     </div>
                 </div>
@@ -51,6 +86,23 @@
         </div>
     </div>
 </div>
+
+<script>
+    const kategoriaSelect = document.getElementById('kategoria-select');
+    const kategoriaInput = document.getElementById('kategoria-css');
+    const kategoriaForm = document.getElementById('kategoria-form');
+    kategoriaForm.style.display = 'block';
+    kategoriaSelect.addEventListener('change', () => {
+        if (kategoriaSelect.value === 'new') {
+            kategoriaInput.required = true;
+            kategoriaForm.style.display = 'block';
+        } else {
+            kategoriaInput.required = false;
+            kategoriaForm.style.display = 'none';
+            document.getElementById('kategoria-css').value = kategoriaSelect.value;
+        }
+    });
+</script>
 
 <?php
 

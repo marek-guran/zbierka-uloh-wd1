@@ -7,7 +7,41 @@
             </div>
             <form method="post" enctype="multipart/form-data">
                 <div class="modal-body">
+                    <?php
+                    $host = 'zbierka-db';
+                    $port = 3306;
+                    $username = 'admin';
+                    $password = getenv('TEACHER_PASSWORD');
+                    $database = 'zbierka';
+
+                    $connection = new mysqli($host, $username, $password, $database, $port);
+
+                    if ($connection->connect_error) {
+                        die('Connection failed: ' . $connection->connect_error);
+                    }
+
+                    $stmt = $connection->prepare("SELECT DISTINCT kategoria FROM HTML");
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $categories = array();
+                    while ($row = $result->fetch_assoc()) {
+                        array_push($categories, $row['kategoria']);
+                    }
+                    $stmt->close();
+                    $connection->close();
+                    ?>
                     <div class="mb-3">
+                        <label for="kategoria" class="form-label">Vyberte alebo pridajte kategóriu</label>
+                        <select class="form-select" id="kategoria-select" name="kategoria-select">
+                            <option value="new">Pridať novú kategóriu</option>
+                            <?php
+                            foreach ($categories as $category) {
+                                echo "<option value=\"$category\">$category</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="kategoria-form" style="display: none;">
                         <label for="kategoria" class="form-label">Kategória</label>
                         <input type="text" class="form-control" id="kategoria" name="kategoria" required>
                     </div>
@@ -48,9 +82,26 @@
     </div>
 </div>
 
+<script>
+    const kategoriaSelect = document.getElementById('kategoria-select');
+    const kategoriaInput = document.getElementById('kategoria');
+    const kategoriaForm = document.getElementById('kategoria-form');
+    kategoriaForm.style.display = 'block';
+    kategoriaSelect.addEventListener('change', () => {
+        if (kategoriaSelect.value === 'new') {
+            kategoriaInput.required = true;
+            kategoriaForm.style.display = 'block';
+        } else {
+            kategoriaInput.required = false;
+            kategoriaForm.style.display = 'none';
+            document.getElementById('kategoria').value = kategoriaSelect.value;
+        }
+    });
+</script>
+
 <?php
 
-if (isset($_POST['kategoria']) && isset($_POST['nazov']) && isset($_POST['zadanie'])) {
+if (isset($_POST['nazov']) && isset($_POST['zadanie']) && isset($_POST['kategoria'])) {
     $kategoria = $_POST['kategoria'];
     $nazov = $_POST['nazov'];
     $zadanie = $_POST['zadanie'];

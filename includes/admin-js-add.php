@@ -7,7 +7,41 @@
             </div>
             <form method="post" enctype="multipart/form-data">
                 <div class="modal-body">
+                <?php
+                    $hostJS = 'zbierka-db';
+                    $portJS = 3306;
+                    $usernameJS = 'admin';
+                    $passwordJS = getenv('TEACHER_PASSWORD');
+                    $databaseJS = 'zbierka';
+
+                    $connectionJS = new mysqli($hostJS, $usernameJS, $passwordJS, $databaseJS, $portJS);
+
+                    if ($connectionJS->connect_error) {
+                        die('Connection failed: ' . $connectionJS->connect_error);
+                    }
+
+                    $stmtJS = $connectionJS->prepare("SELECT DISTINCT kategoria FROM JS");
+                    $stmtJS->execute();
+                    $resultJS = $stmtJS->get_result();
+                    $categoriesJS = array();
+                    while ($rowJS = $resultJS->fetch_assoc()) {
+                        array_push($categoriesJS, $rowJS['kategoria']);
+                    }
+                    $stmtJS->close();
+                    $connectionJS->close();
+                    ?>
                     <div class="mb-3">
+                        <label for="kategoria" class="form-label">Vyberte alebo pridajte kategóriu</label>
+                        <select class="form-select" id="kategoria-select" name="kategoria-select">
+                            <option value="new">Pridať novú kategóriu</option>
+                            <?php
+                            foreach ($categoriesJS as $categoryJS) {
+                                echo "<option value=\"$categoryJS\">$categoryJS</option>";
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="kategoria-form" style="display: none;">
                         <label for="kategoria" class="form-label">Kategória</label>
                         <input type="text" class="form-control" id="kategoria-JS" name="kategoria-JS" required>
                     </div>
@@ -73,6 +107,23 @@
         </div>
     </div>
 </div>
+
+<script>
+    const kategoriaSelect = document.getElementById('kategoria-select');
+    const kategoriaInput = document.getElementById('kategoria-JS');
+    const kategoriaForm = document.getElementById('kategoria-form');
+    kategoriaForm.style.display = 'block';
+    kategoriaSelect.addEventListener('change', () => {
+        if (kategoriaSelect.value === 'new') {
+            kategoriaInput.required = true;
+            kategoriaForm.style.display = 'block';
+        } else {
+            kategoriaInput.required = false;
+            kategoriaForm.style.display = 'none';
+            document.getElementById('kategoria-JS').value = kategoriaSelect.value;
+        }
+    });
+</script>
 
 <?php
 
