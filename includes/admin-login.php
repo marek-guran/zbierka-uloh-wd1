@@ -44,16 +44,43 @@ if (isset($_POST['login'])) {
                             </label>
                             <input type="password" class="form-control formular" id="password" name="password" required>
                         </div>
-                        <button type="submit" name="login" class="btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i>
+                        <button type="submit" name="login" class="btn btn-primary"><i
+                                class="fa-solid fa-right-to-bracket"></i>
                             Prihlásiť sa</button>
                     </form>
                 <?php } else { ?>
-                    <form method="post">
-                        <button type="submit" name="logout" class="btn btn-danger"><i
-                                class="fa-solid fa-right-from-bracket"></i> Odhlásiť sa</button>
-                    </form>
+                    <div class="row">
+                        <div class="col-6">
+                            <form method="post">
+                                <button type="submit" name="logout" class="btn btn-danger"><i
+                                        class="fa-solid fa-right-from-bracket"></i> Odhlásiť sa</button>
+                            </form>
+                        </div>
+                        <div class="col-6 text-end">
+                            <form method="get">
+                                <button type="submit" name="create" class="btn btn-primary"
+                                    onclick="createJSON(); return false;"><i class="fa-solid fa-volume-high"></i> Zavolať
+                                    Študentov</button>
+                            </form>
+                        </div>
+                        <div>
+                            <hr>
+                            <p><i class="fa-solid fa-volume-high"></i> <strong>Zavolať Študentov</strong> ukáže všetkým
+                                PoP-up dialóg, ktorý ich na prijatie presmeruje na aktuálne otvorenú stránku.<br><br><i class="fa-regular fa-clock"></i> Po dobu
+                                30-tich sekúnd.</p>
+                        </div>
+                    </div>
                 <?php } ?>
             </div>
         </div>
     </div>
 </div>
+
+
+<script>
+    function createJSON() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/zavolaj.php?url=" + encodeURIComponent(window.location.href), true);
+        xhr.send();
+    }
+</script>

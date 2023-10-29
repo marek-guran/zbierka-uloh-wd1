@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<div class="row">';
         echo '<div class="col-md-12">';
         echo '<h1 class="d-inline-block">Prihlásený ako <strong>učiteľ</strong></h1>';
-        echo '<button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#editJsModal"><i class="fa-regular fa-pen-to-square"></i> Upraviť príklad</button>';
+        echo '<button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#editJsModal" style="margin-bottom: 10px;"><i class="fa-regular fa-pen-to-square"></i> Upraviť príklad</button>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
@@ -115,16 +115,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if (!empty($jsonfPath) || !empty($kniznicaPath) || !empty($dokumentacia) || (!empty($jsPath) && $downloadJS === "1")) {
                         echo "<p><i class=\"fa-solid fa-download\"></i> <strong>Na Stiahnutie</strong></p>";
                         if (!empty($jsonfPath)) {
-                            echo "<a href='$jsonfPath' download class=\"btn btn-primary me-2\"><i class=\"fa-regular fa-file-lines\"></i> JSON</a>";
+                            echo "<a href='$jsonfPath' download class=\"btn btn-primary me-2\" style=\"margin-bottom: 10px;\"><i class=\"fa-regular fa-file-lines\"></i> JSON</a>";
                         }
                         if (!empty($kniznicaPath)) {
-                            echo "<a href='$kniznicaPath' download class=\"btn btn-primary me-2\"><i class=\"fa-solid fa-book\"></i> Knižnica</a>";
+                            echo "<a href='$kniznicaPath' download class=\"btn btn-primary me-2\" style=\"margin-bottom: 10px;\"><i class=\"fa-solid fa-book\"></i> Knižnica</a>";
                         }
                         if (!empty($dokumentacia)) {
-                            echo "<a href='$dokumentacia' target=\"_blank\" class=\"btn btn-primary me-2\"><i class=\"fa-solid fa-book-open\"></i> Dokumentácia</a>";
+                            echo "<a href='$dokumentacia' target=\"_blank\" class=\"btn btn-primary me-2\" style=\"margin-bottom: 10px;\"><i class=\"fa-solid fa-book-open\"></i> Dokumentácia</a>";
                         }
                         if (!empty($jsPath) && ($downloadJS === "1" || !empty($_COOKIE['isTeacher']))) {
-                            echo "<a href='$jsPath' download class=\"btn btn-primary me-2\"><i class=\"fa-brands fa-js\"></i> JavaScript</a>";
+                            echo "<a href='$jsPath' download class=\"btn btn-primary me-2\" style=\"margin-bottom: 10px;\"><i class=\"fa-brands fa-js\"></i> JavaScript</a>";
                         }
                     } else if (!empty($_COOKIE['isTeacher']) && $_COOKIE['isTeacher'] === "true") {
                     }

@@ -11,3 +11,32 @@
         </div>
     </div>
 </footer>
+
+<script>
+    function checkZavolaj() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    var url = data.url;
+                    var timestamp = new Date(data.timestamp);
+                    var now = new Date();
+                    var diff = (now - timestamp) / 1000;
+
+                    if (diff <= 30 && url !== window.location.href) {
+                        var message = "Vyučujúci vás volá na stránku. Chcete pokračovať?";
+                        var confirmed = window.confirm(message);
+                        if (confirmed) {
+                            window.location.href = url;
+                        }
+                    }
+                }
+            }
+        };
+        xhr.open("GET", "/zavolaj.json", true);
+        xhr.send();
+    }
+
+    setInterval(checkZavolaj, 3000);
+</script>

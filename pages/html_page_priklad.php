@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<div class="row">';
         echo '<div class="col-md-12">';
         echo '<h1 class="d-inline-block">Prihlásený ako <strong>učiteľ</strong></h1>';
-        echo '<button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#editHtmlModal"><i class="fa-regular fa-pen-to-square"></i> Upraviť príklad</button>';
+        echo '<button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#editHtmlModal" style="margin-bottom: 10px;"><i class="fa-regular fa-pen-to-square"></i> Upraviť príklad</button>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
