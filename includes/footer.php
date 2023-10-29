@@ -4,7 +4,8 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <p><i class="fa-regular fa-copyright"></i><strong>
-                    <?php echo date("Y"); ?> Marek Guráň</strong>
+                        <?php echo date("Y"); ?> Marek Guráň
+                    </strong>
                 </p>
             </div>
         </div>
