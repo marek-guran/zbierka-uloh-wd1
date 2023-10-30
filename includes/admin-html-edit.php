@@ -120,8 +120,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmtEdit->execute()) {
         $connectionEdit->commit();
-    } else {
-        echo "Error updating record: " . $stmtEdit->error;
+
+        // Rename the folder
+        $oldFolderName = '../priklady/html/' . $nazov;
+        $newFolderName = '../priklady/html/' . $nazovEdit;
+        if (is_dir($oldFolderName)) {
+            if (rename($oldFolderName, $newFolderName)) {
+                echo 'Folder renamed successfully.';
+
+                // Update the rows in the HTML table
+                $stmtUpdate = $connectionEdit->prepare("UPDATE HTML SET nazov = REPLACE(nazov, ?, ?), html = REPLACE(html, ?, ?),  obrazok = REPLACE(obrazok, ?, ?), video = REPLACE(video, ?, ?) WHERE id = ?");
+                $stmtUpdate->bind_param("ssssssssi", $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $idEdit);
+                $stmtUpdate->execute();
+                $stmtUpdate->close();
+            }
+        }
     }
 
     $stmtEdit->close();

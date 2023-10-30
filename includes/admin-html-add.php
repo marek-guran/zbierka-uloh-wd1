@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addHtmlModalLabel">Pridať HTML Príklad</h5>
+                <h5 class="modal-title" id="addHtmlModalLabel"><strong>Pridať HTML5 Príklad</strong></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form method="post" enctype="multipart/form-data">

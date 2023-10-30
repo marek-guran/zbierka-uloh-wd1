@@ -66,8 +66,9 @@ if (isset($_POST['login'])) {
                         <div>
                             <hr>
                             <p><i class="fa-solid fa-volume-high"></i> <strong>Zavolať Študentov</strong> ukáže všetkým
-                                PoP-up dialóg, ktorý ich na prijatie presmeruje na aktuálne otvorenú stránku.<br><br><i class="fa-regular fa-clock"></i> Po dobu
-                                30-tich sekúnd.</p>
+                                PoP-up dialóg, ktorý ich po prijatí presmeruje na aktuálne otvorenú stránku alebo
+                                príklad.<br><br><i class="fa-regular fa-clock"></i> Správa je platná <strong>10 sekúnd.</strong>
+                            </p>
                         </div>
                     </div>
                 <?php } ?>

@@ -24,8 +24,8 @@
                     var now = new Date();
                     var diff = (now - timestamp) / 1000;
 
-                    if (diff <= 30 && url !== window.location.href) {
-                        var message = "Vyučujúci vás volá na stránku. Chcete pokračovať?";
+                    if (diff <= 10 && url !== window.location.href) {
+                        var message = "Vyučujúci vás volá na stránku. Presmerovať?";
                         var confirmed = window.confirm(message);
                         if (confirmed) {
                             window.location.href = url;
@@ -38,5 +38,5 @@
         xhr.send();
     }
 
-    setInterval(checkZavolaj, 3000);
+    setInterval(checkZavolaj, 5000);
 </script>

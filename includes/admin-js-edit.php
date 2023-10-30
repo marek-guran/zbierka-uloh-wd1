@@ -58,6 +58,11 @@
                         <textarea class="form-control" id="zadanie" name="zadanieEdit" rows="3"
                             required><?php echo $zadanie; ?></textarea>
                     </div>
+                    <div class="mb-3">
+                        <label for="dokumentacia" class="form-label">Dokumentácia - link (Nepovinné)</label>
+                        <input class="form-control" id="dokumentacia" name="dokumentaciaEdit"
+                            value="<?php echo $dokumentacia; ?>" optional>
+                    </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="downloadJsEdit" name="downloadJsEdit" <?php if ($downloadJS == "1") {
                             echo 'checked';
@@ -106,6 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     $nazovEdit = $_POST['nazovEdit'];
     $zadanieEdit = $_POST['zadanieEdit'];
+    $dokumentaciaEdit = $_POST['dokumentaciaEdit'];
     $downloadJsEdit = isset($_POST['downloadJsEdit']) && !empty($_POST['downloadJsEdit']);
     $visibleVysledokEdit = isset($_POST['visible-vysledokEdit']) && !empty($_POST['visible-vysledokEdit']);
 
@@ -122,13 +128,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Update the item in the database
-    $stmtEdit = $connectionEdit->prepare("UPDATE JS SET kategoria = ?, nazov = ?, zadanie = ?,  downloadJs = ?, visibleVysledok = ? WHERE id = ?");
-    $stmtEdit->bind_param("sssssi", $kategoriaEdit, $nazovEdit, $zadanieEdit, $downloadJsEdit, $visibleVysledokEdit, $idEdit);
+    $stmtEdit = $connectionEdit->prepare("UPDATE JS SET kategoria = ?, nazov = ?, zadanie = ?,  downloadJs = ?, visibleVysledok = ?, dokumentacia = ? WHERE id = ?");
+    $stmtEdit->bind_param("ssssssi", $kategoriaEdit, $nazovEdit, $zadanieEdit, $downloadJsEdit, $visibleVysledokEdit, $dokumentaciaEdit, $idEdit);
 
     if ($stmtEdit->execute()) {
         $connectionEdit->commit();
     } else {
         echo "Error updating record: " . $stmtEdit->error;
+    }
+
+    if ($stmtEdit->execute()) {
+        $connectionEdit->commit();
+
+        // Rename the folder
+        $oldFolderName = '../priklady/js/' . $nazov;
+        $newFolderName = '../priklady/js/' . $nazovEdit;
+        if (is_dir($oldFolderName)) {
+            if (rename($oldFolderName, $newFolderName)) {
+                echo 'Folder renamed successfully.';
+
+                // Update the rows in the HTML table
+                $stmtUpdate = $connectionEdit->prepare("UPDATE JS SET nazov = REPLACE(nazov, ?, ?), html = REPLACE(html, ?, ?), css = REPLACE(css, ?, ?), js = REPLACE(js, ?, ?), jsonf = REPLACE(jsonf, ?, ?), kniznica = REPLACE(kniznica, ?, ?), obrazok = REPLACE(obrazok, ?, ?), video = REPLACE(video, ?, ?) WHERE id = ?");
+                $stmtUpdate->bind_param("ssssssssssssssssi", $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $idEdit);
+                $stmtUpdate->execute();
+                $stmtUpdate->close();
+            }
+        }
     }
 
     $stmtEdit->close();

@@ -124,6 +124,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error updating record: " . $stmtEdit->error;
     }
 
+    if ($stmtEdit->execute()) {
+        $connectionEdit->commit();
+
+        // Rename the folder
+        $oldFolderName = '../priklady/css/' . $nazov;
+        $newFolderName = '../priklady/css/' . $nazovEdit;
+        if (is_dir($oldFolderName)) {
+            if (rename($oldFolderName, $newFolderName)) {
+                echo 'Folder renamed successfully.';
+
+                // Update the rows in the HTML table
+                $stmtUpdate = $connectionEdit->prepare("UPDATE CSS SET nazov = REPLACE(nazov, ?, ?), html = REPLACE(html, ?, ?), css = REPLACE(css, ?, ?), obrazok = REPLACE(obrazok, ?, ?), video = REPLACE(video, ?, ?) WHERE id = ?");
+                $stmtUpdate->bind_param("ssssssssssi", $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $oldFolderName, $newFolderName, $idEdit);
+                $stmtUpdate->execute();
+                $stmtUpdate->close();
+            }
+        }
+    }
+
     $stmtEdit->close();
     $connectionEdit->close();
 }
