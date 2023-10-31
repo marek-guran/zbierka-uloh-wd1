@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand ml-3" href="../index.php">
-            <img src="../img/logo-512x512.png" alt="Zbierka Úloh - WD1" style="width: 40px; height: 40px;" />
+            <img src="../img/logo-512x512.png" alt="Zbierka Úloh - WD1" style="width: 60px; height: 60px;" />
         </a>
 
         <div class="collapse navbar-collapse" id="navbarNav">
