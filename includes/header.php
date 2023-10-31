@@ -1,3 +1,9 @@
+<?php
+if ($_SERVER['HTTP_HOST'] != 'wd1.site') {
+    header('Location: http://wd1.site');
+    exit;
+}
+?>
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand ml-3" href="../index.php">
