@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: Út 31.Okt 2023, 12:32
+-- Čas generovania: Št 02.Nov 2023, 14:23
 -- Verzia serveru: 11.1.2-MariaDB-1:11.1.2+maria~ubu2204
 -- Verzia PHP: 8.2.11
 
@@ -55,7 +55,8 @@ INSERT INTO `CSS` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `css`, `obrazo
 (9, '9 Animácie', '9.1 Text', 'Vytvorte webstránku na ktorej bude podľa vášho výberu animovaný text. Pokúste sa vytvoriť aj iný efekt ako je vo videu.', '../priklady/css/9.1 Text/pr1.html', '../priklady/css/9.1 Text/pr1.css', '', '../priklady/css/9.1 Text/text1.mp4', ''),
 (10, '9 Animácie', '9.2 Lopta', 'Vytvorte webstránku na ktorej bude animovaná lopta, ktorá sa bude hýbať stále dookola po okraji obrazovky. Lopta nesmie zájsť mimo obrazovku.', '../priklady/css/9.2 Lopta/pr2.html', '../priklady/css/9.2 Lopta/pr2.css', '', '../priklady/css/9.2 Lopta/lopta1.mp4', ''),
 (11, '10 Transformácie', '10.1 Transformácie', 'Podľa videa sa pokúste vytvoriť podobnú transformáciu.', '../priklady/css/10.1 Transformácie/pr1.html', '../priklady/css/10.1 Transformácie/pr1.css', '', '../priklady/css/10.1 Transformácie/pr1.mp4', ''),
-(12, '6 Flexbox', '6.1 Karty', 'Vytvorte responzívnu stránku s kartami, kde využijete gradientné pozadie kariet. Karty musia obsahovať obrázok, text ku karte a tlačidlo. Karty zobrazujte pomocou flexboxu.', '../priklady/css/6.1 Karty/karty.html', '../priklady/css/6.1 Karty/karty.css', '', '../priklady/css/6.1 Karty/video.mp4', '');
+(12, '6 Flexbox', '6.1 Karty', 'Vytvorte responzívnu stránku s kartami, kde využijete gradientné pozadie kariet. Karty musia obsahovať obrázok, text ku karte a tlačidlo. Karty zobrazujte pomocou flexboxu.', '../priklady/css/6.1 Karty/karty.html', '../priklady/css/6.1 Karty/karty.css', '', '../priklady/css/6.1 Karty/video.mp4', ''),
+(13, '7 Grid', '7.2 Grid', 'Vytvorte pomocou priloženého obrázka webstránku, ktorá používa iba <strong>Grid Layout</strong>. Pokúste sa spraviť rovnakú stránku ale zmeňte jej obsah.', '../priklady/css/7.2 Grid/grid-index.html', '../priklady/css/7.2 Grid/grid-index.css', '../priklady/css/7.2 Grid/grid2.png', '', '');
 
 -- --------------------------------------------------------
 
@@ -159,7 +160,7 @@ ALTER TABLE `JS`
 -- AUTO_INCREMENT pre tabuľku `CSS`
 --
 ALTER TABLE `CSS`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT pre tabuľku `HTML`
