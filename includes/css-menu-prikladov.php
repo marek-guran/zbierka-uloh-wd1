@@ -31,7 +31,7 @@ if (isset($_GET['pr'])) {
         $stmt->close();
 
         if ($count > 1) {
-            $stmt = $connection->prepare("SELECT nazov FROM CSS WHERE kategoria = ?");
+            $stmt = $connection->prepare("SELECT nazov FROM CSS WHERE kategoria = ? ORDER BY nazov");
             $stmt->bind_param("s", $category);
             $stmt->execute();
             $stmt->bind_result($name);
