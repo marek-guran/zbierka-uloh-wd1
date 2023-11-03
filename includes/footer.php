@@ -3,9 +3,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <button class="btn btn-primary" style="margin-bottom: 5px;" onclick="window.open('http://status.wd1.site', '_blank')">
-                    <i class="fa-solid fa-heart-pulse"></i> Status
-                </button>
                 <p><i class="fa-regular fa-copyright"></i><strong>
                         <?php echo date("Y"); ?> Marek Guráň
                     </strong>
