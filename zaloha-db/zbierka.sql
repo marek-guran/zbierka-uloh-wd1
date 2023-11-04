@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: Pi 03.Nov 2023, 09:38
+-- Čas generovania: So 04.Nov 2023, 10:00
 -- Verzia serveru: 11.1.2-MariaDB-1:11.1.2+maria~ubu2204
 -- Verzia PHP: 8.2.11
 
@@ -58,7 +58,8 @@ INSERT INTO `CSS` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `css`, `obrazo
 (12, '6 Flexbox', '6.1 Karty', 'Vytvorte responzívnu stránku s kartami, kde využijete gradientné pozadie kariet. Karty musia obsahovať obrázok, text ku karte a tlačidlo. Karty zobrazujte pomocou flexboxu.', '../priklady/css/6.1 Karty/karty.html', '../priklady/css/6.1 Karty/karty.css', '', '../priklady/css/6.1 Karty/video.mp4', ''),
 (13, '7 Grid', '7.2 Grid', 'Vytvorte pomocou priloženého obrázka webstránku, ktorá používa iba <strong>Grid Layout</strong>. Pokúste sa spraviť rovnakú stránku ale zmeňte jej obsah.', '../priklady/css/7.2 Grid/grid-index.html', '../priklady/css/7.2 Grid/grid-index.css', '../priklady/css/7.2 Grid/grid2.png', '', ''),
 (14, '8 Navigácia', '8.2 Sidebar Menu', 'Vytvorte webstránku na ktorej sa budete mať na miesto tradičného Header Menu navigáciu na stránke pomocou bočného menu tzv. Sidebar Menu.', '../priklady/css/8.2 Sidebar Menu/side-bar-pr.html', '../priklady/css/8.2 Sidebar Menu/sidebar.css', '../priklady/css/8.2 Sidebar Menu/obr.png', '', ''),
-(15, '8 Navigácia', '8.3 Bottom Menu', 'Vytvorte stránku, kde sa budete môcť navigovať pomocou Bottom Navigation Menu. (Menu ako býva napríklad na mobilných aplikáciách)', '../priklady/css/8.3 Bottom Menu/bottom-navigation.html', '../priklady/css/8.3 Bottom Menu/bottom.css', '../priklady/css/8.3 Bottom Menu/obr.png', '', '');
+(15, '8 Navigácia', '8.3 Bottom Menu', 'Vytvorte stránku, kde sa budete môcť navigovať pomocou Bottom Navigation Menu. (Menu ako býva napríklad na mobilných aplikáciách)', '../priklady/css/8.3 Bottom Menu/bottom-navigation.html', '../priklady/css/8.3 Bottom Menu/bottom.css', '../priklady/css/8.3 Bottom Menu/obr.png', '', ''),
+(16, '8 Navigácia', '8.4 Scrollbar', 'Pomocou CSS3 navrhnite a aplikujte vlastný scrollbar.', '../priklady/css/8.4 Scrollbar/vlastny-scrollbar.html', '../priklady/css/8.4 Scrollbar/vlastny-scrollbar.css', '', '../priklady/css/8.4 Scrollbar/Scrollbar.mp4', '');
 
 -- --------------------------------------------------------
 
@@ -166,7 +167,7 @@ ALTER TABLE `JS`
 -- AUTO_INCREMENT pre tabuľku `CSS`
 --
 ALTER TABLE `CSS`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT pre tabuľku `HTML`
