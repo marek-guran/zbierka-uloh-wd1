@@ -1,4 +1,4 @@
-# <img src="https://github.com/marek-guran/zbierka-uloh-wd1/assets/26904790/1e5fdb7e-0fe8-4be7-a7b2-50fe8dfc552f" alt="" height="32"> K dispozícii na
+# <img src="https://github.com/marek-guran/zbierka-uloh-wd1/assets/26904790/1e5fdb7e-0fe8-4be7-a7b2-50fe8dfc552f" alt="" height="64"> K dispozícii na
 
 [ZBIERKA](https://wd1.site/) a status stránky [STATUS](https://status.wd1.site/)
 
