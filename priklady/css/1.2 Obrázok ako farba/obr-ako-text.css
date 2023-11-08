@@ -1,0 +1,14 @@
+ body {
+     background-color: black;
+     color: white;
+ }
+
+h1 {
+    background: url('obr-textu.jpg');
+    background-size: contain;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 10em;
+    text-align: center;
+}
