@@ -17,6 +17,7 @@ Stránka sa dá navštíviť iba so **slovenskou / českou** IP adresou.
 1. Otvorte priečinok s www súbormi stránky a otvorte terminál
 2. Spustite príkaz (ak nemáte používateľa v skupine docker, tak pridajte pred príkaz `sudo`)
    - Ak chcete zmeniť porty, tak najskôr upravte install.sh
+   - Defaultne porty: 10000 (http) a 10001 (https) pre WEB, 3306 pre DB, 10003 pre PHP My Admin 
 ```bash
 bash install.sh
 ```
