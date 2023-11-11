@@ -16,7 +16,7 @@ Stránka sa dá navštíviť iba so **slovenskou / českou** IP adresou.
 
 1. Otvorte priečinok s www súbormi stránky a otvorte terminál
 2. Spustite príkaz (ak nemáte používateľa v skupine docker, tak pridajte pred príkaz `sudo`)
-3. Ak chcete zmeniť porty, tak najskôr upravte install.sh
+   - Ak chcete zmeniť porty, tak najskôr upravte install.sh
 ```bash
 bash install.sh
 ```
