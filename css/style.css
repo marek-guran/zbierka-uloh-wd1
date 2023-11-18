@@ -33,7 +33,7 @@ ul li a {
 }
 
 .card-hover {
-    border-radius: 20px !important;
+    border-radius: 20px!important;
     transition: transform 0.4s, box-shadow 0.4s;
 }
 
@@ -534,6 +534,64 @@ Modal
 .form-select {
     background-color: #a4dbf7!important;
     border-radius: 20px!important;
+}
+
+/*
+################################## 
+Strom
+##################################
+*/
+
+.strom-first {
+    border-top-left-radius: 20px!important;
+    border-top-right-radius: 20px!important;
+    border-bottom-left-radius: 5px!important;
+    border-bottom-right-radius: 5px!important;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.strom-first:hover {
+    box-shadow: 0px 0px 5px black;
+    transform: scale(1.02);
+}
+
+.strom-first:active {
+    transform: scale(0.98);
+    transition: transform 0.2s;
+}
+
+.strom-last {
+    border-top-left-radius: 5px!important;
+    border-top-right-radius: 5px!important;
+    border-bottom-left-radius: 20px!important;
+    border-bottom-right-radius: 20px!important;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.strom-last:hover {
+    box-shadow: 0px 0px 5px black;
+    transform: scale(1.02);
+}
+
+.strom-last:active {
+    transform: scale(0.98);
+    transition: transform 0.2s;
+}
+
+.strom {
+    background-color: #a4dbf7!important;
+    border-radius: 5px!important;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.strom:hover {
+    box-shadow: 0px 0px 5px black;
+    transform: scale(1.02);
+}
+
+.strom:active {
+    transform: scale(0.98);
+    transition: transform 0.2s;
 }
 
 /* { outline: 1px solid red;}

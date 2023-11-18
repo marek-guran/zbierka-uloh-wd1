@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: St 08.Nov 2023, 08:58
+-- Čas generovania: So 18.Nov 2023, 09:27
 -- Verzia serveru: 11.1.2-MariaDB-1:11.1.2+maria~ubu2204
 -- Verzia PHP: 8.2.11
 
@@ -95,7 +95,8 @@ INSERT INTO `HTML` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `obrazok`, `v
 (8, '6 Navigácia', '6.2 Back To Top', 'Vytvorte webstránku na ktorej budete môcť pomocou link späť na začiatok poslať používateľa späť na vrch stránky.', '../priklady/html/6.2 Back To Top/top.html', '', '../priklady/html/6.2 Back To Top/Moja dlhá stránka.mp4', ''),
 (9, '3 Formuláre', '3.1 GET', 'Vytvorte prihlasovací formulár, ktorý pomocou funkcie GET pošle údaje, ktoré zadá používateľ do formulára. Tieto údaje by sa mali zobraziť na konci adresy webstránky za otáznikom.', '../priklady/html/3.1 GET/getform.html', '../priklady/html/3.1 GET/get.png', '', ''),
 (10, '3 Formuláre', '3.2 POST', 'Vytvorte formulár, pomocou ktorého môže užívateľ kontaktovať správcu webstránky. Formulár musí poslať všetky údaje pomocou funkcie POST. Tým pádom by sa mala ukázať chyba 405 (Not Allowed), ak nemáte nakonfigurovaný webový server aby posielal / prijímal POST požiadavky. V opačnom prípade by nemalo ukázať chybu a vyčistí formulár.', '../priklady/html/3.2 POST/post.html', '', '../priklady/html/3.2 POST/Kontaktujte nás.mp4', ''),
-(11, '5 Meta Údaje', '5.2 Kľúčové Slová', 'Petrov obchod si už začínajú pomaly všímať ľudia. Ale ešte to nie je ono. Pridajte mu na stránku kľúčové slová aby sa ukázala jeho stránka vo vyhľadávačoch, keď ľudia hľadajú na internete iba pomocou slov.', '../priklady/html/5.2 Kľúčové Slová/keywords.html', '../priklady/html/5.2 Kľúčové Slová/obr.png', '', '');
+(11, '5 Meta Údaje', '5.2 Kľúčové Slová', 'Petrov obchod si už začínajú pomaly všímať ľudia. Ale ešte to nie je ono. Pridajte mu na stránku kľúčové slová aby sa ukázala jeho stránka vo vyhľadávačoch, keď ľudia hľadajú na internete iba pomocou slov.', '../priklady/html/5.2 Kľúčové Slová/keywords.html', '../priklady/html/5.2 Kľúčové Slová/obr.png', '', ''),
+(12, '2 Média', '2.2 Webstránky na stránke', 'Pomocou HTML5 vytvorte webstránku, ktorá bude zobrazovať aspoň 3 webstránky na sebe podľa videa. Nezabudnite, že niektoré stránky ako google.sk majú ochranu voči vkladaním ich webov na iné stránky.', '../priklady/html/2.2 Webstránky na stránke/stránky.html', '', '../priklady/html/2.2 Webstránky na stránke/video.mp4', '');
 
 -- --------------------------------------------------------
 
@@ -127,7 +128,7 @@ CREATE TABLE `JS` (
 INSERT INTO `JS` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `css`, `js`, `jsonf`, `kniznica`, `dokumentacia`, `obrazok`, `video`, `visibleVysledok`, `downloadJs`) VALUES
 (1, '1 API', '1.1 Zobrazenie Textu z JSON súboru', 'Pomocou priloženého súboru JSON vytvorte stránku, ktorá zobrazí jeho obsah. Viď. fotka.', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/pr1.html', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/pr1.css', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/pr1.js', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/pr1.json', '', '', '../priklady/js/1.1 Zobrazenie Textu z JSON súboru/js-api-pr1.png', '', '', '1'),
 (2, '1 API', '1.2 Dáta na požiadanie', 'Pomocou priloženého súboru JSON vytvorte stránku, ktorá zobrazí jeho obsah na kliknutie tlačidla. Viď. video.', '../priklady/js/1.2 Dáta na požiadanie/pr1.html', '../priklady/js/1.2 Dáta na požiadanie/pr1.css', '../priklady/js/1.2 Dáta na požiadanie/pr1.js', '../priklady/js/1.2 Dáta na požiadanie/pr1.json', '', '', '', '../priklady/js/1.2 Dáta na požiadanie/pr1.mp4', '', '1'),
-(3, '3 Grafy', '3.1 Chart.js', 'Pomocou priloženého súboru JSON a knižnice vytvorte stránku, ktorá zobrazí jeho obsah na grafe. Máte priloženú aj dokumentáciu ku knižnici. Viď. fotka.', '../priklady/js/3.1 Chart.js/pr1.html', '../priklady/js/3.1 Chart.js/pr1.css', '../priklady/js/3.1 Chart.js/pr1.js', '../priklady/js/3.1 Chart.js/pr1.json', '../priklady/js/3.1 Chart.js/library-graphs.js', 'https://www.chartjs.org/docs/4.4.0/', '../priklady/js/3.1 Chart.js/js-grafy-pr1.png', '', '', '1'),
+(3, '3 Grafy', '3.1 Roky', 'Pomocou priloženého súboru JSON a knižnice vytvorte stránku, ktorá zobrazí jeho obsah na grafe. Máte priloženú aj dokumentáciu ku knižnici. Viď. fotka.', '../priklady/js/3.1 Roky/pr1.html', '../priklady/js/3.1 Roky/pr1.css', '../priklady/js/3.1 Roky/pr1.js', '../priklady/js/3.1 Roky/pr1.json', '../priklady/js/3.1 Roky/library-graphs.js', 'https://www.chartjs.org/docs/4.4.0/', '../priklady/js/3.1 Roky/js-grafy-pr1.png', '', '', '1'),
 (4, '4 Navigácia', '4.1 Mobilné Menu', 'Vytvorte navigačné menu pre menšie obrazovky, ktoré funguje ako hamburger menu na mobilných aplikáciach. Viď. video.', '../priklady/js/4.1 Mobilné Menu/pr1.html', '../priklady/js/4.1 Mobilné Menu/pr1.css', '../priklady/js/4.1 Mobilné Menu/pr1.js', '', '', '', '', '../priklady/js/4.1 Mobilné Menu/pr1.mp4', '', '1'),
 (5, '5 Prepínanie CSS', '5.1 Svetlý a Tmavý režim', 'Pomocou tlačidla na stránke zmeňte tému stránky na tmavú. Viď. video.', '../priklady/js/5.1 Svetlý a tmavý režim/pr1.html', '../priklady/js/5.1 Svetlý a tmavý režim/pr1.css', '../priklady/js/5.1 Svetlý a tmavý režim/pr1.js', '', '', '', '', '../priklady/js/5.1 Svetlý a tmavý režim/pr1.mp4', '', '1'),
 (6, '6 Vyskakovacie okná', '6.1 Povoliť Cookies', 'Vytvorte vyskakovacie okno, ktoré si bude pýtať od používateľa aby prijal Cookies. Toto následne uložte do lokálneho úložiska, aby sa ho stránka nabudúce nepýtala znovu jeho prijatie. Viď. video.', '../priklady/js/6.1 Povoliť Cookies/pr1.html', '../priklady/js/6.1 Povoliť Cookies/pr1.css', '../priklady/js/6.1 Povoliť Cookies/pr1.js', '', '', '', '', '../priklady/js/6.1 Povoliť Cookies/pr1.mp4', '', '1'),
@@ -175,7 +176,7 @@ ALTER TABLE `CSS`
 -- AUTO_INCREMENT pre tabuľku `HTML`
 --
 ALTER TABLE `HTML`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT pre tabuľku `JS`
