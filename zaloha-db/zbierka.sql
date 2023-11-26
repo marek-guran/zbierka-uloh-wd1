@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: So 25.Nov 2023, 10:33
+-- Čas generovania: Sun 26.Nov 2023, 09:38
 -- Verzia serveru: 11.1.3-MariaDB-1:11.1.3+maria~ubu2204
 -- Verzia PHP: 8.2.12
 
@@ -61,7 +61,8 @@ INSERT INTO `CSS` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `css`, `obrazo
 (15, '8 Navigácia', '8.3 Bottom Menu', 'Vytvorte stránku, kde sa budete môcť navigovať pomocou Bottom Navigation Menu. (Menu ako býva napríklad na mobilných aplikáciách)', '../priklady/css/8.3 Bottom Menu/bottom-navigation.html', '../priklady/css/8.3 Bottom Menu/bottom.css', '../priklady/css/8.3 Bottom Menu/obr.png', '', ''),
 (16, '8 Navigácia', '8.4 Scrollbar', 'Pomocou CSS3 navrhnite a aplikujte vlastný scrollbar.', '../priklady/css/8.4 Scrollbar/vlastny-scrollbar.html', '../priklady/css/8.4 Scrollbar/vlastny-scrollbar.css', '', '../priklady/css/8.4 Scrollbar/Scrollbar.mp4', ''),
 (17, '1 Texty', '1.2 Obrázok ako farba', 'Pomocou CSS3 vytvorte stránku na ktorej budete mať ľubovoľný text a na miesto farby, použite vami vybratý obrázok. Viď obrázok zadania.', '../priklady/css/1.2 Obrázok ako farba/obr-ako-text.html', '../priklady/css/1.2 Obrázok ako farba/obr-ako-text.css', '../priklady/css/1.2 Obrázok ako farba/obr.png', '', ''),
-(18, '3 Média', '3.2 Rozmazanie', 'Pomocou HTML5 a CSS3 vytvorte webstránku na ktorej budete mať text a za ním ako pozadie obrázok. Tento obrázok musí byť rozmazaný a mať efekt ako na videu. Čím je viac priblížená webstránka, tým viac je obrázok rozmazaný a naopak.', '../priklady/css/3.2 Rozmazanie/rozm-obrazka.html', '../priklady/css/3.2 Rozmazanie/rozm-obrazka.css', '', '../priklady/css/3.2 Rozmazanie/video.mp4', '');
+(18, '3 Média', '3.2 Rozmazanie', 'Pomocou HTML5 a CSS3 vytvorte webstránku na ktorej budete mať text a za ním ako pozadie obrázok. Tento obrázok musí byť rozmazaný a mať efekt ako na videu. Čím je viac priblížená webstránka, tým viac je obrázok rozmazaný a naopak.', '../priklady/css/3.2 Rozmazanie/rozm-obrazka.html', '../priklady/css/3.2 Rozmazanie/rozm-obrazka.css', '', '../priklady/css/3.2 Rozmazanie/video.mp4', ''),
+(19, '2 Responzivita', '2.2 Navigačné menu', 'Vytvorte webovú stránku, ktorá bude obsahovať responzívne menu. To znamená, že ak máme mobilné zariadenie, tak na ňom nezobrazíme menu, ktoré je veľké a primárne navrhnuté pre počítače. Taktiež toto menu by malo používať <strong>anchor links,</strong> ktoré na kliknutie posunú používateľa na danú časť stránky. Viď. video.', '../priklady/css/2.2 Navigačné menu/menu-bez-js.html', '../priklady/css/2.2 Navigačné menu/menu-bez-js.css', '', '../priklady/css/2.2 Navigačné menu/video.mp4', '');
 
 -- --------------------------------------------------------
 
@@ -96,11 +97,12 @@ INSERT INTO `HTML` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `obrazok`, `v
 (9, '3 Formuláre', '3.1 GET', 'Vytvorte prihlasovací formulár, ktorý pomocou funkcie GET pošle údaje, ktoré zadá používateľ do formulára. Tieto údaje by sa mali zobraziť na konci adresy webstránky za otáznikom.', '../priklady/html/3.1 GET/getform.html', '../priklady/html/3.1 GET/get.png', '', ''),
 (10, '3 Formuláre', '3.2 POST', 'Vytvorte formulár, pomocou ktorého môže užívateľ kontaktovať správcu webstránky. Formulár musí poslať všetky údaje pomocou funkcie POST. Tým pádom by sa mala ukázať chyba 405 (Not Allowed), ak nemáte nakonfigurovaný webový server aby posielal / prijímal POST požiadavky. V opačnom prípade by nemalo ukázať chybu a vyčistí formulár.', '../priklady/html/3.2 POST/post.html', '', '../priklady/html/3.2 POST/Kontaktujte nás.mp4', ''),
 (11, '5 Meta Údaje', '5.2 Kľúčové Slová', 'Petrov obchod si už začínajú pomaly všímať ľudia. Ale ešte to nie je ono. Pridajte mu na stránku kľúčové slová aby sa ukázala jeho stránka vo vyhľadávačoch, keď ľudia hľadajú na internete iba pomocou slov.', '../priklady/html/5.2 Kľúčové Slová/keywords.html', '../priklady/html/5.2 Kľúčové Slová/obr.png', '', ''),
-(12, '2 Média', '2.2 Webstránky na stránke', 'Pomocou HTML5 vytvorte webstránku, ktorá bude zobrazovať aspoň 3 webstránky viď. video. Nezabudnite, že niektoré stránky ako google.sk majú ochranu voči vkladaním ich webov na iné stránky.', '../priklady/html/2.2 Webstránky na stránke/stránky.html', '', '../priklady/html/2.2 Webstránky na stránke/video.mp4', ''),
-(13, '7 Dáta', '7.1 Jednoduché Listy', 'Podľa videa vytvorte všetky 4 dátové listy.', '../priklady/html/7.1 Jednoduché Listy/dtlists.html', '', '../priklady/html/7.1 Jednoduché Listy/video.mp4', ''),
+(12, '2 Média', '2.3 Webstránky na stránke', 'Pomocou HTML5 vytvorte webstránku, ktorá bude zobrazovať aspoň 3 webstránky viď. video. Nezabudnite, že niektoré stránky ako google.sk majú ochranu voči vkladaním ich webov na iné stránky.', '../priklady/html/2.3 Webstránky na stránke/stránky.html', '', '../priklady/html/2.3 Webstránky na stránke/video.mp4', ''),
+(13, '7 Dáta', '7.1 Dátové Listy', 'Podľa videa vytvorte všetky 4 dátové listy.', '../priklady/html/7.1 Dátové Listy/dtlists.html', '', '../priklady/html/7.1 Dátové Listy/video.mp4', ''),
 (14, '7 Dáta', '7.2 Meter', 'Vytvorte pomocou čistého HTML5 dátový typ, ktorý ukáže tzv. progress podľa vami zadanej hodnoty.', '../priklady/html/7.2 Meter/meter.html', '../priklady/html/7.2 Meter/obr.png', '', ''),
-(15, '2 Média', '2.3 PDF na stránke', 'Vytvorte webstránku, ktorá bude zobrazovať PDF súbor uložený v priečinku s vašou webstránkou. Viď. video.', '../priklady/html/2.3 PDF na stránke/pdf-na-stranke.html', '', '../priklady/html/2.3 PDF na stránke/video.mp4', ''),
-(16, '5 Meta Údaje', '5.3 Presmerovanie', 'Vytvorte jednoduchú webstránku, ktorá zobrazí text o presmerovaní a po určitom čase presmeruje používateľa na novú stránku. Viď. video.', '../priklady/html/5.3 Presmerovanie/presmeruj-ma.html', '', '../priklady/html/5.3 Presmerovanie/video.mp4', '');
+(15, '2 Média', '2.4 PDF', 'Vytvorte webstránku, ktorá bude zobrazovať PDF súbor uložený v priečinku s vašou webstránkou. Viď. video.', '../priklady/html/2.4 PDF/pdf-na-stranke.html', '', '../priklady/html/2.4 PDF/video.mp4', ''),
+(16, '5 Meta Údaje', '5.3 Presmerovanie', 'Vytvorte jednoduchú webstránku, ktorá zobrazí text o presmerovaní a po určitom čase presmeruje používateľa na novú stránku. Viď. video.', '../priklady/html/5.3 Presmerovanie/presmeruj-ma.html', '', '../priklady/html/5.3 Presmerovanie/video.mp4', ''),
+(17, '2 Média', '2.2 Stiahnutie', 'Vytvorte webstránku na ktorej budete mať stiahnuteľný ľubovoľný súbor, ktorý <strong>na kliknutie stiahne tento súbor (nesmie ho otvoriť v prehliadači).</strong> Viď. video.', '../priklady/html/2.2 Stiahnutie/stiahni.html', '', '../priklady/html/2.2 Stiahnutie/video.mp4', '');
 
 -- --------------------------------------------------------
 
@@ -175,13 +177,13 @@ ALTER TABLE `JS`
 -- AUTO_INCREMENT pre tabuľku `CSS`
 --
 ALTER TABLE `CSS`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT pre tabuľku `HTML`
 --
 ALTER TABLE `HTML`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT pre tabuľku `JS`
