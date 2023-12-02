@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: Sun 26.Nov 2023, 09:38
--- Verzia serveru: 11.1.3-MariaDB-1:11.1.3+maria~ubu2204
--- Verzia PHP: 8.2.12
+-- Čas generovania: So 02.Dec 2023, 09:02
+-- Verzia serveru: 11.2.2-MariaDB-1:11.2.2+maria~ubu2204
+-- Verzia PHP: 8.2.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -103,8 +103,14 @@ INSERT INTO `HTML` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `obrazok`, `v
 (15, '2 Média', '2.4 PDF', 'Vytvorte webstránku, ktorá bude zobrazovať PDF súbor uložený v priečinku s vašou webstránkou. Viď. video.', '../priklady/html/2.4 PDF/pdf-na-stranke.html', '', '../priklady/html/2.4 PDF/video.mp4', ''),
 (16, '5 Meta Údaje', '5.3 Presmerovanie', 'Vytvorte jednoduchú webstránku, ktorá zobrazí text o presmerovaní a po určitom čase presmeruje používateľa na novú stránku. Viď. video.', '../priklady/html/5.3 Presmerovanie/presmeruj-ma.html', '', '../priklady/html/5.3 Presmerovanie/video.mp4', ''),
 (17, '2 Média', '2.2 Stiahnutie', 'Vytvorte webstránku na ktorej budete mať stiahnuteľný ľubovoľný súbor, ktorý <strong>na kliknutie stiahne tento súbor (nesmie ho otvoriť v prehliadači).</strong> Viď. video.', '../priklady/html/2.2 Stiahnutie/stiahni.html', '', '../priklady/html/2.2 Stiahnutie/video.mp4', ''),
-(18,'8 Detaily','8.1 Chybové kódy','Vytvorte webovú stránku, ktorá obsahuje niekoľko textových odsekov s nadpismi ale používateľ najskôr vidí iba tieto nadpisy. Po kliknutí na nadpis alebo šípku sa daný nadpis otvorí a zobrazí k nemu text. Viď. video.','../priklady/html/8.1 Chybové kódy/chybne-kody.html','','../priklady/html/8.1 Chybové kódy/video.mp4',''),
-(19,'8 Detaily','8.2 HTML5','Podľa predchádzajúceho príkladu <strong>8.1 Chybové kódy</strong> vytvorte teraz stránku, ktorá obsahuje rovnaký druh elementov ale teraz sa pokúste vložiť do vnútra elementov pod kategórie. Viď. video.','../priklady/html/8.2 HTML5/html5.html','','../priklady/html/8.2 HTML5/video.mp4','');
+(18, '8 Detaily', '8.1 Chybové kódy', 'Vytvorte webovú stránku, ktorá obsahuje niekoľko textových odsekov s nadpismi ale používateľ najskôr vidí iba tieto nadpisy. Po kliknutí na nadpis alebo šípku sa daný nadpis otvorí a zobrazí k nemu text. Viď. video.', '../priklady/html/8.1 Chybové kódy/chybne-kody.html', '', '../priklady/html/8.1 Chybové kódy/video.mp4', ''),
+(19, '8 Detaily', '8.2 HTML5', 'Podľa predchádzajúceho príkladu <strong>8.1 Chybové kódy</strong> vytvorte teraz stránku, ktorá obsahuje rovnaký druh elementov ale teraz sa pokúste vložiť do vnútra elementov pod kategórie. Viď. video.', '../priklady/html/8.2 HTML5/html5.html', '', '../priklady/html/8.2 HTML5/video.mp4', ''),
+(20, '9 Interaktivita', '9.1 Upraviteľný Obsah', 'Vytvorte jednoduchú webstránku, na ktorej budete môcť upraviť textový obsah elementu ako je na videu k zadaniu.', '../priklady/html/9.1 Upraviteľný Obsah/u-obsah.html', '', '../priklady/html/9.1 Upraviteľný Obsah/video.mp4', ''),
+(21, '3 Formuláre', '3.4 Anketa', 'Pomocou funkcie <strong>GET</strong> vytvorte anketu. Obsah ankety je na vás ale musí obsahovať tzv. guľaté checkboxy.', '../priklady/html/3.4 Anketa/anketa.html', '', '../priklady/html/3.4 Anketa/video.mp4', ''),
+(22, '10 Sémantika', '10.1 Sekcia', 'Bez použitia akýchkoľvek tagov ako definovanie DOCTYPE, head, body... Vytvorte sekciu stránky, ktorá bude obsahovať jeden nadpis a pod ním text.', '../priklady/html/10.1 Sekcia/section.html', '../priklady/html/10.1 Sekcia/obr-sekcia.png', '', ''),
+(23, '10 Sémantika', '10.2 Článok', 'Bez použitia akýchkoľvek tagov ako definovanie DOCTYPE, head, body... Vytvorte článok.', '../priklady/html/10.2 Článok/article.html', '../priklady/html/10.2 Článok/obr-článok.png', '', ''),
+(24, '10 Sémantika', '10.3 Footer', 'Bez použitia akýchkoľvek tagov ako definovanie DOCTYPE, head, body... Vytvorte footer s copyrightom.', '../priklady/html/10.3 Footer/footer.html', '../priklady/html/10.3 Footer/obr-footer.png', '', ''),
+(25, '10 Sémantika', '10.4 Spojenie', 'V predchádzajúcich príkladoch ste vytvorili 3 základné stránky bez použitia základných tagov/elementov. Teraz je vašou úlohou vytvoriť webstránku, ktorá tieto stránky zobrazí na sebe ako <strong>jednu</strong> stránku.', '../priklady/html/10.4 Spojenie/spojenie.html', '../priklady/html/10.4 Spojenie/obr-spojenie.png', '', '');
 
 -- --------------------------------------------------------
 
@@ -185,7 +191,7 @@ ALTER TABLE `CSS`
 -- AUTO_INCREMENT pre tabuľku `HTML`
 --
 ALTER TABLE `HTML`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT pre tabuľku `JS`
