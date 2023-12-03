@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: So 02.Dec 2023, 09:02
+-- Čas generovania: Sun 03.Dec 2023, 09:11
 -- Verzia serveru: 11.2.2-MariaDB-1:11.2.2+maria~ubu2204
 -- Verzia PHP: 8.2.13
 
@@ -110,7 +110,9 @@ INSERT INTO `HTML` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `obrazok`, `v
 (22, '10 Sémantika', '10.1 Sekcia', 'Bez použitia akýchkoľvek tagov ako definovanie DOCTYPE, head, body... Vytvorte sekciu stránky, ktorá bude obsahovať jeden nadpis a pod ním text.', '../priklady/html/10.1 Sekcia/section.html', '../priklady/html/10.1 Sekcia/obr-sekcia.png', '', ''),
 (23, '10 Sémantika', '10.2 Článok', 'Bez použitia akýchkoľvek tagov ako definovanie DOCTYPE, head, body... Vytvorte článok.', '../priklady/html/10.2 Článok/article.html', '../priklady/html/10.2 Článok/obr-článok.png', '', ''),
 (24, '10 Sémantika', '10.3 Footer', 'Bez použitia akýchkoľvek tagov ako definovanie DOCTYPE, head, body... Vytvorte footer s copyrightom.', '../priklady/html/10.3 Footer/footer.html', '../priklady/html/10.3 Footer/obr-footer.png', '', ''),
-(25, '10 Sémantika', '10.4 Spojenie', 'V predchádzajúcich príkladoch ste vytvorili 3 základné stránky bez použitia základných tagov/elementov. Teraz je vašou úlohou vytvoriť webstránku, ktorá tieto stránky zobrazí na sebe ako <strong>jednu</strong> stránku.', '../priklady/html/10.4 Spojenie/spojenie.html', '../priklady/html/10.4 Spojenie/obr-spojenie.png', '', '');
+(25, '10 Sémantika', '10.4 Spojenie', 'V predchádzajúcich príkladoch ste vytvorili 3 základné stránky bez použitia základných tagov/elementov. Teraz je vašou úlohou vytvoriť webstránku, ktorá tieto stránky zobrazí na sebe ako <strong>jednu</strong> stránku.', '../priklady/html/10.4 Spojenie/spojenie.html', '../priklady/html/10.4 Spojenie/obr-spojenie.png', '', ''),
+(26, '4 Tabuľky', '4.2 Zvieratá', 'Vytvorte jednoduchú tabuľku na ktorej budete mať jeden stĺpec pre obrázok, text a audio. Môžete sa inšpirovať obrázkom zadania.', '../priklady/html/4.2 Zvieratá/tab-zvierata.html', '../priklady/html/4.2 Zvieratá/obr.png', '', ''),
+(27, '9 Interaktivita', '9.2 Prístupnosť', 'Prístupnosť webovej stránky je veľmi dôležitá vec, keď vieme, že webstránku bude navštevovať široké publikum ľudí. Preto by sme nemali zabúdať ani na zdravotne znevýhodnených.<br>\r\n<br>\r\nVytvorte webovú stránku, ktorá bude obsahovať čo najviac prístupného obsahu pre nevidiacich. <br>\r\n<br>\r\nNa otestovanie môžete použiť program NV Access, ktorý je prístupný zadarmo na: <a href=\"https://www.nvaccess.org/download/\" class=\"btn btn-primary\" role=\"button\" target=\"_blank\">NV Access</a>\r\n', '../priklady/html/9.2 Prístupnosť/accessibilty.html', '', '../priklady/html/9.2 Prístupnosť/video.mp4', '');
 
 -- --------------------------------------------------------
 
@@ -191,7 +193,7 @@ ALTER TABLE `CSS`
 -- AUTO_INCREMENT pre tabuľku `HTML`
 --
 ALTER TABLE `HTML`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT pre tabuľku `JS`

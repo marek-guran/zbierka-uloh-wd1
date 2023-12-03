@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Príklad prístupnej webovej stránky</title>
+</head>
+<body>
+    <header role="banner">
+        <h1>Príklad prístupnej webovej stránky</h1>
+    </header>
+    <nav role="navigation">
+        <ul>
+            <li><a href="#content">Prejsť na obsah</a></li>
+            <li><a href="#about">O nás</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+    <main id="content" role="main">
+        <h2>Vitajte na našej webovej stránke</h2>
+        <p>Toto je príklad webovej stránky, ktorá je prístupná pre nevidiacich ľudí.</p>
+        <img src="obr.svg" alt="Čierny obrázok s bielym textom vo vnútri: OBR">
+    </main>
+    <aside role="complementary">
+        <h3>Dalšie informácie</h3>
+        <p>Tu môžete nájsť ďalšie informácie, ktoré by mohli byť užitočné.</p>
+    </aside>
+    <footer role="contentinfo">
+        <h4>Kontaktujte nás</h4>
+        <form>
+            <label for="name">Meno:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <input type="submit" value="Odoslať">
+        </form>
+    </footer>
+</body>
+</html>
