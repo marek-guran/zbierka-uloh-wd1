@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: Sun 10.Dec 2023, 11:46
+-- Čas generovania: Sun 10.Dec 2023, 18:21
 -- Verzia serveru: 11.2.2-MariaDB-1:11.2.2+maria~ubu2204
 -- Verzia PHP: 8.2.13
 
@@ -158,7 +158,9 @@ INSERT INTO `JS` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `css`, `js`, `j
 (11, '10 Iné', '10.2 Hodiny', '<strong>Bez použitia AJAXu</strong> sa pokúste vytvoriť hodiny so sekundami, ktoré sa budú aktualizovať v <strong>reálnom čase.</strong> Viď. video.', '../priklady/js/10.2 Hodiny/pr1.html', '../priklady/js/10.2 Hodiny/pr1.css', '../priklady/js/10.2 Hodiny/pr1.js', '', '', '', '', '../priklady/js/10.2 Hodiny/pr1.mp4', '', '1'),
 (12, '10 Iné', '10.3 Galéria', 'Vytvorte galériu obrázkov, kde sa budú prepínať obrázky na stlačenie tlačidla vpravo alebo vľavo. Viď. video.', '../priklady/js/10.3 Galéria/pr1.html', '../priklady/js/10.3 Galéria/pr1.css', '../priklady/js/10.3 Galéria/pr1.js', '', '', '', '', '../priklady/js/10.3 Galéria/pr1.mp4', '', '1'),
 (13, '2 AJAX', '2.1 Čas a náhodný text', 'Pomocou priloženej knižnice vytvorte webstránku, na ktorej sa bude zobrazovať <strong>aktuálny čas, náhodná veta</strong> podľa vášho výberu <strong>(aspoň 5)</strong> a táto veta sa bude meniť každých <strong>10 sekúnd.</strong> Následne vytvorte <strong>odpočítavanie,</strong> ktoré bude ukazovať v <strong>reálnom čase,</strong> kedy sa bude meniť táto <strong>náhodná veta.</strong> Môžete sa inšpirovať videom.', '../priklady/js/2.1 Čas a náhodný text/cas-text.html', '../priklady/js/2.1 Čas a náhodný text/cas-text.css', '../priklady/js/2.1 Čas a náhodný text/script.js', '', '../priklady/js/2.1 Čas a náhodný text/jquery-3.7.1.js', 'https://api.jquery.com/', '', '../priklady/js/2.1 Čas a náhodný text/Video.mp4', '', '1'),
-(14, '4 Navigácia', '4.2 Single Page', 'Pomocou vašich znalostí vytvorte webstránku, ktorá bude mať iba jednu HTML5 stránku ale bude obsahovať aspoň 3 stránky. Tj. stránka nesmie presmerovať používateľa na inú stránku. Viď. video.', '../priklady/js/4.2 Single Page/index.html', '../priklady/js/4.2 Single Page/style.css', '../priklady/js/4.2 Single Page/script.js', '', '', '', '', '../priklady/js/4.2 Single Page/video.mp4', '', '1');
+(14, '4 Navigácia', '4.2 Single Page', 'Pomocou vašich znalostí vytvorte webstránku, ktorá bude mať iba jednu HTML5 stránku ale bude obsahovať aspoň 3 stránky. Tj. stránka nesmie presmerovať používateľa na inú stránku. Viď. video.', '../priklady/js/4.2 Single Page/index.html', '../priklady/js/4.2 Single Page/style.css', '../priklady/js/4.2 Single Page/script.js', '', '', '', '', '../priklady/js/4.2 Single Page/video.mp4', '', '1'),
+(15, '2 AJAX', '2.2 Počasie (API)', 'Vytvorte stránku o počasí, ktorá bude každých 60 sekúnd obnovovať údaje o počasí z priloženej dokumentácie.<br><br>\r\nAko prvé sa budete musieť zaregistrovať a získať <strong>zadarmo</strong> API kľúč a potom si zistiť ID mesta o ktorom chcete zistiť aktuálne informácie. Toto ID mesta získate taktiež pomocou prečítaní dokumentácie alebo z url, keď si otvoríte mesto na ich stránke.', '../priklady/js/2.2 Počasie (API)/počasie.html', '../priklady/js/2.2 Počasie (API)/počasie.css', '../priklady/js/2.2 Počasie (API)/script.js', '', '../priklady/js/2.2 Počasie (API)/jquery-3.7.1.js', 'https://openweathermap.org/api', '', '../priklady/js/2.2 Počasie (API)/video.mp4', '', '1'),
+(16, '3 Grafy', '3.2 Šťastné Čísla', 'Pomocou priloženého <strong>JSON</strong> súboru a <strong>knižnice</strong> (spojený AJAX s Plotly) vytvorte graf ako je na videu k zadaniu. Pokúste sa použiť / preskúšať si aj iné typy grafov, ktoré táto knižnica ponúka.', '../priklady/js/3.2 Šťastné Čísla/šťastné-čísla.html', '../priklady/js/3.2 Šťastné Čísla/šťastné-čísla.css', '../priklady/js/3.2 Šťastné Čísla/script.js', '../priklady/js/3.2 Šťastné Čísla/data.json', '../priklady/js/3.2 Šťastné Čísla/plotly-ajax.js', 'https://plotly.com/javascript/', '', '../priklady/js/3.2 Šťastné Čísla/video.mp4', '', '1');
 
 --
 -- Kľúče pre exportované tabuľky
@@ -202,7 +204,7 @@ ALTER TABLE `HTML`
 -- AUTO_INCREMENT pre tabuľku `JS`
 --
 ALTER TABLE `JS`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
