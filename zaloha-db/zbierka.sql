@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: Sun 03.Dec 2023, 09:11
+-- Čas generovania: Sun 10.Dec 2023, 11:19
 -- Verzia serveru: 11.2.2-MariaDB-1:11.2.2+maria~ubu2204
 -- Verzia PHP: 8.2.13
 
@@ -62,7 +62,10 @@ INSERT INTO `CSS` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `css`, `obrazo
 (16, '8 Navigácia', '8.4 Scrollbar', 'Pomocou CSS3 navrhnite a aplikujte vlastný scrollbar.', '../priklady/css/8.4 Scrollbar/vlastny-scrollbar.html', '../priklady/css/8.4 Scrollbar/vlastny-scrollbar.css', '', '../priklady/css/8.4 Scrollbar/Scrollbar.mp4', ''),
 (17, '1 Texty', '1.2 Obrázok ako farba', 'Pomocou CSS3 vytvorte stránku na ktorej budete mať ľubovoľný text a na miesto farby, použite vami vybratý obrázok. Viď obrázok zadania.', '../priklady/css/1.2 Obrázok ako farba/obr-ako-text.html', '../priklady/css/1.2 Obrázok ako farba/obr-ako-text.css', '../priklady/css/1.2 Obrázok ako farba/obr.png', '', ''),
 (18, '3 Média', '3.2 Rozmazanie', 'Pomocou HTML5 a CSS3 vytvorte webstránku na ktorej budete mať text a za ním ako pozadie obrázok. Tento obrázok musí byť rozmazaný a mať efekt ako na videu. Čím je viac priblížená webstránka, tým viac je obrázok rozmazaný a naopak.', '../priklady/css/3.2 Rozmazanie/rozm-obrazka.html', '../priklady/css/3.2 Rozmazanie/rozm-obrazka.css', '', '../priklady/css/3.2 Rozmazanie/video.mp4', ''),
-(19, '2 Responzivita', '2.2 Navigačné menu', 'Vytvorte webovú stránku, ktorá bude obsahovať responzívne menu. To znamená, že ak máme mobilné zariadenie, tak na ňom nezobrazíme menu, ktoré je veľké a primárne navrhnuté pre počítače. Taktiež toto menu by malo používať <strong>anchor links,</strong> ktoré na kliknutie posunú používateľa na danú časť stránky. Viď. video.', '../priklady/css/2.2 Navigačné menu/menu-bez-js.html', '../priklady/css/2.2 Navigačné menu/menu-bez-js.css', '', '../priklady/css/2.2 Navigačné menu/video.mp4', '');
+(19, '2 Responzivita', '2.2 Navigačné menu', 'Vytvorte webovú stránku, ktorá bude obsahovať responzívne menu. To znamená, že ak máme mobilné zariadenie, tak na ňom nezobrazíme menu, ktoré je veľké a primárne navrhnuté pre počítače. Taktiež toto menu by malo používať <strong>anchor links,</strong> ktoré na kliknutie posunú používateľa na danú časť stránky. Viď. video.', '../priklady/css/2.2 Navigačné menu/menu-bez-js.html', '../priklady/css/2.2 Navigačné menu/menu-bez-js.css', '', '../priklady/css/2.2 Navigačné menu/video.mp4', ''),
+(20, '4 Formuláre', '4.2 Žiaci', 'Pomocou CSS3 a HTML5 vytvorte webstránku na ktorej bude môcť používateľ nahrať obrázok, 2 textové polia, 1 e-mailové pole a jedno veľké textové pole. Tlačidlo na nahrávanie obrázka musí mať váš vlastný štýl. Viď. obrázok.', '../priklady/css/4.2 Žiaci/ziaci.html', '../priklady/css/4.2 Žiaci/ziaci.css', '../priklady/css/4.2 Žiaci/obrazok.png', '', ''),
+(21, '5 Tabuľky', '5.2 Platy', 'Vašou úlohou je zreplikovať obrázok zadania. Obsah tabuľky nemusí byť rovnaký.', '../priklady/css/5.2 Platy/tabulka-platy.html', '../priklady/css/5.2 Platy/tabulka-platy.css', '../priklady/css/5.2 Platy/obrazok.png', '', ''),
+(22, '10 Transformácie', '10.2 Štvorec', 'Vytvorte transformáciu, ktorá otočí o niekoľko stupňov vami vybratý geometrický tvar, keď naň prejdete myšou a vráti sa do pôvodného stavu po odídení myše.', '../priklady/css/10.2 Štvorec/štvorec.html', '../priklady/css/10.2 Štvorec/štvorec.css', '', '../priklady/css/10.2 Štvorec/video.mp4', '');
 
 -- --------------------------------------------------------
 
@@ -187,7 +190,7 @@ ALTER TABLE `JS`
 -- AUTO_INCREMENT pre tabuľku `CSS`
 --
 ALTER TABLE `CSS`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT pre tabuľku `HTML`
