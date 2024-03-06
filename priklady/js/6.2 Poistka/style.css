@@ -1,0 +1,70 @@
+body {
+    background-color: #d8e7a0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.container {
+    border-radius: 18px;
+    box-shadow: 0px 0px 10px rgb(250, 166, 88);
+    padding: 20px;
+    background-color: #ffde70;
+}
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.car-item {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #db9962;
+    text-align: center;
+}
+
+.car-item img {
+    width: 100%;
+    height: auto;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #d32e2e;
+    color: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup p {
+    margin: 0;
+}
+
+.popup .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

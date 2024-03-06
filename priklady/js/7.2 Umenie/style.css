@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.drop-area {
+    border: 5px dashed #d3850f;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 18px;
+    background-color: rgb(248, 212, 159);
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.result p {
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 18px;
+}
