@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: db
--- Čas generovania: Št 07.Mar 2024, 17:33
+-- Čas generovania: So 09.Mar 2024, 10:32
 -- Verzia serveru: 11.2.2-MariaDB-1:11.2.2+maria~ubu2204
 -- Verzia PHP: 8.2.13
 
@@ -100,7 +100,7 @@ INSERT INTO `HTML` (`id`, `kategoria`, `nazov`, `zadanie`, `html`, `obrazok`, `v
 (9, '3 Formuláre', '3.1 GET', 'Vytvorte prihlasovací formulár, ktorý pomocou funkcie GET pošle údaje, ktoré zadá používateľ do formulára. Tieto údaje by sa mali zobraziť na konci adresy webstránky za otáznikom.', '../priklady/html/3.1 GET/getform.html', '../priklady/html/3.1 GET/get.png', '', ''),
 (10, '3 Formuláre', '3.2 POST', 'Vytvorte formulár, pomocou ktorého môže používateľ kontaktovať správcu webstránky. Formulár musí poslať všetky údaje pomocou funkcie POST. Tým pádom by sa mala ukázať chyba 405 (Not Allowed), ak nemáte nakonfigurovaný webový server aby posielal / prijímal POST požiadavky. V opačnom prípade by nemalo ukázať chybu a vyčistí formulár.', '../priklady/html/3.2 POST/post.html', '', '../priklady/html/3.2 POST/Kontaktujte nás.mp4', ''),
 (11, '5 Meta Údaje', '5.2 Kľúčové Slová', 'Petrov obchod si už začínajú pomaly všímať ľudia. Ale ešte to nie je ono. Pridajte mu na stránku kľúčové slová aby sa ukázala jeho stránka vo vyhľadávačoch, keď ľudia hľadajú na internete iba pomocou slov.', '../priklady/html/5.2 Kľúčové Slová/keywords.html', '../priklady/html/5.2 Kľúčové Slová/obr.png', '', ''),
-(12, '2 Média', '2.3 Webstránky na stránke', 'Pomocou HTML5 vytvorte webstránku, ktorá bude zobrazovať aspoň 3 webstránky viď. video. Nezabudnite, že niektoré stránky ako google.sk majú ochranu voči vkladaním ich webov na iné stránky.', '../priklady/html/2.3 Webstránky na stránke/stránky.html', '', '../priklady/html/2.3 Webstránky na stránke/video.mp4', ''),
+(12, '2 Média', '2.3 Webstránky na stránke', 'Pomocou HTML5 vytvorte webstránku, ktorá bude zobrazovať aspoň 3 webstránky ako môžete vidieť na videu v zadaní. Nezabudnite, že niektoré stránky ako google.sk majú ochranu voči vkladaním ich webstránok na iné stránky.', '../priklady/html/2.3 Webstránky na stránke/stránky.html', '', '../priklady/html/2.3 Webstránky na stránke/video.mp4', ''),
 (13, '7 Dáta', '7.1 Dátové Listy', 'Vytvorte webovú stránku na ktorej si bude môcť používateľ: vybrať druh svojho prehliadača, čas (tento čas by mal mať takisto nadefinované minimálne 3 manuálne časy a možnosť iné aby si mohol používateľ vybrať vlastný čas, ktorý nie je v ponuke), taktiež posuvník s nadefinovanými 4-mi hodnotami a možnosť si vybrať farbu (nadefinujte aspoň 4 farby a pridajte možnosť iné aby si používateľ mohol vybrať aj inú farbu zo všetkých možností).', '../priklady/html/7.1 Dátové Listy/dtlists.html', '', '../priklady/html/7.1 Dátové Listy/video.mp4', ''),
 (14, '7 Dáta', '7.2 Meter', 'Vytvorte pomocou čistého HTML5 dátový typ, ktorý ukáže tzv. progress podľa vami zadanej hodnoty.', '../priklady/html/7.2 Meter/meter.html', '../priklady/html/7.2 Meter/obr.png', '', ''),
 (15, '2 Média', '2.4 PDF', 'Vytvorte webstránku, ktorá bude zobrazovať vami vybratý PDF súbor uložený v priečinku s vašou webstránkou. Viď. video.', '../priklady/html/2.4 PDF/pdf-na-stranke.html', '', '../priklady/html/2.4 PDF/video.mp4', ''),
