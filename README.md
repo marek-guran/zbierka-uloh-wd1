@@ -2,6 +2,12 @@
 
 [ZBIERKA](https://wd1.site/)
 
+Stránka sa dá navštíviť iba so **slovenskou / českou** IP adresou.
+
+# Pridať
+- Príklady
+- Ďalšie
+
 # Inštalácia
 ### Potrebné veci:
 - Docker, Docker compose
